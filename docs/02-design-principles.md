@@ -515,3 +515,24 @@ Daraus folgen verbindliche Regeln:
 Ein Zwischenstand muss nicht bereits releasefertig sein. Er muss aber ehrlich als Prototyp, Vorschau, Teilfunktion oder abnahmefähiger Liefergegenstand gekennzeichnet werden. Nicht vorhandene Funktionen dürfen nicht durch Attrappen oder rein visuelle Platzhalter als fertig dargestellt werden.
 
 Die Projektleitung soll jederzeit erkennen können, was bereits funktioniert, was nur demonstriert wird, was noch fehlt und worauf der nächste Schritt aufbaut. Die konkrete Taktung und Größe der Arbeitspakete richtet sich nach Risiko und fachlichem Zusammenhang; ein starres Zeitintervall wird nicht vorgegeben.
+
+## 2.21 Konzeptstatus vor Implementierung verbindlich einordnen
+
+Die Dokumentation enthält sowohl bestätigte Projektleitplanken als auch fachliche Ausgangskonzepte, Arbeitskonzepte, abgeleitete Anforderungen, Erweiterungsideen, Beispiele und offene Fragen. Diese Kategorien haben unterschiedliche Verbindlichkeit.
+
+Vor Planung und Umsetzung muss der Agent jede betroffene Anforderung einordnen:
+
+- **Leitplanke:** muss eingehalten werden;
+- **bestehendes Konzept:** Originalquelle prüfen und Übernahme-/Migrationsentscheidung dokumentieren;
+- **Arbeitskonzept:** als Planungsgrundlage verwenden, Details aber nicht als beschlossen behandeln;
+- **Funktionserweiterung:** Nutzen, Abhängigkeiten und Umfang spezifizieren; Umsetzung erst nach Freigabe;
+- **Vorschlag/Beispiel/Inspiration:** darf Ideen liefern, ist aber keine Implementierungspflicht;
+- **Offen/Quellenlücke:** nicht eigenmächtig entscheiden oder erfinden.
+
+Wenn eine Passage mehrere Kategorien vermischt, gilt nur der ausdrücklich als Leitplanke oder freigegebener Umfang erkennbare Teil als verbindlich. Unklare Teile bleiben offen und werden im Entscheidungsregister oder Arbeitspaket benannt.
+
+## 2.22 Fachliche Kontinuität bei technischer Neuentwicklung
+
+Die Unity-Neuentwicklung soll bewährte fachliche Regeln und gewünschte Spielerfunktionen erhalten, aber keine alte technische Implementierung blind nachbauen. Ein fachliches Konzept kann in der neuen 3D-Architektur anders strukturiert oder technisch vollständig neu umgesetzt werden, sofern sein bestätigter Zweck und seine Regeln erhalten bleiben.
+
+Vorhandene Daten, JSON-Strukturen, Kataloge und Funktionen werden erst nach Bestandsprüfung migriert. Die Prüfung muss zwischen fachlicher Semantik, technischer Altlast, nicht mehr benötigtem Inhalt und gewünschter Erweiterung unterscheiden. Änderungen und Verluste benötigen nachvollziehbare Begründung und Freigabe gemäß Agentenregeln.
