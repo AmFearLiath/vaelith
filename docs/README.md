@@ -46,3 +46,9 @@ Der Spieler beginnt damit, die Welt zu entdecken. Danach lernt er, in ihr zu leb
 ## Wichtige Quellenbegrenzung
 
 Diese erste Fassung stützt sich auf die im aktuellen Projektkontext verfügbaren Gesprächsinhalte. Frühere Einzelchats, Item-Archive und Quelldateien konnten nicht vollständig erneut eingesehen werden. Insbesondere sind ursprüngliche Monetarisierungsdetails und vollständige Item-/JSON-Kataloge noch zu importieren. Diese Lücken sind an den jeweiligen Stellen dokumentiert. Es wird nicht behauptet, diese Quellen seien vollständig ausgewertet.
+
+## Wichtige Arbeitsregel für Entwicklungsagenten
+
+**Vaelith wird als eigenständiges, vollständig 3D-Spiel in Unity neu entwickelt.** Die Dokumentation beschreibt die Zielvision und die fachlichen Ausgangskonzepte. Sie ist keine pauschal verbindliche Liste sämtlicher zu implementierender Features.
+
+Vor der Umsetzung ist zwischen verbindlichen Projektleitplanken, zu prüfenden Bestandskonzepten, Arbeitskonzepten, Funktionserweiterungen, unverbindlichen Vorschlägen/Beispielen und offenen Entscheidungen zu unterscheiden. Bestehende Emberwild-/Vaelith-Inhalte sind fachliche Quellen und mögliche Migrationsbestände; die alte technische Implementierung wird nicht automatisch fortgeführt. Maßgebliche Details stehen in `01-project-overview.md`, `02-design-principles.md`, `16-mdp-development-process.md` und `19-agent-operating-rules.md`.
