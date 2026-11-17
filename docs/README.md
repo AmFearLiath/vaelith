@@ -29,6 +29,7 @@ Diese Dokumentation beschreibt Zielbild, Leitplanken, Spielsysteme, Weltgenerier
 19. [Agentenregeln](19-agent-operating-rules.md)
 20. [Entscheidungsregister und offene Punkte](20-decisions-and-open-questions.md)
 21. [Glossar](21-glossary.md)
+22. [Asset-Credit- und Attribution-Register](22-asset-attribution-register.md)
 
 ## Statuskennzeichnung
 
