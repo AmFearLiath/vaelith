@@ -78,3 +78,8 @@ Vor Katalogfreigabe sind JSON-/Schema-Validierung, eindeutige IDs und Namespaces
 Dieses Dokument behauptet nicht, dass alle 240 JSON-Dateien semantisch und feldweise vollständig ausgewertet wurden. Noch erforderlich sind dateiweises Inventar mit Kategorie, Version, Status und Eintragszahl, Vergleich aller Versionen einer Katalogfamilie, Prüfung eingebetteter Archive, kanonische ID-/Referenzmatrix, Rezept-/Produktionskettenmatrix, Migrationsmapping sowie Abgleich mit Charakter-, Kampf-, Wirtschafts-, Simulations- und Moddingdaten.
 
 Originalwerte werden nicht pauschal verändert. Abweichungen benötigen eine nachvollziehbare Designentscheidung und Migration.
+
+
+## 24.10 Eingebettetes Archiv und Versionsvergleich
+
+Unter Items/Items.zip liegt ein eingebettetes Archiv mit 309 ZIP-Einträgen, darunter 239 JSON-Dateien und 43 Markdown-Dateien. Dieser Bestand überschneidet sich weitgehend mit den im äußeren Archiv enthaltenen Items-Dateien. Die beiden Ebenen sind vor jeder Mengen- oder Dublettenanalyse anhand relativer Pfade, Hashes, IDs, Versionen und Migrationsnotizen zu vergleichen. Eine doppelte Ablage ist kein doppelter Spielinhalt.
