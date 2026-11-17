@@ -397,3 +397,17 @@ Diese Einordnung ist übergeordnet und gilt für sämtliche Fachkonzepte. Sie er
 | EDITOR-012 | 3D-Editor-Grundwerkzeuge werden als gemeinsame Infrastruktur bereitgestellt | Zielanforderung |
 
 Die detaillierten Anforderungen und Quellen stehen in Dokument 23 (Quellenregister), Dokument 24 (Item-/Produktionsmigration) und Dokument 25 (Quest-System). Diese Entscheidungen konkretisieren die Vaelith-Zielarchitektur; sie behaupten nicht, dass die ursprünglichen Emberwild-Systeme bereits fertig implementiert waren.
+
+## 20.27 Quellenimport und delegierte Ausarbeitung
+
+| ID | Thema | Einordnung | Status |
+|---|---|---|---|
+| SRC-001 | documents.zip ist zusätzliche fachliche Originalquelle | Quellenleitplanke | Inventarisiert; systemweise Konsolidierung läuft |
+| SRC-002 | Emberwild-Fachkonzepte sind auf Vaelith-Eignung zu prüfen | Migrationsleitplanke | Gilt projektweit |
+| SRC-003 | ASHFALL-spezifische Inhalte bleiben ausgeschlossen | Verbindliche Leitplanke | Unverändert |
+| SRC-004 | Multiplayer-Konzepte sind nicht automatisch Bestandteil des Releaseumfangs | Produkt-/Scopeentscheidung | Singleplayer-first; Umfang offen |
+| SRC-005 | Delegierte offene Designfragen dürfen eigenständig für Vaelith ausgearbeitet werden | Arbeitsauftrag | Ausarbeitung muss als neue Vaelith-Entscheidung gekennzeichnet sein |
+| SRC-006 | Quest-System ist noch nicht fertig entwickelt | Quellen-/Projektstatus | Zielarchitektur in Dokument 25; Implementierung und Datenmigration offen |
+| SRC-007 | Das eingebettete Items.zip überschneidet sich mit dem äußeren Items-Bestand | Migrationsleitplanke | Vor Katalogzählung und Migration deduplizieren |
+
+Die Quellenregister 23–25 sind Teil der maßgeblichen Projektdokumentation. Ein als Arbeitskonzept gekennzeichneter Vorschlag wird erst nach Projektfreigabe zur verbindlichen Produktentscheidung, sofern die Projektleitung nicht ausdrücklich eine konkrete Designentscheidung delegiert hat.
