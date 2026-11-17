@@ -90,3 +90,19 @@ Visuelle Abnahme umfasst reale Browserdarstellung und relevante responsive Zust�
 ## 14.16 Offene Entscheidungen
 
 Die offenen Webentscheidungen WEB-001 bis WEB-010 sind in Dokument 20 registriert. Insbesondere werden Hosting, Authentifizierung, Konten, Launcher, Onlinepflicht und konkrete Adminmodule nicht vorweggenommen.
+
+
+## 14.17 Gemeinsame Inhalte und klare Systemgrenzen
+
+Website, Administration und Spiel dürfen freigegebene Inhalte, Assets und Designressourcen gemeinsam nutzen. Daraus folgt jedoch keine gemeinsame Vertrauens- oder Laufzeitgrenze. Die Webplattform erhält keinen pauschalen direkten Schreibzugriff auf lokale Spielstände, aktive Weltzustände oder interne Unity-Runtime-Objekte.
+
+Für jeden gemeinsam genutzten Inhalt ist festzulegen:
+- welches System die kanonische Quelle besitzt;
+- ob die Webplattform ihn nur liest, bearbeitet oder zur Veröffentlichung vorbereitet;
+- welche Validierung vor Veröffentlichung erfolgt;
+- wie Versionierung, Herkunft und Rücknahme behandelt werden;
+- wie das Spiel eine freigegebene Version sicher übernimmt.
+
+Administrative Aktionen benötigen rollenbasierte Berechtigungen, nachvollziehbare Protokolle und Schutz vor unbeabsichtigter Veröffentlichung. Gemeinsame Stylesheets oder Assets bedeuten keine Vermischung der Informationsarchitektur oder der technischen Zuständigkeiten.
+
+Online-/Offline-Betrieb, Backendpflichten und Synchronisationsverhalten bleiben offene Produkt- und Architekturentscheidungen.
