@@ -101,3 +101,32 @@ Mindestens:
 ## 16.10 Kommunikation
 
 Projektentscheidungen und Statusmeldungen sollen präzise sein. Unausgeführte Tests dürfen nicht als bestanden gemeldet werden. Fehlende Quelldaten und unklare Absprachen müssen sichtbar bleiben. Agenten dürfen keine Änderungen an anderen Verantwortungsbereichen vornehmen, ohne Freigabe.
+
+
+## 16.11 Inkrementelle Lieferung und laufende Sichtprüfung
+
+Die MDP ist so auszuführen, dass die Projektleitung den Entwicklungsfortschritt jederzeit in funktionalen und visuellen Zwischenständen prüfen kann. Große Systeme werden deshalb nicht als ein einziger langer Entwicklungsblock umgesetzt.
+
+Verbindlicher Ablauf:
+
+1. Einen kleinen, fachlich sinnvollen und überprüfbaren Schritt aus dem freigegebenen Arbeitspaket bestimmen.
+2. Vorab festlegen, welches konkrete Ergebnis dieser Schritt liefert und wie es geprüft werden kann.
+3. Den Schritt implementieren und in den erforderlichen Systemkontext integrieren.
+4. Die vorgesehenen automatisierten und manuellen Prüfungen tatsächlich ausführen.
+5. Einen geeigneten Prüfstand bereitstellen: beispielsweise eine lauffähige Funktion, eine Editor-Arbeitsstrecke, eine Vorschau, eine Testszene oder einen reproduzierbaren Testfall.
+6. Ergebnis, Prüfmethode, Testergebnisse, Einschränkungen und noch fehlende Teile verständlich übergeben.
+7. Feedback der Projektleitung aufnehmen und erforderliche Korrekturen durchführen.
+8. Erst danach den nächsten regulären Schritt beginnen, der auf diesem Ergebnis aufbaut.
+
+### Anforderungen an prüfbare Zwischenstände
+
+- Funktionale Änderungen müssen praktisch ausprobierbar sein, nicht nur im Quellcode nachvollziehbar.
+- Visuelle Änderungen müssen in einer geeigneten Vorschau oder laufenden Anwendung sichtbar sein.
+- Für nicht direkt zugängliche oder technisch noch nicht vollständig integrierte Funktionen ist ein reproduzierbarer Testweg bereitzustellen.
+- Provisorische Zustände sind eindeutig als Prototyp, Platzhalter oder Teilimplementierung zu kennzeichnen.
+- Ein Zwischenschritt darf notwendige Qualitäts-, Sicherheits- oder Datenintegritätsprüfungen nicht überspringen.
+- Der Agent darf keine Abnahme unterstellen. „Geliefert“, „prüfbar“, „abnahmebereit“ und „abgenommen“ bleiben unterschiedliche Zustände.
+
+Wenn technische Abhängigkeiten eine unmittelbare Sichtprüfung verhindern, muss der Agent die Ursache, die fehlende Voraussetzung und den frühestmöglichen sinnvollen Prüfpunkt benennen. Er soll den Umfang so schneiden, dass unnötig lange Phasen ohne sichtbaren oder funktionalen Fortschritt vermieden werden.
+
+Die Projektleitung erhält damit regelmäßig Gelegenheit, tatsächliches Verhalten und Erscheinungsbild zu bewerten, bevor weitere Systeme oder Inhalte darauf aufbauen.
