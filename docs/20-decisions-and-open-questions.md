@@ -144,3 +144,52 @@ Die folgenden Punkte wurden bei der Erweiterung von 06-living-world-simulation.m
 | SIM-014 | Simulation politischer Konflikte, Bündnisse und territorialer Kontrolle | 06-living-world-simulation.md | Lore-/Gameplay-Abgleich erforderlich |
 | SIM-015 | Umgang mit Questfiguren und geschützten Populationen in Fernsimulation | 06-living-world-simulation.md | Offen |
 
+## 20.11 Ergänzte offene Entscheidungen aus der Weltgenerierung
+
+Die folgenden Punkte wurden bei der Erweiterung von 07-world-generation.md identifiziert. Sie sind nicht als bereits getroffene technische oder inhaltliche Entscheidungen zu verstehen.
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| WORLD-001 | Weltmaßstab, Projektion und geografische Ausdehnung | 07-world-generation.md | Offen |
+| WORLD-002 | Auflösung und Detailgrad der globalen Weltkarte | 07-world-generation.md | Technische Prüfung erforderlich |
+| WORLD-003 | Regionengröße und Verhältnis zu technischen Chunks | 07-world-generation.md | Prototyp/Profiling erforderlich |
+| WORLD-004 | Generatoralgorithmen für Kontinente, Höhenmodell und Küsten | 07-world-generation.md | Evaluierung erforderlich |
+| WORLD-005 | Klima-, Wind-, Niederschlags- und Wasserhaushaltsmodell | 07-world-generation.md | Offen |
+| WORLD-006 | Finale Biomenliste und Übergangsregeln | 07-world-generation.md | Gemeinsam festzulegen |
+| WORLD-007 | Fluss-/Entwässerungsmodell und regionsübergreifende Kontinuität | 07-world-generation.md | Technische Spezifikation erforderlich |
+| WORLD-008 | Ressourcen-, Vegetations- und Faunaverteilungsregeln | 07-world-generation.md | Fachlicher Abgleich erforderlich |
+| WORLD-009 | POI-Dichte, Seltenheit und Schutz storykritischer Orte | 07-world-generation.md | Offen |
+| WORLD-010 | Weltkoordinatensystem und Maßeinheiten | 07-world-generation.md | Technische Entscheidung erforderlich |
+| WORLD-011 | Seed-Aufteilung und Stabilitätsgarantien bei Generatoränderungen | 07-world-generation.md | Technische Prüfung erforderlich |
+| WORLD-012 | Azgaar-Importumfang, Exportformate und Lizenzprüfung | 07-world-generation.md | Quellen-/Lizenzprüfung erforderlich |
+| WORLD-013 | Terrain-Technologie: Unity Terrain, Mesh-Chunks oder Kombination | 07-world-generation.md | Prototyp/Profiling erforderlich |
+| WORLD-014 | Freigabe- und Migrationsverfahren veröffentlichter Regionen | 07-world-generation.md | Prozessentscheidung erforderlich |
+| WORLD-015 | Kriterien für Siedlungseignung und Routenplanung | 07-world-generation.md | Offen |
+
+## 20.12 Ergänzte offene Entscheidungen aus der Editor-Suite
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| EDITOR-001 | Technische Basis der Editor-Suite innerhalb/außerhalb des Unity-Editors | 08-editor-suite.md | Architekturentscheidung erforderlich |
+| EDITOR-002 | Gemeinsames UI-/UX-System und Layoutstandards | 08-editor-suite.md | Prototyp/Abstimmung erforderlich |
+| EDITOR-003 | Gemeinsames Referenz- und Dependency-Browser-Konzept | 08-editor-suite.md | Technische Spezifikation erforderlich |
+| EDITOR-004 | Undo/Redo-Umfang und Änderungs-/Transaktionsmodell | 08-editor-suite.md | Technische Prüfung erforderlich |
+| EDITOR-005 | Import-/Exportformate und Migrationsworkflow je Fachgebiet | 08-editor-suite.md | Quellenabgleich erforderlich |
+| EDITOR-006 | Berechtigungs- und Freigabemodell | 08-editor-suite.md | Offen |
+| EDITOR-007 | Umfang von Simulationen direkt in Fach-Editoren | 08-editor-suite.md | Workflowprüfung erforderlich |
+| EDITOR-008 | Erweiterungspunkte für Datenmods und Code-Mods | 08-editor-suite.md | Abgleich mit Dokument 11 erforderlich |
+| EDITOR-009 | Gemeinsame Suche, Tags und Metadatenstandards | 08-editor-suite.md | Technische Spezifikation erforderlich |
+| EDITOR-010 | Automatisierte Editor-Workflowtests und Testdatenverwaltung | 08-editor-suite.md | QA-Spezifikation erforderlich |
+
+## 20.13 Ergänzte offene Entscheidungen aus der Datenarchitektur
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| DATA-001 | Kanonische Serialisierung für Definitionen, Weltzustände und Spielstände | 09-data-architecture.md | Technische Evaluierung erforderlich |
+| DATA-002 | Speichertechnologie und Datenbankbedarf | 09-data-architecture.md | Architekturentscheidung erforderlich |
+| DATA-003 | Granularität von Welt-/Regions-/Chunkpersistenz | 09-data-architecture.md | Prototyp/Profiling erforderlich |
+| DATA-004 | Ereignisprotokoll: Umfang, Aufbewahrung und Kompaktierung | 09-data-architecture.md | Offen |
+| DATA-005 | Transaktions-/Wiederherstellungsmodell für systemübergreifende Aktionen | 09-data-architecture.md | Technische Spezifikation erforderlich |
+| DATA-006 | Schema- und Paketversionierung für Mod-Inhalte | 09-data-architecture.md | Abgleich mit Dokument 11 erforderlich |
+| DATA-007 | Provenienzmodell für externe Karten, Assets und Contentimporte | 09-data-architecture.md | Offen |
+| DATA-008 | Umgang mit Konflikten zwischen Generatorupdates und Spieleränderungen | 09-data-architecture.md | Technische Spezifikation erforderlich |
