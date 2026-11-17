@@ -193,3 +193,63 @@ Die folgenden Punkte wurden bei der Erweiterung von 07-world-generation.md ident
 | DATA-006 | Schema- und Paketversionierung für Mod-Inhalte | 09-data-architecture.md | Abgleich mit Dokument 11 erforderlich |
 | DATA-007 | Provenienzmodell für externe Karten, Assets und Contentimporte | 09-data-architecture.md | Offen |
 | DATA-008 | Umgang mit Konflikten zwischen Generatorupdates und Spieleränderungen | 09-data-architecture.md | Technische Spezifikation erforderlich |
+
+## 20.14 Ergänzte offene Entscheidungen aus der Unity-Architektur
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| ARCH-001 | Finale Unity-Version und Upgrade-Politik | 10-unity-architecture.md | Projektstartprüfung erforderlich |
+| ARCH-002 | Renderpipeline und Renderfeature-Set | 10-unity-architecture.md | Prototyp/Benchmark erforderlich |
+| ARCH-003 | Assembly-/Modulzuschnitt und Abhängigkeitsregeln | 10-unity-architecture.md | Vertikaler Prototyp erforderlich |
+| ARCH-004 | Einsatz von ECS/DOTS gegenüber klassischer Unity-Architektur | 10-unity-architecture.md | Profiling und Anwendungsfallprüfung erforderlich |
+| ARCH-005 | Threading-/Job-System für Generator und Simulation | 10-unity-architecture.md | Prototyp/Profiling erforderlich |
+| ARCH-006 | Szenen-, Streaming- und Weltzustandslebenszyklus | 10-unity-architecture.md | Technische Spezifikation erforderlich |
+| ARCH-007 | Physik-, Kollisions- und Navigationslösungen | 10-unity-architecture.md | Prototyp erforderlich |
+| ARCH-008 | Zielplattformen, Backends und Buildprofile | 10-unity-architecture.md | Produktentscheidung erforderlich |
+| ARCH-009 | Logging-/Telemetrieumfang und Datenschutzgrenzen | 10-unity-architecture.md | Produkt-/Technikentscheidung erforderlich |
+| ARCH-010 | Netzwerk-/Onlinefunktionen und Backend-Abhängigkeiten | 10-unity-architecture.md | Produktentscheidung erforderlich |
+
+## 20.15 Ergänzte offene Entscheidungen aus Modding und Vaelith Mod API
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| MOD-001 | BepInEx-Version, Fork-/Patchbedarf und unterstützte Plattformen | 11-modding-api.md | Kompatibilitätstest erforderlich |
+| MOD-002 | Mono-/IL2CPP- und sonstige Backendstrategie | 11-modding-api.md | Technische Prüfung erforderlich |
+| MOD-003 | Öffentliche API-Schichten und genaue Erweiterungspunkte | 11-modding-api.md | API-Design erforderlich |
+| MOD-004 | Datenmod-Paketformat und Schema-Versionierung | 11-modding-api.md | Technische Spezifikation erforderlich |
+| MOD-005 | Mod-ID-/Content-ID-Namensraum und Kollisionsregeln | 11-modding-api.md | Entscheidung erforderlich |
+| MOD-006 | Mod-Ladepriorität und Konfliktauflösung | 11-modding-api.md | Design/Prototyp erforderlich |
+| MOD-007 | Savegame-Verhalten bei fehlenden oder geänderten Mods | 11-modding-api.md | Technische Spezifikation erforderlich |
+| MOD-008 | Vertrauenshinweise, Signaturen und Herkunftsprüfung | 11-modding-api.md | Sicherheitsprüfung erforderlich |
+| MOD-009 | Mod-Manager-Umfang und Diagnoseexport | 11-modding-api.md | Produkt-/UX-Entscheidung erforderlich |
+| MOD-010 | API-Versionierung, Supportfenster und Deprecation | 11-modding-api.md | Governance-Entscheidung erforderlich |
+
+## 20.16 Ergänzte offene Entscheidungen aus Assets, Animation und Audio
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| ASSET-001 | Finale visuelle Stilrichtlinien und technische Qualitätsprofile | 12-assets-animation-audio.md | Art Direction erforderlich |
+| ASSET-002 | Assetkatalog und stabile Asset-ID-Konvention | 12-assets-animation-audio.md | Daten-/Toolentscheidung erforderlich |
+| ASSET-003 | Importprofile und unterstützte Austauschformate | 12-assets-animation-audio.md | Pipeline-Prototyp erforderlich |
+| ASSET-004 | LOD- und Speicherbudgets je Assetkategorie | 12-assets-animation-audio.md | Profiling erforderlich |
+| ASSET-005 | Modulare Charakter-/Ausrüstungs- und Kreaturenpipeline | 12-assets-animation-audio.md | Prototyp erforderlich |
+| ASSET-006 | Rig-/Retargeting-Standards und Ausnahmen je Artengruppe | 12-assets-animation-audio.md | Animationstest erforderlich |
+| ASSET-007 | Umfang und Lizenzierung von Musik, Sprache und Soundeffekten | 12-assets-animation-audio.md | Content-/Lizenzplanung erforderlich |
+| ASSET-008 | Audio-Middleware oder Unity-Bordmittel | 12-assets-animation-audio.md | Prototyp/Anforderungsprüfung erforderlich |
+| ASSET-009 | Asset-Streaming- und Addressables-Strategie | 12-assets-animation-audio.md | Technische Evaluierung erforderlich |
+| ASSET-010 | Assetfreigabe und visuelle Qualitätsabnahme | 12-assets-animation-audio.md | Prozessentscheidung erforderlich |
+
+## 20.17 Ergänzte offene Entscheidungen aus QA, Sicherheit und Performance
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| QA-001 | Zielhardware und verbindliche Performancebudgets | 18-qa-security-performance.md | Produkt-/Benchmarkentscheidung erforderlich |
+| QA-002 | Automatisierungsgrad und CI-Testpipeline | 18-qa-security-performance.md | Prozess-/Toolentscheidung erforderlich |
+| QA-003 | Umfang repräsentativer Testwelten und Lastprofile | 18-qa-security-performance.md | QA-Konzept erforderlich |
+| QA-004 | Savegame-Kompatibilitäts- und Wiederherstellungsziele | 18-qa-security-performance.md | Produkt-/Technikentscheidung erforderlich |
+| QA-005 | Bedrohungsmodell und Sicherheitsreview-Zyklus | 18-qa-security-performance.md | Sicherheitskonzept erforderlich |
+| QA-006 | Release-Gates und Ausnahmefreigaben | 18-qa-security-performance.md | Prozessentscheidung erforderlich |
+| QA-007 | Telemetrie, Datenschutz und Diagnoseexport | 18-qa-security-performance.md | Produkt-/Rechtsprüfung erforderlich |
+| QA-008 | Plattformübergreifende Modding- und Backend-Testmatrix | 18-qa-security-performance.md | Kompatibilitätstests erforderlich |
+| QA-009 | Visuelle Qualitätsmetriken und Abnahmeverfahren | 18-qa-security-performance.md | Art-/QA-Abstimmung erforderlich |
+| QA-010 | Langzeittests für Simulation und Weltzeit | 18-qa-security-performance.md | Testkonzept erforderlich |
