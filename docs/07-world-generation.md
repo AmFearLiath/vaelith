@@ -281,3 +281,20 @@ Eine Änderung an einem Algorithmus kann Auswirkungen auf abhängige Daten haben
 | WORLD-013 | Terrain-Technologie: Unity Terrain, Mesh-Chunks oder Kombination | Prototyp/Profiling erforderlich |
 | WORLD-014 | Freigabe- und Migrationsverfahren veröffentlichter Regionen | Prozessentscheidung erforderlich |
 | WORLD-015 | Kriterien für Siedlungseignung und Routenplanung | Offen |
+
+
+## 7.26 Regionale Spezialisierung und strategische Ressourcenräume
+
+Die Emberwild-Quellen beschreiben Provinzen bzw. Regionen mit eigener geologischer, ökologischer und wirtschaftlicher Identität. Für Vaelith wird das Prinzip regionaler Spezialisierung als Arbeitskonzept übernommen: Nicht jede Region soll sämtliche Ressourcen in gleicher Qualität und Menge bereitstellen. Geologie, Klima, Ökosystem und Kultur prägen verfügbare Rohstoffe und Produktionsmöglichkeiten.
+
+Eine Region kann besondere Rohstoffvorkommen, seltene Arten, landwirtschaftliche Eignung, Wasserzugang, Energiequellen, Handelslage oder strategische Engpässe besitzen. Diese Merkmale werden als Daten der Region bzw. ihrer Subgebiete modelliert und nicht als willkürliche globale Bonuswerte.
+
+Die alte Quelle enthält konkrete Provinznamen, Rohstoffmonopole und eine Zahl von 294 Provinzen. Diese Namen, Anzahl und konkrete Ressourcenverteilung sind keine festgelegten Vaelith-Weltparameter. Sie dienen als Beispiele für die regionale Spezialisierung und müssen mit der prozeduralen Welt, Biomen und dem endgültigen Setting abgeglichen werden.
+
+## 7.27 Außenposten, Ressourcenorte und Erschließung
+
+Ressourcenorte und strategische POIs können durch Erkundung, Freilegung, Sicherung und Infrastruktur erschlossen werden. Ein Außenposten ist dabei kein isoliertes Menüobjekt, sondern ein realer Ort in der 3D-Welt mit Zugängen, Gebäuden, Personal, Versorgung, Lager und Transportanbindung.
+
+Mögliche Funktionsprofile sind Mine, Steinbruch, Forst-/Ernteposten, Mühle, Forschungsstation, Beobachtungsposten und befestigtes Lager. Ob ein Ort neutral, verlassen, gefährlich oder von einer Gruppe kontrolliert ist, wird als Weltzustand modelliert. Besitz-/Kontrollregeln und konkrete Baukosten bleiben offen.
+
+Erschließung muss in Weltgenerierung, Siedlungssimulation, Wirtschaft, Routen, Quests und Editor zusammenwirken. Ein gesicherter Ressourcenort erzeugt keine Waren ohne Personal, Betriebsmittel, Kapazität und Transportmöglichkeit.
