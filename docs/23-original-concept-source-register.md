@@ -105,3 +105,8 @@ ASHFALL-spezifische Inhalte, Strukturen, Implementierungen, Assets, Daten, Szene
 | ASHFALL | Quellen identifiziert | Ausschluss |
 
 Jede spätere Übernahme wird mit Quelldatei, Abschnitt/Feld, Zielkapitel, Änderungstyp, Begründung und Status dokumentiert.
+
+
+## 23.7 Eingebettetes Item-Archiv
+
+Das unter Items/Items.zip eingebettete Archiv wurde separat geöffnet. Es enthält 309 ZIP-Einträge: 239 JSON-Dateien, 43 Markdown-Dateien und 27 Verzeichniseinträge. Es ist ein zusätzlicher, nahezu vollständiger Item-Quellenbestand und muss bei der Versions-/Duplikatprüfung gegen die parallel im äußeren Archiv liegenden Dateien verglichen werden. Es darf nicht als weiterer unabhängiger Katalog addiert werden.
