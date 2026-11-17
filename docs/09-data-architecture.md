@@ -79,3 +79,69 @@ Ein zentraler Abhängigkeitsgraph soll Referenzen zwischen Biomen, Regionen, Geb
 ## 9.10 Datenvergleich und Änderungsverlauf
 
 Für Welt- und Contentdaten werden nachvollziehbare Diffs benötigt. Änderungen sollen Autor, Zeitpunkt, Zweck, betroffene IDs und Migration enthalten. Generatorausgaben müssen mit Seed und Generatorversion reproduzierbar sein.
+
+## 9.11 Weltgenerierungsdaten und Versionsbindung
+
+Weltgenerierungsdaten müssen die zur Reproduktion und sicheren Weiterentwicklung erforderlichen Eingaben und Versionen speichern. Dazu gehören mindestens Welt-/Regionsidentität, Seed-Kontext, Generatorversion, Regelsatz-/Profilversion und Referenzen auf verwendete Datenkataloge.
+
+Zu unterscheiden sind:
+- globale geografische Planungsdaten;
+- regionale Generierungsergebnisse;
+- technische Chunk-/Streamingdaten;
+- persistente Änderungen nach der Generierung;
+- Laufzeitzustände aus Simulation und Gameplay.
+
+Eine Generatoraktualisierung darf persistente Spieleränderungen nicht als bloße Generatorabweichung behandeln oder überschreiben. Die genaue Speicherung und Granularität ist durch Prototypen festzulegen.
+
+## 9.12 Herkunft, Provenienz und Content-Import
+
+Importierte Inhalte benötigen nachvollziehbare Herkunft. Für externe Karten, Assets und Contentpakete sollen Quelle, Autor/Urheber soweit bekannt, Lizenz, Importdatum, Originalversion, Transformationen und lokale Änderungen dokumentiert werden.
+
+Bei Datenimporten müssen Originalquelle und Vaelith-Datensatz unterscheidbar bleiben. Ein erneuter Import darf lokale Anpassungen nicht stillschweigend überschreiben. Zusammenführen, Ersetzen und Verwerfen sind explizite Operationen mit Vorschau und Protokoll.
+
+## 9.13 Transaktionen und Zustandsänderungen über Systeme hinweg
+
+Aktionen, die mehrere Fachbereiche verändern, benötigen eine konsistente Ausführungs- und Wiederherstellungsstrategie. Beispiele sind Questbelohnungen, Bauaufträge, Produktionszyklen, Zuchtvorgänge und Regionsfreigaben.
+
+Es muss erkennbar sein:
+- welche Zustände gemeinsam geändert werden;
+- welche Vorbedingungen gelten;
+- wann eine Änderung als abgeschlossen gilt;
+- wie Teilfehler erkannt und behandelt werden;
+- wie doppelte Ausführung verhindert wird;
+- wie Wiederholung, Rücknahme oder Reparatur erfolgt.
+
+Eine universelle technische Transaktionslösung wird hier nicht vorgeschrieben. Die Architektur muss jedoch Datenverlust, doppelte Belohnungen und widersprüchliche Teilzustände verhindern.
+
+## 9.14 Ereignisprotokoll und Änderungsverfolgung
+
+Für wichtige dauerhafte Zustandsänderungen ist ein geeignetes Änderungs-/Ereignisprotokoll vorzusehen. Es soll Ursachen und Folgen für Debugging, QA, Savegame-Reparatur und Modding nachvollziehbar machen.
+
+Nicht jede Frame- oder Animationsänderung muss protokolliert werden. Umfang und Aufbewahrung richten sich nach fachlicher Bedeutung, Speicherbudget und Datenschutz-/Plattformanforderungen.
+
+## 9.15 Datenverträge zwischen Editoren und Runtime
+
+Editoren, Generator und Runtime müssen dieselben kanonischen Definitionen und Validierungsregeln verwenden. Ein Editor darf keine Daten freigeben, die die Runtime anders interpretiert oder nicht laden kann.
+
+Datenverträge umfassen:
+- stabile IDs und Typen;
+- Schema- und Paketversionen;
+- Pflichtfelder und zulässige Werte;
+- Referenz- und Kompatibilitätsregeln;
+- Standardwerte und Fallbackverhalten;
+- Migrations- und Fehlerregeln.
+
+Validierung muss möglichst früh erfolgen und sowohl im Editor als auch vor Build/Runtime verfügbar sein.
+
+## 9.16 Offene Datenarchitektur-Entscheidungen
+
+| ID | Thema | Status |
+|---|---|---|
+| DATA-001 | Kanonische Serialisierung für Definitionen, Weltzustände und Spielstände | Technische Evaluierung erforderlich |
+| DATA-002 | Speichertechnologie und Datenbankbedarf | Architekturentscheidung erforderlich |
+| DATA-003 | Granularität von Welt-/Regions-/Chunkpersistenz | Prototyp/Profiling erforderlich |
+| DATA-004 | Ereignisprotokoll: Umfang, Aufbewahrung und Kompaktierung | Offen |
+| DATA-005 | Transaktions-/Wiederherstellungsmodell für systemübergreifende Aktionen | Technische Spezifikation erforderlich |
+| DATA-006 | Schema- und Paketversionierung für Mod-Inhalte | Abgleich mit Dokument 11 erforderlich |
+| DATA-007 | Provenienzmodell für externe Karten, Assets und Contentimporte | Offen |
+| DATA-008 | Umgang mit Konflikten zwischen Generatorupdates und Spieleränderungen | Technische Spezifikation erforderlich |
