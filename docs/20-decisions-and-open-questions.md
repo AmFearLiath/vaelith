@@ -99,3 +99,26 @@ Die folgenden Punkte wurden bei der Ausarbeitung von 04-player-progression-and-m
 | PROG-012 | Klassifikation persistenter Entscheidungswirkungen | 04-player-progression-and-magic.md | Offen |
 | PROG-013 | Konkrete Unterrichts-, Begleiter- und Reaktionsfunktionen Vaeliths | 04-player-progression-and-magic.md | Offen |
 | PROG-014 | Übernahme und Migration vorhandener Charakter-, Skill-, Magie- und Kampfdaten | 04-player-progression-and-magic.md | Quellenabgleich erforderlich |
+
+## 20.9 Ergänzte offene Entscheidungen aus den Gameplay-Systemen
+
+Die folgenden Punkte wurden bei der Erweiterung von 05-gameplay-systems.md als nicht abschließend spezifiziert identifiziert. Sie sind keine stillschweigenden Designentscheidungen. Vor Implementierung sind vorhandene Quellen zu prüfen und die offenen Regeln gemeinsam festzulegen.
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| GAME-001 | Vollständige Interaktionsarten, Kontextregeln und Abbruchverhalten | 05-gameplay-systems.md | Offen |
+| GAME-002 | Bestehende Kampfregeln, Trefferlogik und Aktionszustände | 05-gameplay-systems.md | Quellenabgleich erforderlich |
+| GAME-003 | Kampfressourcen, Effekte, Widerstände und Niederlagenfolgen | 05-gameplay-systems.md | Offen |
+| GAME-004 | Verbindliche Verknüpfung von Questentscheidungen mit persistenten Weltzuständen | 05-gameplay-systems.md | Offen |
+| GAME-005 | Bauplatzierung: Raster, Freiform oder kontextabhängiges Hybridverfahren | 05-gameplay-systems.md | Offen |
+| GAME-006 | Baukosten, Bauzeit, Materialtransport und Arbeitskräfteberechnung | 05-gameplay-systems.md | Offen |
+| GAME-007 | Schloss-/Siedlungsrechte, Grenzen und Besitz-/Kontrollmodell | 05-gameplay-systems.md | Offen |
+| GAME-008 | Dungeonbesitz, Personal, Unterhalt, Angriffe und Wiederherstellung | 05-gameplay-systems.md | Offen |
+| GAME-009 | Konkrete Raumtypen und Funktionsprofile für Dungeons | 05-gameplay-systems.md | Offen |
+| GAME-010 | Kreaturenrollen-Kompatibilität und Zuweisungsregeln | 05-gameplay-systems.md | Offen |
+| GAME-011 | Definition und Abgrenzung von Hoftieren | 05-gameplay-systems.md | Gemeinsam festzulegen |
+| GAME-012 | Zuchtregeln, Genetik, Wahrscheinlichkeiten und Generationseffekte | 05-gameplay-systems.md | Offen |
+| GAME-013 | Gameplay-UI, Eingabebelegung und Accessibility-Anforderungen | 05-gameplay-systems.md | Offen |
+| GAME-014 | Speichern/Wiederherstellen mehrstufiger Gameplay-Aktionen | 05-gameplay-systems.md | Technische Spezifikation erforderlich |
+| GAME-015 | Vollständiger Abgleich des vorhandenen Quest-JSON und Quest-Editors | 05-gameplay-systems.md | Quellenabgleich erforderlich |
+
