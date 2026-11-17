@@ -49,7 +49,7 @@ Der Spieler beginnt damit, die Welt zu entdecken. Danach lernt er, in ihr zu leb
 
 ## Wichtige Quellenbegrenzung
 
-Diese erste Fassung stützt sich auf die im aktuellen Projektkontext verfügbaren Gesprächsinhalte. Frühere Einzelchats, Item-Archive und Quelldateien konnten nicht vollständig erneut eingesehen werden. Insbesondere sind ursprüngliche Monetarisierungsdetails und vollständige Item-/JSON-Kataloge noch zu importieren. Diese Lücken sind an den jeweiligen Stellen dokumentiert. Es wird nicht behauptet, diese Quellen seien vollständig ausgewertet.
+Die am 17. November 2026 bereitgestellte documents.zip wurde eingelesen. Das Archiv enthält 325 Dateien, darunter 82 Markdown- und 240 JSON-Dateien sowie ein eingebettetes Items.zip. Alle 240 JSON-Dateien ließen sich syntaktisch parsen. Die fachliche Sichtung und Konsolidierung erfolgt systemweise und ist noch nicht abgeschlossen. Insbesondere sind Item-/Materialversionen und Referenzen noch nicht vollständig semantisch migriert; ursprüngliche Monetarisierungsdetails und frühere Einzelchats bleiben separate Quellenlücken. Dokument 23–25 führen Quellenstatus und Migrationsarbeit nach.
 
 ## Wichtige Arbeitsregel für Entwicklungsagenten
 
