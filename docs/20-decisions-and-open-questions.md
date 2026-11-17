@@ -346,3 +346,16 @@ Die folgenden Punkte wurden bei der Erweiterung von 07-world-generation.md ident
 | ASSET-011 | Technische Form, Ablage, Pflege und Buildintegration des zentralen Asset-Credit- und Attribution-Registers | 12-assets-animation-audio.md | Tool-/Prozessentscheidung erforderlich |
 | ASSET-012 | Automatisierte Prüfung ausgelieferter Assets gegen Lizenz- und Creditregister | 12-assets-animation-audio.md | Pipeline-/QA-Spezifikation erforderlich |
 | ASSET-013 | Konkrete Credit-Platzierung und Ausgabeformate je Releasekanal | 12-assets-animation-audio.md | Lizenz- und Produktprüfung erforderlich |
+
+
+## 20.24 Ergänzte offene Entscheidungen aus der systemübergreifenden Konsistenzprüfung
+
+| ID | Thema | Betroffene Dokumente | Status |
+|---|---|---|---|
+| DATA-009 | Globales ID-/Namensraummodell für Grundspiel, Mods, Importe und lokale Inhalte | 09, 11 | Technische Spezifikation erforderlich |
+| DATA-010 | Einheitlicher Änderungs-, Validierungs-, Freigabe- und Wiederherstellungslebenszyklus | 08, 09, 14, 18 | Prozess- und Architekturentscheidung erforderlich |
+| DATA-011 | Regeln für Änderungen an Definitionen gegenüber bestehenden Instanzen und persistentem Weltzustand | 07, 09, 13 | Fachliche und technische Spezifikation erforderlich |
+| WEB-011 | Kanonische Eigentümerschaft, Veröffentlichungsworkflow und Synchronisation gemeinsamer Web-/Spielinhalte | 09, 14 | Produkt-/Architekturentscheidung erforderlich |
+| QA-011 | Verbindliche Ende-zu-Ende-Integrationsszenarien und Testdatenbasis je Kernspielablauf | 05, 08, 09, 18 | Testkatalog vor Implementierungsbeginn festzulegen |
+
+Diese Punkte wurden als Klärungsbedarf ergänzt. Die zugehörigen Abschnitte beschreiben notwendige Anforderungen, legen aber weder ein konkretes ID-Format noch eine bestimmte Datenbank, Backendarchitektur oder technische Transaktionsimplementierung fest.
