@@ -267,3 +267,37 @@ Die Simulationsregeln müssen mit den Gameplay-Anforderungen aus Dokument 05, de
 | SIM-013 | Konkrete Rollen von Krankheiten, Verletzungen und Sterblichkeit in der Simulation | Offen |
 | SIM-014 | Simulation politischer Konflikte, Bündnisse und territorialer Kontrolle | Lore-/Gameplay-Abgleich erforderlich |
 | SIM-015 | Umgang mit Questfiguren und geschützten Populationen in Fernsimulation | Offen |
+
+
+## 6.26 Ökologische Populationen und Genetik — Quellenkonkretisierung
+
+Die Emberwild-Konzeptquellen erweitern das bisherige Ökologiemodell um explizite Populationsdynamik, Artenrollen, Nahrungsketten, Zuchtmerkmale und Mutationen. Für Vaelith wird daraus ein gemeinsames ökologisches Simulationsmodell abgeleitet; die ursprüngliche Asche-/Korruptionsthematik wird nicht automatisch als Vaelith-Weltmechanik übernommen.
+
+Das Modell soll mindestens abbilden:
+- Artenidentität, Lebensraum und regionale Verbreitung;
+- Population, Geburten, Sterblichkeit und Zu-/Abwanderung;
+- Nahrung, Wasser, Deckung und Tragfähigkeit eines Lebensraums;
+- Räuber-Beute-Beziehungen und Konkurrenz;
+- Jagd- und Sammeldruck durch Spieler/NPCs;
+- Krankheiten, Verletzungen und Umweltgefahren;
+- Domestizierung, Haltung, Zucht und Nachkommen;
+- individuelle Merkmale, Abstammung und Generationen;
+- seltene Arten und Schutz-/Erholungsmechanismen.
+
+Genetik wird als nachvollziehbares Merkmalssystem ausgelegt. Die Originalkonzepte nennen mehrere Kernmerkmale, Zuchtlinien und Mutationen. Konkrete Merkmalsliste, Vererbungsformeln, Wahrscheinlichkeiten und Mutationsauslöser werden erst nach vollständiger Sichtung der Datenquellen und Balancingtests festgelegt. Ein genetischer Wert darf nicht ohne definierte Auswirkung als bloße Zahl existieren.
+
+## 6.27 Meister, Vorarbeiter und Berufsentwicklung
+
+Produktionsstätten können eine verantwortliche Meister- oder Vorarbeiterrolle besitzen. Diese Rolle ist von einem gewöhnlichen Arbeitsplatz zu unterscheiden: Sie umfasst fachliche Spezialisierung, Produktionsfokus, Qualitätssicherung, Anleitung und nachvollziehbare Betriebsberichte.
+
+NPC-Berufsentwicklung soll eine mehrstufige Laufbahn unterstützen. Die Quelle beschreibt eine vierstufige Karriereidee; die konkrete Benennung und Werte sind noch zu prüfen. Berufserfahrung entsteht durch tatsächliche Arbeit, Training und geeignete Aufgaben. Meisterprägungen oder individuelle Spezialisierungen sind mögliche charakteristische Merkmale, dürfen aber nicht zu undurchsichtigen pauschalen Prozentboni werden.
+
+Bedürfnisse, Moral und Arbeitsleistung sind getrennt zu modellieren. Eine Siedlungsmoral ist ein nachvollziehbarer aggregierter Zustand aus Versorgung, Sicherheit, Wohnqualität, sozialen Beziehungen und Ereignissen, nicht ein willkürlicher Einzelwert.
+
+## 6.28 Ereignis- und Krisensteuerung
+
+Ein übergeordnetes Ereignissystem kann ökologische, wirtschaftliche, soziale und sicherheitsbezogene Krisen koordinieren. Es beobachtet Weltindikatoren, erkennt Schwellen und erzeugt passende Ereignisketten. Es ersetzt nicht die Fachsimulation und darf keine unplausiblen Krisen allein zur Beschäftigung des Spielers erzeugen.
+
+Jedes Ereignis benötigt Auslöser, betroffene Region/Akteure, Eskalationsstufen, Reaktionsfenster, Folgen, Auflösungsbedingungen und Schutz vor Wiederholungsschleifen. Ökologische Bedrohungen, organisierte Angriffe, Versorgungskrisen und politische Konflikte bleiben unterscheidbare Ereignisklassen.
+
+Die in älteren Konzepten verwendete Asche-/Korruptionsmechanik wird nicht pauschal übernommen. Übertragbar ist das Prinzip eines transparenten, systemübergreifenden Krisen-Direktors; die konkrete Vaelith-Weltgefahr muss aus dem freigegebenen Setting entstehen.
