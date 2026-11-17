@@ -168,3 +168,132 @@ Der zentrale Validator prüft unter anderem:
 ## 8.15 Editor-Abnahme
 
 Für jeden Editor muss eine dokumentierte Workflowprüfung existieren: Inhalt erstellen, bearbeiten, validieren, speichern, erneut laden, in anderem Editor referenzieren, in Runtime testen, fehlerhaften Zustand absichtlich erzeugen und Diagnose prüfen. Details siehe Kapitel 18.
+
+## 8.16 Editorübergreifende Bedien- und Workflowstandards
+
+Alle Fach-Editoren sollen sich trotz unterschiedlicher Aufgaben konsistent bedienen lassen. Gemeinsame Konzepte sind beispielsweise Auswahl, Suche, Filter, Inspektor, Vorschau, Validierung, Änderungsverlauf und Referenznavigation.
+
+Ein Editorworkflow muss den Nutzer vom Auffinden eines Datensatzes bis zur Verwendung in abhängigen Systemen begleiten. Dazu gehören:
+- direkte Navigation zu referenzierten Datensätzen;
+- Anzeige eingehender und ausgehender Abhängigkeiten;
+- verständliche Fehler mit betroffenen IDs und Pfaden;
+- Vorschau vor Übernahme riskanter Änderungen;
+- Speichern, Verwerfen und Wiederherstellen von Änderungen;
+- Kennzeichnung ungespeicherter oder ungültiger Zustände;
+- nachvollziehbare Meldungen bei fehlenden Assets oder inkompatiblen Versionen.
+
+Gemeinsame Bedienstandards dürfen fachliche Unterschiede nicht einebnen. Ein World Editor benötigt andere räumliche Werkzeuge als ein Quest Editor, soll aber dieselben Grundprinzipien für Datenintegrität und Feedback verwenden.
+
+## 8.17 Gemeinsamer Daten- und Referenzbrowser
+
+Die Suite benötigt einen zentralen Browser für kanonische Datensätze und ihre Referenzen. Er soll Suche nach ID, Name, Typ, Tags und weiteren fachlichen Eigenschaften ermöglichen.
+
+Der Browser muss mindestens:
+- Datensätze nach Typ und Fachgebiet filtern;
+- stabile IDs und Herkunft anzeigen;
+- Referenzen öffnen und Abhängigkeiten visualisieren;
+- verwaiste und doppelte Referenzen auffinden;
+- Verwendungsorte eines Datensatzes auflisten;
+- Änderungen und Versionen vergleichen;
+- Mod-/Paketzugehörigkeit kenntlich machen.
+
+Änderungen an gemeinsam verwendeten Daten müssen in allen betroffenen Editoren sichtbar werden. Lokale Kopien derselben Definition sind zu vermeiden.
+
+## 8.18 Import, Export und Migrationswerkzeuge
+
+Import-/Exportfunktionen sind Teil der Editorplattform und keine nachträglichen Hilfsskripte. Sie müssen Formate, Versionen, Herkunft und Validierungsergebnisse dokumentieren.
+
+Erforderlich sind je nach Fachgebiet:
+- Importvorschau mit Zuordnung erkannter Felder und Referenzen;
+- Erkennung vorhandener IDs und möglicher Duplikate;
+- explizite Regeln für Zusammenführen, Ersetzen und Ergänzen;
+- Fehler- und Warnbericht vor dem Commit;
+- Export mit Schema-/Paketversion;
+- Migrationsvorschau und Sicherung des Ausgangsstands;
+- nachvollziehbare Protokolle und Rücknahmeoptionen, soweit möglich.
+
+Bestehende JSON-Daten dürfen nicht stillschweigend umgeschrieben oder reduziert werden. Der Importer muss unbekannte Felder und nicht unterstützte Inhalte sichtbar behandeln.
+
+## 8.19 World- und Biome-Editor: spezielle Anforderungen
+
+World Editor und Biome Editor benötigen synchronisierte 2D-/3D-Ansichten mit auswählbaren Layern. Änderungen an Weltparametern oder Biomprofilen müssen ihre Auswirkungen auf Regionen und abhängige Inhalte sichtbar machen.
+
+Zu unterstützen sind:
+- Seed- und Profilverwaltung;
+- Layer für Höhenlage, Wasser, Klima, Biome, Gefahr und Ressourcen;
+- Regions- und Chunkgrenzen;
+- Generatorvorschau mit Vorher-/Nachhervergleich;
+- Nachbarregionen- und Kontinuitätsdiagnostik;
+- Anzeige geplanter, in Entwicklung befindlicher und freigegebener Regionen;
+- Schutz veröffentlichter Regionen vor unbeabsichtigter Überschreibung.
+
+## 8.20 Simulation und Test im Editor
+
+Fach-Editoren sollen relevante Regeln ohne vollständigen Spielstart testen können, soweit das fachlich sinnvoll und technisch zuverlässig möglich ist. Beispiele sind Questabläufe, NPC-Tagespläne, Produktionsketten, Zuchtregeln, Routen und Generatorparameter.
+
+Simulationen müssen:
+- Testdaten von produktiven Daten trennen;
+- verwendete Eingaben, Seeds und Regelversionen anzeigen;
+- pausieren, schrittweise laufen und zurücksetzen können;
+- erwartete und tatsächliche Ergebnisse darstellen;
+- keine unbeabsichtigten Änderungen an echten Spielständen erzeugen;
+- Fehler und nicht unterstützte Fälle eindeutig kennzeichnen.
+
+Eine Editorvorschau ersetzt nicht den Runtime-Test. Die Abnahme verlangt weiterhin den Einsatz der Daten im tatsächlichen Spiel.
+
+## 8.21 Rollen, Berechtigungen und sichere Änderungen
+
+Die Editor-Suite soll Änderungen nachvollziehbar und kontrollierbar machen. Für Team-/Projektworkflows sind Rollen und Berechtigungen zu prüfen, insbesondere für Freigaben, globale Daten, veröffentlichte Regionen und Mod-/Paketverwaltung.
+
+Unabhängig von einer späteren Mehrbenutzerlösung müssen riskante Operationen geschützt sein:
+- Löschen oder Umbenennen referenzierter Datensätze;
+- Änderungen an stabilen IDs;
+- Überschreiben freigegebener Weltinhalte;
+- Massenimporte und Massenänderungen;
+- Schema- und Generatorversionen;
+- Änderungen an gemeinsam genutzten Assets.
+
+Vor solchen Aktionen sind Auswirkungen und betroffene Referenzen anzuzeigen. Eine Bestätigung allein ersetzt keine Backup- und Migrationsstrategie.
+
+## 8.22 Erweiterbarkeit und Modding
+
+Die Editorplattform muss Erweiterungen berücksichtigen, ohne den Kern von Vaelith von beliebigen Plugins abhängig zu machen. Mod-/Content-Pakete benötigen definierte Metadaten, Versionen, Abhängigkeiten, Konfliktinformationen und Validierung.
+
+Datenmods und ausführbare Code-Mods sind getrennt zu behandeln. Die Editor-Suite darf keine Sicherheitsgarantie für beliebigen In-Process-Code suggerieren. Offizielle Modding- und API-Regeln werden in Dokument 11 festgelegt.
+
+## 8.23 Gemeinsame Definition of Done für Fach-Editoren
+
+Ein Fach-Editor ist erst abnahmefähig, wenn der reale Workflow nachweislich funktioniert:
+1. Datensatz oder Inhalt neu anlegen.
+2. Bestehende Inhalte öffnen und vollständig bearbeiten.
+3. Referenzen und Abhängigkeiten auflösen.
+4. Vorschau und fachliche Validierung ausführen.
+5. absichtlich fehlerhafte Daten erzeugen und verständliche Diagnose erhalten.
+6. Änderungen speichern, schließen und erneut laden.
+7. Daten in mindestens einem abhängigen Editor verwenden.
+8. Daten in Runtime oder einem repräsentativen Testsystem einsetzen.
+9. Änderungen vergleichen und dokumentieren.
+10. Fehlerfälle und bekannte Grenzen protokollieren.
+
+Nicht anwendbare Schritte müssen begründet werden. Ein Fenster, eine Formularansicht oder ein erfolgreicher Speichervorgang allein ist keine vollständige Editorfunktion.
+
+## 8.24 Schrittweise Entwicklung und visuelle Prüfbarkeit
+
+Die Editor-Suite wird in kleinen, eigenständig prüfbaren Arbeitspaketen aufgebaut. Jeder Editor erhält früh eine tatsächlich bedienbare Zwischenversion, damit Funktionen, Layout, räumliche Werkzeuge und Arbeitsabläufe geprüft werden können.
+
+Ein Arbeitspaket soll möglichst einen abgeschlossenen Workflow liefern, beispielsweise Datensatz anlegen, Vorschau öffnen, validieren, speichern und erneut laden. Nicht integrierte Bereiche und Platzhalter sind sichtbar zu kennzeichnen. Feedback und Korrekturen werden vor dem Ausbau abhängiger Funktionen berücksichtigt.
+
+## 8.25 Offene Entscheidungen
+
+| ID | Thema | Status |
+|---|---|---|
+| EDITOR-001 | Technische Basis der Editor-Suite innerhalb/außerhalb des Unity-Editors | Architekturentscheidung erforderlich |
+| EDITOR-002 | Gemeinsames UI-/UX-System und Layoutstandards | Prototyp/Abstimmung erforderlich |
+| EDITOR-003 | Gemeinsames Referenz- und Dependency-Browser-Konzept | Technische Spezifikation erforderlich |
+| EDITOR-004 | Undo/Redo-Umfang und Änderungs-/Transaktionsmodell | Technische Prüfung erforderlich |
+| EDITOR-005 | Import-/Exportformate und Migrationsworkflow je Fachgebiet | Quellenabgleich erforderlich |
+| EDITOR-006 | Berechtigungs- und Freigabemodell | Offen |
+| EDITOR-007 | Umfang von Simulationen direkt in Fach-Editoren | Workflowprüfung erforderlich |
+| EDITOR-008 | Erweiterungspunkte für Datenmods und Code-Mods | Abgleich mit Dokument 11 erforderlich |
+| EDITOR-009 | Gemeinsame Suche, Tags und Metadatenstandards | Technische Spezifikation erforderlich |
+| EDITOR-010 | Automatisierte Editor-Workflowtests und Testdatenverwaltung | QA-Spezifikation erforderlich |
