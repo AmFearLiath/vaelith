@@ -297,3 +297,25 @@ Ein Arbeitspaket soll möglichst einen abgeschlossenen Workflow liefern, beispie
 | EDITOR-008 | Erweiterungspunkte für Datenmods und Code-Mods | Abgleich mit Dokument 11 erforderlich |
 | EDITOR-009 | Gemeinsame Suche, Tags und Metadatenstandards | Technische Spezifikation erforderlich |
 | EDITOR-010 | Automatisierte Editor-Workflowtests und Testdatenverwaltung | QA-Spezifikation erforderlich |
+
+
+## 8.26 Gemeinsamer Änderungslebenszyklus und Datenintegrität
+
+Alle Fach-Editoren verwenden die in Dokument 09 beschriebenen gemeinsamen Regeln für Entwurf, Validierung, Vorschau, Übernahme und Änderungsprotokoll. Fachspezifische Workflows ergänzen diese Regeln, ersetzen sie aber nicht.
+
+Bei jeder Änderung an gemeinsam referenzierten Datensätzen muss der Editor:
+- betroffene Referenzen und abhängige Systeme anzeigen;
+- zwischen Definition, Instanz und persistentem Weltzustand unterscheiden;
+- mögliche Auswirkungen auf bestehende Spielstände und veröffentlichte Regionen kenntlich machen;
+- ungültige oder unvollständige Änderungen vor der Übernahme blockieren oder ausdrücklich als nicht freigabefähig markieren;
+- die Änderung mit stabilen IDs und nachvollziehbarer Herkunft speichern.
+
+Ein Editor darf eine Änderung nicht als erfolgreich übernommen melden, wenn nur seine lokale Ansicht aktualisiert wurde, die kanonische Datenquelle aber unverändert oder inkonsistent geblieben ist.
+
+## 8.27 Testdaten, Produktionsdaten und sichere Vorschau
+
+Die Trennung von Test- und Produktivdaten gilt für alle Fach-Editoren und ihre Simulatoren. Testläufe müssen ihre Datenbasis, Seed-/Regelversionen und Ausführungsumgebung kenntlich machen.
+
+Vorschauen dürfen produktive Daten nur verändern, wenn der Nutzer ausdrücklich eine Übernahme ausführt und die betroffenen Änderungen vorher nachvollziehen kann. Reset- und Wiederherstellungsfunktionen müssen klar angeben, welchen Datenbereich sie betreffen.
+
+Die Runtime-Abnahme bleibt erforderlich: Eine im Editor erfolgreiche Vorschau beweist nicht, dass derselbe Datensatz im Spiel korrekt geladen, gespeichert und verwendet wird.
