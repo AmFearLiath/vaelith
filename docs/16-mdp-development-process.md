@@ -130,3 +130,68 @@ Verbindlicher Ablauf:
 Wenn technische Abhängigkeiten eine unmittelbare Sichtprüfung verhindern, muss der Agent die Ursache, die fehlende Voraussetzung und den frühestmöglichen sinnvollen Prüfpunkt benennen. Er soll den Umfang so schneiden, dass unnötig lange Phasen ohne sichtbaren oder funktionalen Fortschritt vermieden werden.
 
 Die Projektleitung erhält damit regelmäßig Gelegenheit, tatsächliches Verhalten und Erscheinungsbild zu bewerten, bevor weitere Systeme oder Inhalte darauf aufbauen.
+
+
+## 16.12 Arbeitspaketgrößen und vertikale Lieferung
+
+Ein Arbeitspaket wird so zugeschnitten, dass es ein überprüfbares Ergebnis mit begrenztem Änderungsumfang liefert. Wenn ein Paket mehrere voneinander unabhängige Ergebnisse enthält, ist es in kleinere Pakete aufzuteilen. Wenn ein einzelnes technisches Ergebnis ohne minimale Integration nicht sinnvoll prüfbar wäre, gehört diese Integration zum Paket.
+
+Bevorzugt werden vertikale Scheiben: ein kleiner vollständiger Ablauf von Daten/Definition über Runtime und UI/Editor bis zur Persistenz und Prüfung. Reine Infrastrukturpakete sind zulässig, wenn sie eine konkrete nachfolgende Funktion ermöglichen und ihre eigene technische Abnahme besitzen.
+
+## 16.13 Abhängigkeits- und Reihenfolgeplanung
+
+Jedes Paket führt explizite Vorgänger, Nachfolger, blockierende Entscheidungen und betroffene Systeme. Abhängigkeiten werden nicht nur als Namensliste geführt, sondern beschreiben, welche konkrete Fähigkeit oder welches Daten-/Schnittstellenversprechen benötigt wird.
+
+Die Planung soll kritische Grundlagen früh erkennen, aber keine vollständige Vorabimplementierung aller denkbaren Frameworks verlangen. Technische Entscheidungen werden möglichst anhand eines realen, repräsentativen Anwendungsfalls validiert.
+
+## 16.14 MDP-Paketdefinition
+
+Jede Paketdefinition enthält mindestens:
+
+- eindeutige Paket-ID, Titel und verantwortliche Rolle;
+- Problem, Ziel und messbares Ergebnis;
+- explizite Nicht-Ziele und Scopegrenzen;
+- betroffene Systeme, Dateien und Datenbestände;
+- Voraussetzungen, Abhängigkeiten und offene Entscheidungen;
+- geplante Aufgaben und sinnvolle Reihenfolge;
+- Datenverträge, APIs und Integrationspunkte;
+- Risiken und Rückfall-/Wiederherstellungsstrategie;
+- funktionale und visuelle Prüfmethode;
+- automatisierte und manuelle Tests;
+- Abnahmekriterien und erwartete Übergabeartefakte.
+
+## 16.15 Freigabe, Umsetzung und Änderungsantrag
+
+Vor Beginn wird das Paket fachlich beschrieben und mit der Projektleitung abgestimmt. Die Freigabe gilt für den beschriebenen Umfang, nicht pauschal für alle während der Arbeit entdeckten Erweiterungen.
+
+Neue Erkenntnisse, die Scope, Architektur, Datenmodell, Zeitbedarf oder Abhängigkeiten wesentlich verändern, werden als Änderungsantrag mit Nutzen, Risiko und Empfehlung vorgelegt. Notwendige Korrekturen innerhalb des vereinbarten Umfangs dürfen eigenständig vorgenommen werden.
+
+## 16.16 Integrierte Dokumentation und Nachvollziehbarkeit
+
+Dokumentation ist Bestandteil der Lieferung und nicht eine optionale Abschlussaufgabe. Änderungen an Datenmodellen, Editorworkflows, APIs, Konfiguration, Build-/Testschritten und bekannten Grenzen werden dort dokumentiert, wo Entwickler und Nutzer sie benötigen.
+
+Jeder Paketabschluss enthält eine präzise Änderungsübersicht mit Pfaden, tatsächlichen Testbefehlen bzw. Prüfschritten, Ergebnissen, offenen Punkten und dem nächsten sinnvollen Schritt. Commits sollen logisch gruppiert und auf das Arbeitspaket zurückführbar sein.
+
+## 16.17 Integrations- und Rückfallplanung
+
+Vor Änderungen an gemeinsam genutzten Schnittstellen oder persistenten Daten wird geprüft, wie abhängige Systeme weiterarbeiten und wie ein fehlerhafter Stand zurückgenommen oder migriert werden kann. Datenmigrationen benötigen Backup-/Wiederherstellungsstrategie, Validierung und möglichst einen reproduzierbaren Testlauf.
+
+Ein Paket darf nicht als integriert gelten, wenn es nur isoliert kompiliert, aber den vereinbarten Ablauf im Zielsystem nicht erfüllt. Integrationsfehler werden als konkrete Blocker dokumentiert.
+
+## 16.18 Priorisierung
+
+Die Priorisierung berücksichtigt mindestens: Abhängigkeiten und Blocker, Risiko für bestehende Daten, Nutzen für einen prüfbaren Spielablauf, technische Unsicherheit, Nutzerwirkung, Aufwand und spätere Änderbarkeit. Sicherheits- und Datenintegritätsprobleme haben Vorrang vor Komfort- oder Politurarbeiten.
+
+Der Agent soll eine priorisierte Empfehlung mit Begründung liefern. Er soll nicht mehrere gleichwertige Roadmaps nebeneinanderstellen, wenn eine klare Empfehlung möglich ist.
+
+## 16.19 Status und tatsächlicher Lieferzustand
+
+Für jedes Paket werden Planung, Implementierung, Integration, Prüfung und Abnahme getrennt erfasst. Ein grüner Status darf nicht aus bloßem Vorhandensein von Dateien oder Code abgeleitet werden. Nicht verfügbare Testumgebungen, nicht ausgeführte Tests und externe Abhängigkeiten bleiben sichtbar.
+
+Ein Paket kann teilweise geliefert werden, wenn Teilergebnis, verbleibende Aufgaben und Einschränkungen klar ausgewiesen sind. Teilfertigstellung darf nicht als Gesamtabschluss kommuniziert werden.
+
+## 16.20 Projektweite Roadmap und M00–M12
+
+Die vorhandene M00–M12-Struktur ist eine vorläufige Themen-/Monolithenplanung und keine starre Reihenfolge für vollständige, monolithische Implementierungen. Für jeden Bereich werden konkrete MDP-Arbeitspakete erstellt. Querschnittsabhängigkeiten wie Datenarchitektur, Editorwerkzeuge, Modding, QA und Assets werden bei der Paketplanung explizit berücksichtigt.
+
+Die Reihenfolge wird anhand realer Abhängigkeiten und früher prüfbarer Ergebnisse angepasst. Eine Änderung der Roadmap wird begründet und im Projektstatus dokumentiert.
