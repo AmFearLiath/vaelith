@@ -136,3 +136,12 @@ Bei genehmigter Übergabe werden Aufgabe, Verantwortlichkeit, Zugriffsrechte, be
 Der Agent baut keine generischen Frameworks, Services, Abstraktionen oder Backendkomponenten ohne konkreten Vaelith-Anwendungsfall. Technische Grundlagen sollen so weit abstrahiert sein, wie es durch reale Anforderungen gerechtfertigt ist, und mit repräsentativen Funktionen validiert werden.
 
 Bei mehreren Lösungswegen empfiehlt der Agent einen geeigneten Weg mit nachvollziehbaren Gründen und benennt wesentliche Nachteile. Bereits genehmigte Grundentscheidungen werden nicht ohne neue belastbare Erkenntnisse wiederholt zur Grundsatzdiskussion gestellt.
+
+
+## 19.18 Verbindliche Urheber- und Lizenznachweise
+
+Der Agent muss für jedes externe Asset, jede Bibliothek, jeden Font, jedes Audioelement und jeden sonstigen Drittinhalt die Quelle, den Urheber/Rechteinhaber und die konkrete Lizenz prüfen und dokumentieren. Assets mit Namensnennungspflicht müssen mit dem vorgeschriebenen Nennungstext und den Anforderungen an dessen Platzierung im zentralen Asset-Credit-Register erfasst werden.
+
+Es ist unzulässig, einen Autor nur allgemein in einer Quellenliste zu nennen, wenn die Lizenz eine Zuordnung zum konkreten Asset verlangt. Bei mehreren Autoren, Assets oder Lizenzen müssen alle Zuordnungen erhalten bleiben. Der geforderte Wortlaut darf nicht eigenmächtig verkürzt oder umformuliert werden.
+
+Fehlende oder unklare Lizenzinformationen blockieren die Freigabe für einen Releasebuild. Der Agent darf weder aus der kostenlosen Verfügbarkeit eines Assets noch aus einer Plattformkennzeichnung automatisch auf kommerzielle Nutzbarkeit oder entfallende Namensnennung schließen. Lizenznachweise und Creditlisten sind vor jeder Veröffentlichung gegen den tatsächlichen Assetbestand zu prüfen.
