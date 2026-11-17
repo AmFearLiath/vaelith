@@ -372,3 +372,28 @@ Diese Punkte wurden als Klärungsbedarf ergänzt. Die zugehörigen Abschnitte be
 | Nicht entschiedene Fragen und Quellenlücken | Offen | Nicht als beschlossene Architektur oder Spielfunktion behandeln |
 
 Diese Einordnung ist übergeordnet und gilt für sämtliche Fachkonzepte. Sie ersetzt nicht die jeweils konkrete Statuskennzeichnung in den einzelnen Dokumenten.
+
+
+## 20.26 Entscheidungen aus dem Quellenimport und Quest-System-Design
+
+| ID | Entscheidung / Thema | Status |
+|---|---|---|
+| QUEST-001 | Quest Runtime als zentrale, datengetriebene Event-/Zustandsmaschine; keine Questlogik in Szenenskripten | Vaelith-Zielarchitektur festgelegt |
+| QUEST-002 | Questdefinitionen, Dialoge, Knowledge, World State und Player Quest State sind getrennte Datenbereiche | Zielarchitektur festgelegt |
+| QUEST-003 | Conditions als typisierte verschachtelte Ausdrucksbäume mit AND/OR/NOT | Zielarchitektur festgelegt |
+| QUEST-004 | Objectives als azyklischer Graph mit Gruppen, Abhängigkeiten und Alternativpfaden | Zielarchitektur festgelegt |
+| QUEST-005 | Entscheidungen werden dauerhaft im Decision Ledger gespeichert und können verzögerte Konsequenzen auslösen | Zielarchitektur festgelegt |
+| QUEST-006 | World Actions sind zentral definiert, autorisiert und idempotent | Zielarchitektur festgelegt |
+| QUEST-007 | Knowledge unterstützt Quellen, Bestätigung, Widerlegung und widersprüchliche Informationen | Zielarchitektur festgelegt |
+| QUEST-008 | Hauptstory-Quests sind standardmäßig nicht aufgebbar; Zeitlimits müssen klar kommuniziert sein | Vaelith-Designentscheidung |
+| QUEST-009 | Multiplayer-Questregeln sind nicht Teil des aktuellen verbindlichen Umfangs | Singleplayer-first; Multiplayer offen |
+| QUEST-010 | Bestehende Quest-IDs, Objective-IDs, Übersetzungen und World-Change-Referenzen sind soweit möglich zu erhalten | Migrationsleitplanke |
+| QUEST-011 | Questdaten enthalten keinen beliebigen ausführbaren Code | Sicherheits-/Architekturleitplanke |
+| DATA-012 | Itemdefinitionen, Instanzen, Stacks, Rezepte, Produktionsaufträge und Facilities sind getrennte Datenkonzepte | Zielarchitektur festgelegt |
+| DATA-013 | Historische Katalogversionen werden familienweise verglichen; Einträge verschiedener Versionen werden nicht addiert | Migrationsleitplanke |
+| GAME-016 | Volle 3D-Bewegung ist Primärmodell; isometrische Übersicht ist Kameramodus, keine 2D-Bewegungsarchitektur | Projektleitplanke konkretisiert |
+| GAME-017 | Kamera-/Physikwerte aus Emberwild-Entwürfen sind Prototypwerte und müssen in Unity validiert werden | Technische Leitplanke |
+| EDITOR-011 | Quest Editor muss Graphauthoring, Simulation, Debugging und Validierung abdecken | Zielanforderung |
+| EDITOR-012 | 3D-Editor-Grundwerkzeuge werden als gemeinsame Infrastruktur bereitgestellt | Zielanforderung |
+
+Die detaillierten Anforderungen und Quellen stehen in Dokument 23 (Quellenregister), Dokument 24 (Item-/Produktionsmigration) und Dokument 25 (Quest-System). Diese Entscheidungen konkretisieren die Vaelith-Zielarchitektur; sie behaupten nicht, dass die ursprünglichen Emberwild-Systeme bereits fertig implementiert waren.
