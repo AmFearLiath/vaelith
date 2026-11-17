@@ -122,3 +122,25 @@ Die folgenden Punkte wurden bei der Erweiterung von 05-gameplay-systems.md als n
 | GAME-014 | Speichern/Wiederherstellen mehrstufiger Gameplay-Aktionen | 05-gameplay-systems.md | Technische Spezifikation erforderlich |
 | GAME-015 | Vollständiger Abgleich des vorhandenen Quest-JSON und Quest-Editors | 05-gameplay-systems.md | Quellenabgleich erforderlich |
 
+## 20.10 Ergänzte offene Entscheidungen aus der Welt- und Simulationsarchitektur
+
+Die folgenden Punkte wurden bei der Erweiterung von 06-living-world-simulation.md identifiziert. Sie beschreiben offene fachliche oder technische Entscheidungen und sind nicht als bereits beschlossene Regeln zu behandeln.
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| SIM-001 | Finale NPC-Bedürfnisgruppen und deren Priorisierung | 06-living-world-simulation.md | Offen |
+| SIM-002 | Detailgrad und Speicherumfang persönlicher Erinnerungen | 06-living-world-simulation.md | Offen |
+| SIM-003 | Informationsverbreitung zwischen NPCs und Fraktionen | 06-living-world-simulation.md | Offen |
+| SIM-004 | Beziehungsmodell und Fraktionsdynamik | 06-living-world-simulation.md | Offen |
+| SIM-005 | Faktoren und Grenzen des Siedlungswachstums | 06-living-world-simulation.md | Offen |
+| SIM-006 | Konkrete Produktions-, Verbrauchs- und Transportregeln | 06-living-world-simulation.md | Quellenabgleich/Design erforderlich |
+| SIM-007 | Ökologische Populationsmodelle und Schutz seltener Arten | 06-living-world-simulation.md | Offen |
+| SIM-008 | Weltzeit bei geschlossenem Spiel und Offline-Fortschritt | 06-living-world-simulation.md | Produktentscheidung erforderlich |
+| SIM-009 | Simulationsintervalle, Radien und CPU-/Speicherbudgets | 06-living-world-simulation.md | Profiling erforderlich |
+| SIM-010 | Determinismus-Anforderungen über Plattformen und Spielstände hinweg | 06-living-world-simulation.md | Technische Prüfung erforderlich |
+| SIM-011 | Übergang von aggregierten Populationen zu individuellen NPCs/Tieren | 06-living-world-simulation.md | Technische Spezifikation erforderlich |
+| SIM-012 | Ereignisketten, Zufallssteuerung und globale Ereignisgrenzen | 06-living-world-simulation.md | Offen |
+| SIM-013 | Konkrete Rollen von Krankheiten, Verletzungen und Sterblichkeit in der Simulation | 06-living-world-simulation.md | Offen |
+| SIM-014 | Simulation politischer Konflikte, Bündnisse und territorialer Kontrolle | 06-living-world-simulation.md | Lore-/Gameplay-Abgleich erforderlich |
+| SIM-015 | Umgang mit Questfiguren und geschützten Populationen in Fernsimulation | 06-living-world-simulation.md | Offen |
+
