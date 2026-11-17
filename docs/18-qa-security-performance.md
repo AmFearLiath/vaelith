@@ -184,3 +184,30 @@ Der Bericht unterscheidet eindeutig zwischen implementiert, integriert, technisc
 | QA-008 | Plattformübergreifende Modding- und Backend-Testmatrix | Kompatibilitätstests erforderlich |
 | QA-009 | Visuelle Qualitätsmetriken und Abnahmeverfahren | Art-/QA-Abstimmung erforderlich |
 | QA-010 | Langzeittests für Simulation und Weltzeit | Testkonzept erforderlich |
+
+
+## 18.23 Systemübergreifende Integrationsprüfungen
+
+Einzeltests je Fachsystem reichen nicht aus, wenn ein Feature Daten und Zustände über mehrere Systeme hinweg verändert. Für zentrale Spielabläufe sind reproduzierbare Ende-zu-Ende-Prüfungen vorzusehen.
+
+Geeignete Integrationsketten umfassen beispielsweise:
+- World-/Biome-Definition → Regionsgenerierung → persistierte Region → Streaming und Runtime;
+- Settlement/Building → NPC-Arbeitsplatz und Tagesablauf → Produktion → Wirtschaftszustand;
+- Questbedingung → Entscheidung/Trigger → systemübergreifende Zustandsänderung → Belohnung und persistente Konsequenz;
+- Itemdefinition → Instanz/Inventar → Ausrüstung → Charakter-/Kampfwirkung;
+- Datenmod → Paket- und Referenzvalidierung → Registrierung → Runtime-Nutzung → Savegame-Wiederöffnung;
+- Editoränderung → Validierung/Übernahme → Build oder Laufzeit → erneutes Laden.
+
+Jede Integrationsprüfung dokumentiert Ausgangsdaten, Versionen, Seeds soweit relevant, erwarteten Zustand, tatsächliches Ergebnis und Wiederholbarkeit. Fehler müssen auf das verantwortliche System und die betroffenen IDs eingegrenzt werden können.
+
+## 18.24 Releaseprüfung über Daten-, Asset- und Contentgrenzen
+
+Vor einem Release werden nicht nur ausführbare Dateien, sondern auch die tatsächlich ausgelieferten Datenpakete und Assets geprüft. Die Prüfung umfasst mindestens:
+- Schema- und Referenzintegrität;
+- erforderliche Mod-/Content-Abhängigkeiten;
+- Assetherkunft, Lizenzstatus und vorgeschriebene Attribution;
+- Versionen und Migrationsfähigkeit unterstützter Spielstände;
+- unbeabsichtigte Test-, Debug- oder nicht freigegebene Inhalte;
+- Übereinstimmung zwischen freigegebenem Content und ausgeliefertem Build.
+
+Nicht auflösbare Lizenz-, Datenintegritäts- oder Sicherheitsblocker verhindern die Releasefreigabe. Nicht ausgeführte Prüfungen sind als offen zu melden und dürfen nicht als bestanden gelten.
