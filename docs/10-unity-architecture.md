@@ -155,3 +155,12 @@ Für jeden Architekturentscheid werden Alternativen, Messwerte, Zielumgebung, Ei
 | ARCH-008 | Zielplattformen, Backends und Buildprofile | Produktentscheidung erforderlich |
 | ARCH-009 | Logging-/Telemetrieumfang und Datenschutzgrenzen | Produkt-/Technikentscheidung erforderlich |
 | ARCH-010 | Netzwerk-/Onlinefunktionen und Backend-Abhängigkeiten | Produktentscheidung erforderlich |
+
+
+## 10.20 3D-Spielsteuerung, Kamera und Navigation
+
+Die Emberwild-Quelle zur 3D-Perspektive beschreibt Third-Person-Kamera, stufenlosen Zoom zwischen Übersicht und Schulterperspektive, Spring-Arm-Kollisionsschutz, freie Umschau, WASD und Point-to-Go als alternative Steuerungsarten, Ground-Snapping, Stufenüberwindung und mehrgeschossige Navigation. Diese fachlichen Anforderungen sind für Vaelith relevant.
+
+Vaelith behandelt echte 3D-Bewegung als Primärmodell. Eine isometrische Übersicht kann als zusätzlicher Kameramodus für taktische Übersicht und Baumodus existieren, darf aber die Bewegungs-, Kollisions- und Navigationsarchitektur nicht auf eine 2D-Ebene reduzieren. Kamera- und Physikwerte aus Emberwild sind Prototyp-Startwerte und müssen in Unity mit repräsentativen Szenen, Charaktergrößen, Treppen, Rampen, Brücken, Hängen und Gebäuden validiert werden.
+
+Navigation, Physik, Interaktion und Kamera müssen dieselben Höhen- und Kollisionsrealitäten berücksichtigen. Die freie Dev-Editor-Kamera ist davon getrennt und darf nicht die Spielerbewegungslogik verwenden.
