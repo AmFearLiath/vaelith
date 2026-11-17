@@ -44,3 +44,69 @@ Balancing benötigt nachvollziehbare Tabellen, Referenzszenarien und Simulatione
 ## 13.9 Quellenlücke und Importpflicht
 
 Das frühere Gespräch „Wirtschaftsbalancing besprechen“ und die genannten Item-Archive müssen als Originalquellen erneut herangezogen werden, bevor das endgültige Wirtschafts-/Itemkapitel als vollständig gelten kann. Diese Fassung ist die Systemhülle, nicht die vollständige Migration der historischen Kataloge.
+
+
+## 13.10 Kanonische Definitionen und individuelle Instanzen
+
+Itemdefinitionen sind zentrale, versionierte Stammdaten. Eine konkrete Iteminstanz in Welt, Inventar, Lager oder Ausrüstung referenziert ihre Definition und trägt nur instanzbezogene Zustände. Laufzeitkopien dürfen keine voneinander abweichenden Stammdaten erzeugen.
+
+Die endgültige Trennung und Feldstruktur wird erst nach Prüfung der vorhandenen JSON-Quellen festgelegt. Bei der Migration müssen bestehende IDs und Referenzen soweit möglich erhalten bleiben. Unvermeidbare Änderungen benötigen Mapping, Validierung und einen nachvollziehbaren Migrationspfad.
+
+## 13.11 Inventar, Lagerung und Transport
+
+Inventar, persönliche Truhen, Siedlungslager, Händlerbestände, Produktionslager und Dungeonlager verwenden konsistente Regeln für Itemstapel, Mengen, Kapazitäten und Besitz. Unterschiedliche Lagerarten dürfen eigene Zugriffsbeschränkungen oder Kapazitätsprofile besitzen, aber keine voneinander abweichenden Itemidentitäten.
+
+Transport ist ein eigener wirtschaftlicher Vorgang: Waren müssen zwischen Quelle und Ziel bewegt werden können. Soweit das Spielsystem Transportzeiten, Träger, Fahrzeuge, Routen oder Verlustrisiken verwendet, müssen diese Größen in direkter Interaktion und Simulation dieselbe fachliche Bedeutung haben.
+
+## 13.12 Handel, Preise und Marktverhalten
+
+Handel verbindet Spieler, Händler, NPCs, Siedlungen, Fraktionen und Produktionsstätten. Preise und Verfügbarkeit können von Angebot, Nachfrage, Lagerbestand, Entfernung, Transportaufwand, Qualität, regionalen Bedingungen und Ereignissen beeinflusst werden. Welche Faktoren tatsächlich gelten und wie stark sie wirken, bleibt eine Balancingentscheidung.
+
+Ein Markt darf nicht unabhängig von der Weltwirtschaft unbegrenzt Waren erzeugen oder aufnehmen. Händlerbestände und Geldflüsse benötigen nachvollziehbare Quellen und Grenzen. Preisänderungen müssen reproduzierbar diagnostizierbar sein; der Spieler soll erkennbare Ursachen für relevante Marktveränderungen erhalten.
+
+## 13.13 Produktions- und Verbrauchsverträge
+
+Jede Produktionskette beschreibt ihre Eingänge, Ausgänge, Verluste/Nebenprodukte, benötigte Stationen, Arbeitskräfte, Dauer und Abhängigkeiten. Verbraucher sind unter anderem NPC-Haushalte, Siedlungen, Tiere, Werkstätten, Bauvorhaben und der Spieler.
+
+Produktion darf nur stattfinden, wenn erforderliche Inputs und Voraussetzungen vorhanden sind. Fehlende Materialien, unbesetzte Arbeitsplätze, beschädigte Infrastruktur oder unterbrochene Transportwege müssen sich nachvollziehbar auf den Produktionsstatus auswirken. Die Simulation kann Vorgänge aggregieren, muss aber dieselben fachlichen Ergebnisse liefern wie eine detailliert simulierte Interaktion.
+
+## 13.14 Qualität, Seltenheit und Varianten
+
+Qualität, Seltenheit, Herkunft, Zustand und visuelle Variante sind getrennt zu modellieren, sofern die vorhandenen Datenquellen keine abweichende verbindliche Struktur vorgeben. Eine seltene Optik darf nicht automatisch bessere Werte bedeuten. Materialqualität, Handwerksfähigkeit, Rohstoffmerkmale und Herstellungsbedingungen können als Balancingfaktoren geprüft werden.
+
+Varianten benötigen stabile Identitäten oder eindeutig auflösbare Variantendaten. Inventaricon, Weltmodell, Ausrüstungsmodell und Tooltip müssen dieselbe Iteminstanz und ihre relevanten Eigenschaften darstellen.
+
+## 13.15 Crafting, Werkstätten und Fähigkeiten
+
+Werkstätten und Craftingstationen sind echte Weltobjekte bzw. Funktionsorte mit Verfügbarkeit, Zustand und möglichen Spezialisierungen. Rezepte referenzieren kanonische Inputs und Outputs. Fähigkeiten oder Berufe können Herstellungsqualität, Effizienz oder Freischaltungen beeinflussen, sofern dies durch die bestehenden Regeln gedeckt ist.
+
+Der Craftingablauf muss Materialprüfung, Stationsprüfung, Start, Fortschritt, Abbruch, Abschluss, Ergebnisverbuchung und Fehlerbehandlung definieren. Ein Vorgang darf bei Abbruch oder Fehlern keine Materialien duplizieren oder ungewollt verlieren. Persistenz und Transaktionsverhalten sind mit der Datenarchitektur abzustimmen.
+
+## 13.16 Systemintegration
+
+Wirtschaft, Items und Crafting sind keine isolierten Minispiele. Zu berücksichtigen sind mindestens:
+
+- Spielerinventar, Ausrüstung, Beute und Belohnungen;
+- NPC-Bedürfnisse, Berufe, Löhne und Haushalte;
+- Siedlungen, Händler, Lager, Märkte und Handelsrouten;
+- Landwirtschaft, Tierhaltung, Zucht und Tierprodukte;
+- Gebäude, Baukosten, Reparatur und Infrastruktur;
+- Dungeonräume, Personal, Ressourcenabbau und Produktion;
+- Quests, Ereignisse, Fraktionen und Weltzustände;
+- Mods, Datenversionierung und Spielstandmigration.
+
+Änderungen an Definitionen oder Rezepten müssen Auswirkungen auf bestehende Spielstände und Mod-Inhalte berücksichtigen.
+
+## 13.17 Wirtschaftsdiagnose und Balancingwerkzeuge
+
+Die Editor-/Diagnosewerkzeuge sollen Produktionsketten, Warenflüsse, Lagerbestände, Engpässe, Preisverläufe, Verbrauchsraten und nicht erfüllte Bedürfnisse sichtbar machen. Testläufe müssen mit kontrollierten Ausgangsdaten und reproduzierbaren Parametern wiederholbar sein.
+
+Balancingänderungen werden nicht nur anhand einzelner Itemwerte beurteilt. Zu prüfen sind komplette Produktions- und Versorgungsketten über unterschiedliche Regionen, Siedlungsgrößen, Entwicklungsstände und Spielphasen. Abweichungen zwischen Detail- und Fernsimulation sind gezielt zu testen.
+
+## 13.18 Abnahmekriterien
+
+Ein Teilbereich ist erst abnahmebereit, wenn Definitionen und Instanzen konsistent sind, Referenzen validiert werden, Persistenz und Migration geprüft sind, Produktions- und Handelsflüsse keine unbeabsichtigten Duplikate oder Quellen erzeugen und repräsentative Szenarien praktisch getestet wurden. Editoransichten müssen die relevanten Daten bearbeiten, validieren und nachvollziehbar speichern können.
+
+## 13.19 Offene Entscheidungen
+
+Die zugehörigen offenen Punkte ECON, ITEM und CRAFT sind im Entscheidungsregister unter Dokument 20 geführt. Die endgültigen Schemas, Zahlen und Formeln bleiben bis zur Prüfung der historischen Quelldaten ausdrücklich offen.
