@@ -58,3 +58,63 @@ Unity soll nicht erneut installiert werden, wenn eine funktionierende Installati
 ## 17.6 Freigabepunkte
 
 Vor dem Start größerer Implementierungspakete werden Umfang, Abnahmekriterien und grundlegende Entscheidungen besprochen und freigegeben. Nach Abschluss erfolgt eine demonstrierbare Übergabe mit Testnachweisen.
+
+
+## 17.7 Paketierung in überprüfbare Lieferstufen
+
+Die Monolithen werden in MDP-Arbeitspakete zerlegt. Ein Monolith ist kein einzelner Entwicklungsauftrag und kein Grund, mehrere Monate ohne prüfbares Ergebnis zu arbeiten. Jedes Paket soll einen klar abgegrenzten Funktions- oder Integrationsschritt liefern.
+
+Die Roadmap unterscheidet:
+- **Grundlagen:** notwendige technische und fachliche Verträge;
+- **Vertikale Scheiben:** kleine vollständige Abläufe im tatsächlichen Spielkontext;
+- **Ausbau:** zusätzliche Varianten, Inhalte und Detailtiefe;
+- **Härtung:** Performance, Sicherheit, Kompatibilität, Migration und Fehlerbehebung;
+- **Releasevorbereitung:** Inhalte, Credits, Store-/Plattformanforderungen, Builds und Freigaben.
+
+Die Reihenfolge wird anhand konkreter Abhängigkeiten und frühestmöglicher Prüfbarkeit festgelegt. Ein Paket soll nicht künstlich warten, wenn ein unabhängiger Teilbereich sinnvoll und sicher umgesetzt werden kann.
+
+## 17.8 Meilensteine als Ergebniszustände
+
+Meilensteine werden durch nachweisbare Ergebnisse beschrieben, nicht allein durch Kalenderdaten oder Prozentangaben. Ein Meilenstein enthält:
+- erwartete spielbare bzw. technisch prüfbare Fähigkeiten;
+- enthaltene und ausdrücklich ausgeschlossene Inhalte;
+- abhängige Pakete und offene Entscheidungen;
+- funktionale und visuelle Prüfkriterien;
+- Qualitäts-, Performance- und Sicherheitsanforderungen;
+- bekannte Einschränkungen und Freigabestatus.
+
+Termine werden erst geplant, wenn Umfang, Abhängigkeiten, Ressourcen und Unsicherheiten ausreichend bekannt sind. Frühere Schätzungen sind keine verbindlichen Zusagen.
+
+## 17.9 Roadmap-Änderungen und Prioritätswechsel
+
+Neue Erkenntnisse aus Prototypen, Quellenprüfung, Lizenzklärung, Performanceprofiling oder Nutzerfeedback können eine Umpriorisierung erforderlich machen. Jede wesentliche Änderung hält Ursache, betroffene Pakete, neue Abhängigkeiten und Auswirkungen auf bereits begonnene Arbeiten fest.
+
+Bestehende Fortschritte werden nicht allein wegen einer geänderten Reihenfolge verworfen. Bereits integrierte und geprüfte Ergebnisse sollen möglichst erhalten bleiben. Änderungen an freigegebenem Umfang folgen dem MDP-Änderungsprozess aus Dokument 16.
+
+## 17.10 Release- und Inhaltsfreigabe
+
+Ein Releasekandidat benötigt einen nachvollziehbaren Stand der enthaltenen Funktionen, Daten, Assets, Lizenzen und offenen Einschränkungen. Dazu gehören insbesondere:
+- reproduzierbarer Build und dokumentierte Buildkonfiguration;
+- bestandene relevante QA- und Regressionstests;
+- geprüfte Savegame- und Datenmigration;
+- geprüfte Plattform- und Moddingkompatibilität im freigegebenen Umfang;
+- vollständige Herkunfts- und Lizenznachweise für Drittinhalte;
+- erzeugte und geprüfte Asset-Credits gemäß den jeweiligen Lizenzbedingungen;
+- dokumentierte bekannte Fehler und genehmigte Ausnahmen.
+
+Die Veröffentlichung ist eine eigene Freigabeentscheidung. Ein technisch erstellbarer Build ist nicht automatisch releasefähig.
+
+## 17.11 Vorläufige Phasenorientierung
+
+Die folgende Orientierung beschreibt die logische Reifeentwicklung und ersetzt keine genehmigte Terminplanung:
+
+1. **Projekt- und Quellenklarheit:** Bestände, Rechte, Datenmodelle, Leitplanken und technische Umgebung erfassen.
+2. **Technischer Kern:** Unity-Projekt, kanonische Datenverträge, Persistenz, Diagnose und erste Editorgrundlagen.
+3. **Welt-Vertikalschnitt:** generierte und begehbare Region mit Terrain, Navigation, Spieler und Interaktion.
+4. **Lebendige Welt:** NPC, Kreaturen, Bedürfnisse, Simulation und erste wirtschaftliche Kreisläufe.
+5. **Gameplay-Vertikalschnitt:** Quest, Kampf, Inventar, POI/Dungeon und persistente Konsequenzen.
+6. **Aufbau und Betrieb:** Schloss, Siedlung, Dungeonverwaltung, Produktion, Zucht und erweiterte Editorworkflows.
+7. **Inhalt und Ausbau:** weitere Regionen, Biome, Kreaturen, Items, Quests und narrative Inhalte.
+8. **Härtung und Veröffentlichung:** Optimierung, Kompatibilität, Lizenz-/Creditprüfung, QA und Release.
+
+Diese Phasen können sich teilweise überlappen, sofern Abhängigkeiten und Datenverträge gesichert sind. Die konkrete Reihenfolge der MDP-Pakete wird nach der Bestands- und Umgebungsprüfung bestätigt.
