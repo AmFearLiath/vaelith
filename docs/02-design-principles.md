@@ -495,3 +495,23 @@ Diese offenen Punkte werden in den jeweiligen Fachkonzepten vertieft und bei Bed
 | 0.1 | 2026-11-17 | Bestehende Leitplanken strukturiert und erweitert; Datenkontinuität, Weltpersistenz, Progression, Systemintegration, Modding, technische Entscheidungen, Qualitätssicherung und Konfliktbehandlung präzisiert. |
 
 **Nächster Schritt:** Gemeinsame Prüfung der Designprinzipien. Anschließend wird die Welt- und Lore-Grundlage in `03-world-and-lore.md` ausgearbeitet.
+
+
+## 2.20 Schrittweise Entwicklung und kontinuierliche Prüfbarkeit
+
+Vaelith wird in überschaubaren, nachvollziehbaren und regelmäßig überprüfbaren Schritten entwickelt. Es ist ausdrücklich zu vermeiden, über lange Zeit große Funktionsbereiche im Hintergrund aufzubauen, ohne der Projektleitung zwischendurch tatsächlich prüfbare Ergebnisse bereitzustellen.
+
+Daraus folgen verbindliche Regeln:
+
+- **Kleine, abgrenzbare Liefergegenstände:** Große Systeme werden in fachlich sinnvolle Arbeitspakete und überprüfbare Zwischenschritte zerlegt.
+- **Früh nutzbare Ergebnisse:** Jeder Schritt soll so früh wie sinnvoll einen lauffähigen, bedienbaren oder anderweitig praktisch prüfbaren Zwischenstand liefern.
+- **Funktionale Prüfbarkeit:** Die Projektleitung muss betroffene Funktionen selbst ausprobieren können. Dazu gehören geeignete Testdaten, nachvollziehbare Start-/Testwege und erforderliche Entwicklungswerkzeuge.
+- **Visuelle Prüfbarkeit:** Sichtbare Ergebnisse wie Spielbereiche, Charaktere, Gebäude, Oberflächen und Editoren müssen frühzeitig in einer geeigneten Vorschau oder in einer lauffähigen Anwendung betrachtet werden können.
+- **Regelmäßige Zwischenabnahmen:** Nach jedem sinnvoll abgeschlossenen Schritt werden Ergebnis, Umfang, bekannte Einschränkungen und Prüfmöglichkeiten vorgestellt.
+- **Feedback vor Aufbau weiterer Komplexität:** Rückmeldungen und notwendige Korrekturen werden grundsätzlich aufgenommen, bevor der nächste reguläre Schritt auf dem Ergebnis aufbaut.
+- **Keine Sammelübergabe:** Ein umfangreicher Bereich darf nicht bis zu einem vermeintlichen Gesamtabschluss verborgen bleiben, wenn vorher bereits sinnvolle Teilstände prüfbar wären.
+- **Abhängigkeiten bewusst behandeln:** Falls ein Schritt noch nicht eigenständig ausführbar ist, muss der Agent erklären, welche konkrete Abhängigkeit fehlt und welcher kleinste sinnvolle Prüfstand trotzdem bereitgestellt werden kann.
+
+Ein Zwischenstand muss nicht bereits releasefertig sein. Er muss aber ehrlich als Prototyp, Vorschau, Teilfunktion oder abnahmefähiger Liefergegenstand gekennzeichnet werden. Nicht vorhandene Funktionen dürfen nicht durch Attrappen oder rein visuelle Platzhalter als fertig dargestellt werden.
+
+Die Projektleitung soll jederzeit erkennen können, was bereits funktioniert, was nur demonstriert wird, was noch fehlt und worauf der nächste Schritt aufbaut. Die konkrete Taktung und Größe der Arbeitspakete richtet sich nach Risiko und fachlichem Zusammenhang; ein starres Zeitintervall wird nicht vorgegeben.
