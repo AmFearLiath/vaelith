@@ -145,3 +145,45 @@ Validierung muss möglichst früh erfolgen und sowohl im Editor als auch vor Bui
 | DATA-006 | Schema- und Paketversionierung für Mod-Inhalte | Abgleich mit Dokument 11 erforderlich |
 | DATA-007 | Provenienzmodell für externe Karten, Assets und Contentimporte | Offen |
 | DATA-008 | Umgang mit Konflikten zwischen Generatorupdates und Spieleränderungen | Technische Spezifikation erforderlich |
+
+
+## 9.17 Namensräume, Eigentümerschaft und Herkunft von Inhalten
+
+Stabile IDs müssen auch dann eindeutig bleiben, wenn Grundspiel, Datenmods, importierte Pakete und projektspezifische Werkzeuge Inhalte beitragen. Vor der endgültigen Festlegung des ID-Formats ist ein explizites Namensraum- und Eigentümerschaftsmodell zu definieren.
+
+Das Modell muss mindestens unterscheiden:
+- Inhalte des Grundspiels;
+- Inhalte eines eindeutig identifizierten Mods bzw. Contentpakets;
+- importierte externe Datensätze mit erhaltener Quellenreferenz;
+- lokal erstellte oder lokal angepasste Inhalte;
+- Laufzeitinstanzen, die auf eine Definition verweisen.
+
+Ein Anzeigename oder Dateipfad ist keine Identität. Umbenennen und Verschieben dürfen Referenzen nicht brechen. Kollisionen müssen vor Aktivierung eines Pakets erkannt und verständlich gemeldet werden. Eigentümerschaft und Herkunft bleiben auch bei abgeleiteten oder lokal angepassten Datensätzen nachvollziehbar.
+
+Das konkrete ID-Format, die Regeln für Übernahmen zwischen Namensräumen und die Behandlung gelöschter bzw. nicht mehr verfügbarer Moddefinitionen bleiben technische Entscheidungen.
+
+## 9.18 Einheitlicher Änderungs- und Freigabelebenszyklus
+
+Editoren, Importer, Generator und administrative Contentpflege müssen denselben fachlichen Lebenszyklus für Änderungen unterstützen. Die konkrete Benutzeroberfläche darf je Werkzeug variieren; die Datenintegritätsregeln dürfen es nicht.
+
+Ein Änderungsablauf unterscheidet mindestens:
+1. Entwurf bzw. lokale Arbeitskopie;
+2. Validierung einschließlich Referenzen, Schemas, Berechtigungen und Abhängigkeiten;
+3. Vorschau und Impact-Analyse;
+4. explizite Übernahme in den vorgesehenen Datenbestand;
+5. Protokollierung von Urheber, Zeitpunkt, Anlass und betroffenen IDs;
+6. Wiederherstellung oder Migration, falls die Änderung fehlerhaft ist.
+
+Nicht jede Änderung benötigt einen mehrstufigen Freigabeprozess. Die erforderliche Kontrolle richtet sich nach Risiko, Reichweite und Persistenzwirkung. Ungeprüfte Entwürfe dürfen jedoch nicht unbemerkt in veröffentlichte Inhalte oder bestehende Spielstände gelangen.
+
+## 9.19 Trennung von Definition, Weltzustand und Präsentation
+
+Kanonische Contentdefinitionen, persistenter Welt-/Spielstand und rein visuelle bzw. abgeleitete Laufzeitdaten müssen getrennt behandelt werden. Eine Änderung an einer Definition darf nicht automatisch bestehende Instanzen oder Spieleränderungen überschreiben.
+
+Für Änderungen ist festzustellen, ob sie:
+- nur eine Definition für neu erzeugte Instanzen betreffen;
+- bestehende Instanzen gezielt migrieren;
+- persistenten Weltzustand verändern;
+- ausschließlich abgeleitete Laufzeit-/Darstellungsdaten neu berechnen.
+
+Die jeweilige Wirkung muss vor Übernahme sichtbar und testbar sein. Das gilt insbesondere für Items, Gebäude, NPCs, Kreaturen, Regionen und Produktionsdaten.
