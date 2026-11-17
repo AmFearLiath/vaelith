@@ -195,3 +195,19 @@ Ein Paket kann teilweise geliefert werden, wenn Teilergebnis, verbleibende Aufga
 Die vorhandene M00–M12-Struktur ist eine vorläufige Themen-/Monolithenplanung und keine starre Reihenfolge für vollständige, monolithische Implementierungen. Für jeden Bereich werden konkrete MDP-Arbeitspakete erstellt. Querschnittsabhängigkeiten wie Datenarchitektur, Editorwerkzeuge, Modding, QA und Assets werden bei der Paketplanung explizit berücksichtigt.
 
 Die Reihenfolge wird anhand realer Abhängigkeiten und früher prüfbarer Ergebnisse angepasst. Eine Änderung der Roadmap wird begründet und im Projektstatus dokumentiert.
+
+## 16.21 Konzeptklassifizierung und Spezifikationsreife
+
+Die MDP darf aus einer Konzeptpassage nicht automatisch ein Implementierungs-Arbeitspaket ableiten. Vor der Planung ist der Inhalt zu klassifizieren: Projektleitplanke, bestehendes fachliches Konzept, Arbeitskonzept, Funktionserweiterung, Vorschlag/Beispiel oder offene Entscheidung/Quellenlücke.
+
+Für jeden umzusetzenden Umfang sind anschließend festzuhalten:
+- Herkunft und Fundstelle des ursprünglichen Konzepts;
+- Konzeptstatus und Entscheidungsinhaber;
+- fachlicher Zweck und gewünschtes Spielergebnis;
+- was unverändert erhalten werden soll;
+- was für Vaelith angepasst oder neu entwickelt wird;
+- optionale Erweiterungen und ausdrücklich ausgeschlossene Vorschläge;
+- offene Fragen und notwendige Freigaben;
+- Unity-/3D-spezifische Umsetzung und Integrationspunkte.
+
+Erst ein ausreichend spezifizierter und freigegebener Umfang wird zum Implementierungsauftrag. Nicht freigegebene Erweiterungen können als Empfehlung oder separater Vorschlag dokumentiert werden, dürfen aber nicht unbemerkt in das Arbeitspaket einfließen.
