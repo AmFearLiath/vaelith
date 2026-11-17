@@ -319,3 +319,18 @@ Die Trennung von Test- und Produktivdaten gilt für alle Fach-Editoren und ihre 
 Vorschauen dürfen produktive Daten nur verändern, wenn der Nutzer ausdrücklich eine Übernahme ausführt und die betroffenen Änderungen vorher nachvollziehen kann. Reset- und Wiederherstellungsfunktionen müssen klar angeben, welchen Datenbereich sie betreffen.
 
 Die Runtime-Abnahme bleibt erforderlich: Eine im Editor erfolgreiche Vorschau beweist nicht, dass derselbe Datensatz im Spiel korrekt geladen, gespeichert und verwendet wird.
+
+
+## 8.28 Quest Editor — vollständiger Fachworkflow
+
+Der Quest Editor ist ein vollwertiges Authoring- und Diagnosewerkzeug. Er umfasst Quest-/Questlinien-Browser, Questgraph, Objective-Gruppen und Abhängigkeiten, Condition Builder, Decision-/Consequence-Editor, Dialoggraph, Knowledge-Verwaltung, World-Action-/Reward-Referenzen, lokalisierte Texte, NPC-/Fraktions-/Item-/Regionsreferenzen, Ablaufvorschau, Pfadprüfung, Simulation, Live-Debugger, Eventverlauf, Schema- und Referenzvalidierung, Versionsvergleich sowie Import/Export. Details stehen in Dokument 25.
+
+Ein Quest Editor gilt nicht als vollständig, wenn er lediglich JSON-Felder bearbeitet. Er muss unerreichbare Knoten, Zyklen, Softlocks, widersprüchliche Bedingungen, fehlende Referenzen, ungenutzte Inhalte und nicht abgedeckte Endzustände sichtbar machen.
+
+## 8.29 Gemeinsame 3D-Dev-Tools
+
+Die Editor-Suite erhält eine gemeinsame freie 3D-Editor-Kamera, Objektselektion, Transform-Gizmos, Duplizieren/Löschen, Asset-Palette mit Vorschau, Terrain-Ausrichtung sowie Kollisions-/Navigationsvisualisierung. Spezialisierte Pinsel- und Pfadwerkzeuge werden als gemeinsame Infrastruktur bereitgestellt, soweit Fach-Editoren sie benötigen.
+
+## 8.30 Produktions- und Katalogeditoren
+
+Item-, Material- und Rezeptdaten benötigen Browser und Editoren mit Versionsvergleich, Referenzprüfung, Rezept-/Produktionsgraph, Facility-Zuordnung, Import/Export, Migrationsvorschau und Validierungsbericht. Die Pflege darf nicht ausschließlich über Roh-JSON erfolgen müssen. Datenverträge und Migration sind in Dokument 24 beschrieben.
