@@ -50,18 +50,20 @@ Dieses Register unterscheidet ausdrücklich festgehaltene Leitplanken von offene
 10. Vollständiges Monetarisierungsmodell.
 11. Online-/Offline-Architektur und eventuelle Backend-Abhängigkeit.
 
-## 20.5 Quellen, die für Vollständigkeit erneut eingelesen werden müssen
+## 20.5 Quellenstatus und verbleibende Quellenlücken
 
-- „Geschichte und Quests entwickeln“ — vollständige ursprüngliche Lore, Storydetails und Quests.
-- „Quest-System Erklärung“ und „Quest-System bewerten“ — bestehende Queststruktur, JSON, Bewertungen und Migration.
-- „Wirtschaftsbalancing besprechen“ — existierende Wirtschaftsregeln, Balancingkonzepte und Monetarisierungsbezüge, soweit enthalten.
-- Item-Archive Items.zip und Items(1).zip — Itemkataloge, Verzeichnisstruktur und JSON-Felder.
-- „Webdesign für Vaelith“ — vollständige Seiten-/Funktions- und Designvorgaben.
-- „Emberwild - World Generator“ — ursprüngliche Generator-/Editoranforderungen und Generatorintegration.
-- „Emberwild“ — vorhandene Inhalte, Assets und technische Ausgangsinformationen.
-- früher erstelltes VAELITH_Development_Manifest_v1.2.md — Draft prüfen; nicht automatisch als beschlossen behandeln.
+Die am 17. November 2026 bereitgestellte documents.zip wurde eingelesen und in Dokument 23 inventarisiert. Die Quest-Erweiterung, ein Quest-Beispiel, die Emberwild-Storygrundlagen, Konzeptfusion, Bausystem-/Expansionsdokumente, Multiplayer-Konzepte und die Item-/Produktionsunterlagen wurden direkt gesichtet. Die 240 JSON-Dateien ließen sich syntaktisch parsen; eine vollständige semantische Feld-, ID- und Referenzmigration ist noch offen.
 
-Diese Quellen sind in der vorliegenden Dokumentationsfassung nicht vollständig erneut inspiziert. Der Agent darf nicht so tun, als sei dies geschehen. Der jeweils tatsächliche Zugriff/Import ist zu protokollieren.
+Weiterhin separat zu prüfen bzw. erneut zu beschaffen sind:
+- frühere Einzelgespräche „Geschichte und Quests entwickeln“, „Quest-System Erklärung“ und „Quest-System bewerten“, falls sie Details enthalten, die nicht in documents.zip vorliegen;
+- „Wirtschaftsbalancing besprechen“ — konkrete historische Balancingentscheidungen und Monetarisierungsbezüge;
+- „Webdesign für Vaelith“ — vollständige Seiten-/Funktions- und Designvorgaben;
+- „Emberwild - World Generator“ — ursprüngliche Generator-/Editoranforderungen und Generatorintegration;
+- frühere Einzelunterhaltungen „Emberwild“ und „Emberwild - World Generator“;
+- VAELITH_Development_Manifest_v1.2.md — Draft prüfen; nicht automatisch als beschlossen behandeln;
+- ursprüngliche Monetarisierungsunterlagen, sofern sie außerhalb des ZIP-Archivs liegen.
+
+Die Quellenregister 23–25 dokumentieren, was tatsächlich aus documents.zip eingesehen wurde und welche Migration noch aussteht. Ein Agent darf frühere Gespräche oder Dateien nicht als gelesen ausgeben, wenn kein tatsächlicher Zugriff vorliegt.
 
 ## 20.6 Änderungsprotokoll
 
