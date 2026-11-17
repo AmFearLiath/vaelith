@@ -334,3 +334,17 @@ Die Editor-Suite erhält eine gemeinsame freie 3D-Editor-Kamera, Objektselektion
 ## 8.30 Produktions- und Katalogeditoren
 
 Item-, Material- und Rezeptdaten benötigen Browser und Editoren mit Versionsvergleich, Referenzprüfung, Rezept-/Produktionsgraph, Facility-Zuordnung, Import/Export, Migrationsvorschau und Validierungsbericht. Die Pflege darf nicht ausschließlich über Roh-JSON erfolgen müssen. Datenverträge und Migration sind in Dokument 24 beschrieben.
+
+## 8.31 Gemeinsamer In-Game- und Dev-Editor
+
+Die Emberwild-Quelle für Dev-Tooling konkretisiert eine gemeinsame 3D-Arbeitsumgebung für Entwickler. Vaelith benötigt dafür eine freie Editor-Kamera, Asset-Browser mit 3D-Vorschau, Selektion, Transform-Gizmos, Inspector, Duplizieren/Löschen, Terrain-Snapping, Kollisions-/Navigationsvisualisierung und versionierbaren Szenen-/Preset-Export.
+
+Der Dev-Editor ist strikt vom Spieler-Baumodus getrennt. Entwicklerwerkzeuge dürfen keine Spielerressourcen verbrauchen und besitzen erweiterte Diagnose-/Bearbeitungsrechte. Spieler-Baumodi verwenden dagegen freigeschaltete Inhalte, Kosten, Baurechte, Weltregeln und persistente Spielzustände. Die beiden Werkzeuge können gemeinsame UI-/Platzierungsgrundlagen nutzen, aber niemals dieselben Berechtigungen.
+
+Zusätzliche Werkzeuge aus der Quelle sind NavMesh-/Kollisions-Wireframes, Boden-/Pfadpinsel, Asset-Palette, freie Objekttransformation und Import/Export von Layoutdaten. Exportformate müssen versioniert und durch den zentralen Datenvertrag validiert werden; ein direkter Export beliebiger Szenenobjekte in unkontrollierte Produktionsdaten ist ausgeschlossen.
+
+## 8.32 Bau- und Siedlungsdatenkatalog
+
+Burg- und Dorfgebäude benötigen einen zentralen, filterbaren Katalog mit Funktionsprofil, Bauvoraussetzungen, Baukosten, Ausbaustufen, Raum-/Modulbeziehungen, Produktions-/Versorgungseffekten und visuellen Varianten. Die Originalquelle enthält konkrete Gebäudebeispiele wie Rats-/Herrschaftsräume, Werkstätten, Lager, Forschung, Verteidigung und Versorgung. Diese Funktionen sind in Vaelith auf die endgültige Science-Fantasy-Formensprache zu übertragen.
+
+Gebäudeprofile dürfen nicht nur visuelle Kategorien sein. Der Editor muss funktionale Voraussetzungen und Synergien validieren, etwa Zugang, Versorgung, Personal, Lager, Produktion, Sicherheit und regionale Eignung.
