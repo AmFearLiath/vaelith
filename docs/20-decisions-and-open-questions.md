@@ -78,3 +78,24 @@ Für jede Änderung an einer Leitplanke oder einem bestehenden Datenmodell ist z
 ## 20.7 Annahmen und Zahlen
 
 Unbestätigte Größenangaben aus früheren Beispielen (z. B. bestimmte Regionenzahlen, Kilometermaße, Chunkgrößen oder Installationsgrößen) gelten nicht als genehmigte Spezifikation. Sie müssen durch Prototypen und Messungen ersetzt werden.
+
+## 20.8 Ergänzte offene Entscheidungen aus dem Spieler- und Magiekonzept
+
+Die folgenden Punkte wurden bei der Ausarbeitung von 04-player-progression-and-magic.md als noch nicht entschieden identifiziert. Sie bleiben offen, bis vorhandene Originaldaten geprüft und die fachlichen Entscheidungen gemeinsam getroffen wurden.
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| PROG-001 | Grundattribute und abgeleitete Werte des Character-Systems | 04-player-progression-and-magic.md | Quellenabgleich erforderlich |
+| PROG-002 | Klassen, Rollen oder freie Spezialisierung | 04-player-progression-and-magic.md | Offen |
+| PROG-003 | Bestehende Stufen-, Erfahrungs- und Fortschrittsregeln | 04-player-progression-and-magic.md | Quellenabgleich erforderlich |
+| PROG-004 | Aktive/passive Fähigkeiten und Gruppierung | 04-player-progression-and-magic.md | Quellenabgleich erforderlich |
+| PROG-005 | Magieformen, Schulen und Kategorien | 04-player-progression-and-magic.md | Quellenabgleich erforderlich |
+| PROG-006 | Funktionsweise der Machtströme und Spieler-Aura | 04-player-progression-and-magic.md | Offen |
+| PROG-007 | Spielmechanische Darstellung des vollständigen Potenzials nach Vaeliths Befreiung | 04-player-progression-and-magic.md | Arbeitskonzept, Umsetzung offen |
+| PROG-008 | Entwicklung von Kontrolle, Präzision und Meisterschaft | 04-player-progression-and-magic.md | Offen |
+| PROG-009 | Magieressourcen, Kosten, Abklingzeiten oder andere Begrenzungen | 04-player-progression-and-magic.md | Offen |
+| PROG-010 | Bestehende Kampf-, Bewegungs- und Trefferregeln | 04-player-progression-and-magic.md | Quellenabgleich erforderlich |
+| PROG-011 | Verknüpfung von Itemattributen, Ausrüstungsslots und Charakterwerten | 04-player-progression-and-magic.md | Quellenabgleich erforderlich |
+| PROG-012 | Klassifikation persistenter Entscheidungswirkungen | 04-player-progression-and-magic.md | Offen |
+| PROG-013 | Konkrete Unterrichts-, Begleiter- und Reaktionsfunktionen Vaeliths | 04-player-progression-and-magic.md | Offen |
+| PROG-014 | Übernahme und Migration vorhandener Charakter-, Skill-, Magie- und Kampfdaten | 04-player-progression-and-magic.md | Quellenabgleich erforderlich |
