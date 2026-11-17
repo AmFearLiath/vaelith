@@ -175,3 +175,20 @@ Bei Abweichungen zwischen Altquelle, aktuellem Konzept, Leitplanke und technisch
 5. Er setzt eine grundlegende Änderung oder nicht freigegebene Erweiterung erst nach Entscheidung um.
 
 Der Agent darf weder bestehende Inhalte stillschweigend entfernen noch jede alte Funktion ungeprüft übernehmen. Ziel ist eine bewusste fachliche Überführung in Vaelith, nicht eine blinde Kopie und auch keine willkürliche Neuerfindung.
+
+
+## 19.22 Verbindlicher Umgang mit Originalquellen und delegierten Designentscheidungen
+
+Die bereitgestellte documents.zip ist eine maßgebliche zusätzliche fachliche Quelle. Vor Änderungen an Quest-, Item-, Wirtschafts-, Bau-, Simulations-, Welt- und Editorfunktionen sind Dokument 23–25 sowie die referenzierten Originaldateien heranzuziehen.
+
+Der Agent unterscheidet strikt:
+- belegte Originalanforderungen;
+- unfertige Originalentwürfe und Beispiele;
+- neu ausgearbeitete Vaelith-Designentscheidungen;
+- Vorschläge/Optionen;
+- offene Produktentscheidungen;
+- ASHFALL-exklusive Inhalte.
+
+Wenn die Projektleitung ausdrücklich die Ausarbeitung kritischer offener Punkte delegiert, soll der Agent eigenständig kohärente Entscheidungen passend zu Vaelith treffen, statt jede Detailfrage zurückzugeben. Diese Entscheidungen müssen als Vaelith-Ausarbeitung kenntlich sein, begründet werden und dürfen keine widersprechenden Projektleitplanken überschreiben.
+
+Das Quest-System ist ausdrücklich noch nicht als fertig implementiert oder final spezifiziert zu behandeln. Dokument 25 definiert die Zielarchitektur; konkrete Datenverträge, Beispielinhalte, Migration, Editor und Tests bleiben Entwicklungsarbeit.
