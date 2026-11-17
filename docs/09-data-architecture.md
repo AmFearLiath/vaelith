@@ -187,3 +187,20 @@ Für Änderungen ist festzustellen, ob sie:
 - ausschließlich abgeleitete Laufzeit-/Darstellungsdaten neu berechnen.
 
 Die jeweilige Wirkung muss vor Übernahme sichtbar und testbar sein. Das gilt insbesondere für Items, Gebäude, NPCs, Kreaturen, Regionen und Produktionsdaten.
+
+
+## 9.20 Quest-, Decision- und Knowledge-Persistenz
+
+Questdefinitionen, Dialoge, Knowledge-Einträge, World Actions und Spielerfortschritt sind getrennte versionierte Datenbereiche. Der Spielstand speichert Queststatus, Run-ID, Objective-Fortschritt, Entscheidungen, Belohnungsnachweise, ausgeführte Weltaktionen, Cooldowns und erforderliche Versionsinformationen. Questdefinitionen werden nicht als veränderliche Laufzeitinstanzen gespeichert.
+
+World State bleibt die kanonische Wahrheit für NPC-, Fraktions-, Regions-, Gebäude-, Siedlungs- und globale Zustände. Die Quest Runtime liest diese Zustände über Services und beantragt Änderungen über autorisierte World Actions. Sie führt keine parallelen Kopien derselben Weltfakten.
+
+Events und Aktionen benötigen stabile IDs, Deduplizierung und Idempotenz. Mehrteilige Aktionen müssen atomar oder kompensierbar sein. Save-/Load- und Migrationsregeln stehen in Dokument 25.
+
+## 9.21 Katalog- und Produktionsdatenmigration
+
+Emberwild-Itemdaten werden als versionierte Stammdatenfamilien migriert. Definitionen, konkrete Instanzen, Stacks, Rezepte, Produktionsaufträge und Facilities sind getrennte Datenkonzepte. IDs und Referenzen bleiben erhalten, sofern eindeutig; Schemaänderungen benötigen Mapping, Validierung und Migrationshistorie. Details stehen in Dokument 24.
+
+## 9.22 Eventherkunft und Auditierbarkeit
+
+Systemübergreifende Ereignisse tragen Quelle, Event-ID, Welt-/Spielzeit, Schema-Version und fachlichen Kontext. Relevante Änderungen an Quest-, Inventar-, Wirtschafts-, NPC-, Regions- und Produktionszuständen müssen bis zum auslösenden Vorgang nachvollziehbar sein. Dies dient Debugging, Save-Recovery, Reproduzierbarkeit und Schutz vor doppelten Belohnungen oder Ressourcenbuchungen.
