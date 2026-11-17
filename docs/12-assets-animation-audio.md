@@ -158,3 +158,63 @@ Für Musik, Sprachaufnahmen, Soundeffekte, Fonts und sonstige Drittinhalte gelte
 | ASSET-008 | Audio-Middleware oder Unity-Bordmittel | Prototyp/Anforderungsprüfung erforderlich |
 | ASSET-009 | Asset-Streaming- und Addressables-Strategie | Technische Evaluierung erforderlich |
 | ASSET-010 | Assetfreigabe und visuelle Qualitätsabnahme | Prozessentscheidung erforderlich |
+
+
+## 12.19 Verbindliches Asset-Credit- und Attribution-Register
+
+Vaelith führt ein zentrales, dauerhaft gepflegtes **Asset-Credit-Register** für alle externen Assets und sonstigen Drittinhalte. Das Register erfasst insbesondere alle Autoren und Urheber, deren Lizenz eine Namensnennung verlangt. Es erfasst darüber hinaus auch Assets ohne Namensnennungspflicht, damit Herkunft und Lizenzstatus vollständig nachvollziehbar bleiben.
+
+Ein Datensatz verbindet mindestens:
+- eindeutige Asset-ID;
+- Assetname und konkrete Beschreibung;
+- Autor/Urheber bzw. Rechteinhaber, exakt nach Quellenangabe;
+- ursprüngliche Fundstelle und direkte Assetseite;
+- verwendete Datei(en) und Projektpfad(e);
+- Lizenzname und Lizenzversion bzw. Lizenzlink;
+- erforderliche Namensnennung im vorgeschriebenen Wortlaut;
+- vorgeschriebene Form und Platzierung der Nennung;
+- Hinweise zu Änderungen, Bearbeitungen oder abgeleiteten Werken;
+- Abrufdatum und verwendete Versions-/Downloadangabe;
+- Status der Rechteprüfung und verantwortliche Prüfung;
+- betroffene Builds, Pakete oder Veröffentlichungen.
+
+Wenn mehrere Assets von demselben Autor stammen, bleibt jedes Asset einzeln zugeordnet. Der Autor kann zusätzlich als gruppierter Eintrag angezeigt werden; die Einzelzuordnung darf dadurch nicht verloren gehen. Mehrere Autoren oder Rechteinhaber eines Assets müssen vollständig abgebildet werden.
+
+## 12.20 Wortlaut und Erfüllung der Namensnennung
+
+Die erforderliche Attribution wird nicht frei umformuliert. Der vom Autor oder Lizenzgeber geforderte Wortlaut wird möglichst originalgetreu gespeichert. Zusätzlich werden Quelle, Lizenzhinweis und gegebenenfalls Änderungsvermerk erfasst, soweit die Lizenz dies verlangt.
+
+Das Register unterscheidet:
+- Namensnennung erforderlich;
+- Namensnennung nicht erforderlich, Herkunftsnachweis dennoch geführt;
+- keine Weitergabe-/Attributionspflicht, aber sonstige Lizenzbedingungen;
+- Lizenz unklar oder noch nicht geprüft;
+- Asset nicht für die vorgesehene Nutzung freigegeben.
+
+Die konkrete Platzierung der Credits wird je Lizenz und Auslieferungskontext dokumentiert, beispielsweise Ingame-Credits, Credits-Menü, Dokumentation, Website oder mitgelieferte Lizenzdatei. Eine Nennung an nur einer Stelle gilt nicht automatisch als ausreichend, wenn die Lizenz weitere Anforderungen stellt.
+
+## 12.21 Asset-Credit-Übersicht und Veröffentlichung
+
+Aus dem Register muss eine lesbare Credit-Liste erzeugt werden können. Sie gruppiert Einträge sinnvoll nach Autor, Asset oder Lizenz, bewahrt aber die Zuordnung zwischen Autor, konkretem Asset und erforderlichem Nennungstext.
+
+Vor jeder Veröffentlichung wird geprüft:
+1. Alle tatsächlich ausgelieferten Drittassets sind im Register enthalten.
+2. Autor, Asset, Quelle und Lizenz sind nachvollziehbar verknüpft.
+3. Der vorgeschriebene Attributionstext ist vollständig vorhanden.
+4. Änderungen und Bearbeitungen sind korrekt gekennzeichnet.
+5. Die erforderliche Credit-Platzierung ist im Build bzw. in den mitgelieferten Unterlagen vorhanden.
+6. Ungeklärte oder unzulässige Assets sind aus dem Releaseumfang ausgeschlossen.
+
+Entfernte Assets werden nicht aus der Historie gelöscht. Ihr Status wird auf nicht mehr verwendet gesetzt; frühere Releases und deren Creditpflichten bleiben nachvollziehbar.
+
+## 12.22 Rechteprüfung als Teil der Assetpipeline
+
+Ein Asset darf erst in einen Releasekandidaten gelangen, wenn seine Lizenzbedingungen geprüft und dokumentiert sind. Der technische Importstatus ersetzt keine Rechtefreigabe. Automatisierte Prüfungen sollen fehlende Autorennamen, Lizenzlinks, Attributionstexte und ungeklärte Statuswerte erkennen.
+
+Das Register ist die zentrale Quelle für die Erstellung der Credits. Kopierte Listen in einzelnen Szenen, Prefabs oder Entwicklernotizen gelten nicht als eigenständige maßgebliche Nachweise. Der tatsächliche Speicherort und das Dateiformat des Registers werden als Teil der Assetpipeline festgelegt.
+
+## 12.23 Neue offene Assetentscheidung
+
+| ID | Thema | Status |
+|---|---|---|
+| ASSET-011 | Technische Form, Ablage, Pflege und Buildintegration des zentralen Asset-Credit- und Attribution-Registers | Tool-/Prozessentscheidung erforderlich |
