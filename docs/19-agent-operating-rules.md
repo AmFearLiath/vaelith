@@ -145,3 +145,33 @@ Der Agent muss für jedes externe Asset, jede Bibliothek, jeden Font, jedes Audi
 Es ist unzulässig, einen Autor nur allgemein in einer Quellenliste zu nennen, wenn die Lizenz eine Zuordnung zum konkreten Asset verlangt. Bei mehreren Autoren, Assets oder Lizenzen müssen alle Zuordnungen erhalten bleiben. Der geforderte Wortlaut darf nicht eigenmächtig verkürzt oder umformuliert werden.
 
 Fehlende oder unklare Lizenzinformationen blockieren die Freigabe für einen Releasebuild. Der Agent darf weder aus der kostenlosen Verfügbarkeit eines Assets noch aus einer Plattformkennzeichnung automatisch auf kommerzielle Nutzbarkeit oder entfallende Namensnennung schließen. Lizenznachweise und Creditlisten sind vor jeder Veröffentlichung gegen den tatsächlichen Assetbestand zu prüfen.
+
+## 19.19 Projektidentität und technische Neuentwicklung
+
+Das zu entwickelnde Produkt heißt **Vaelith**. Es wird als eigenständiges, vollständig dreidimensionales Spiel in **Unity neu entwickelt**. Der Agent darf das Vorhaben nicht als bloße Umbenennung, Weiterführung oder unveränderte Portierung eines vorhandenen Emberwild-Projekts behandeln.
+
+Vorhandene Emberwild-/Vaelith-Konzepte, Funktionen, Regeln, JSON-Daten, Kataloge und Inhalte sind fachliche Quellen und mögliche Migrationsbestände. Sie müssen auf tatsächliche Existenz, Herkunft, Vollständigkeit, fachliche Gültigkeit und Eignung für Vaelith geprüft werden. Die technische Altstruktur wird nicht automatisch übernommen. Die neue Implementierung muss zu den freigegebenen Vaelith-Anforderungen und der Unity-3D-Architektur passen.
+
+## 19.20 Konzeptstatus nicht vermischen
+
+Die Dokumentation enthält ausdrücklich keine durchgehend verbindliche Featureliste. Der Agent muss jede relevante Passage vor der Umsetzung als eine der folgenden Kategorien behandeln:
+
+- **Projektleitplanke:** verbindlich einzuhalten.
+- **Bestehendes Konzept / fachliche Grundlage:** Quelle prüfen; Übernahme, Anpassung, Erweiterung oder Nichtübernahme begründet dokumentieren.
+- **Arbeitskonzept:** Planungsgrundlage, noch keine endgültige Spezifikation.
+- **Funktionserweiterung:** mögliche zusätzliche Funktion; erst nach Spezifikation, Priorisierung und Freigabe umsetzen.
+- **Vorschlag / Beispiel / Inspiration:** unverbindliche Idee, keine automatische Implementierungspflicht.
+- **Offene Entscheidung / Quellenlücke:** nicht eigenmächtig festlegen; Entscheidung oder Quelle anfordern bzw. als Blocker kennzeichnen.
+
+Beispiele, Listen möglicher Fach-Editoren, illustrative Funktionen und technische Optionen sind nicht automatisch verbindlich. Ein als Beispiel beschriebener Dungeonraum, Gebäudetyp oder Generatoransatz ist keine Pflicht, sofern er nicht gesondert als freigegebene Anforderung festgelegt wurde.
+
+## 19.21 Vorgehen bei widersprüchlichen oder unklaren Konzepten
+
+Bei Abweichungen zwischen Altquelle, aktuellem Konzept, Leitplanke und technischer Anforderung gilt:
+1. Verbindliche Vaelith-Projektleitplanken und ausdrücklich freigegebene Entscheidungen haben Vorrang.
+2. Der Agent prüft die Originalquelle, statt ältere Inhalte nur aus einer Zusammenfassung abzuleiten.
+3. Er unterscheidet fachliches Ziel von alter technischer Realisierung.
+4. Er beschreibt Konflikt, Auswirkungen, Optionen und eine begründete Empfehlung.
+5. Er setzt eine grundlegende Änderung oder nicht freigegebene Erweiterung erst nach Entscheidung um.
+
+Der Agent darf weder bestehende Inhalte stillschweigend entfernen noch jede alte Funktion ungeprüft übernehmen. Ziel ist eine bewusste fachliche Überführung in Vaelith, nicht eine blinde Kopie und auch keine willkürliche Neuerfindung.
