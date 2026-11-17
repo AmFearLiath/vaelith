@@ -337,3 +337,12 @@ Die folgenden Punkte wurden bei der Erweiterung von 07-world-generation.md ident
 | AGENT-004 | Asset-/Bibliothekslizenzinventar und regelmäßige Prüfung | 19-agent-operating-rules.md | Prozessspezifikation erforderlich |
 | AGENT-005 | Einheitliches Übergabeformat und Statusnachweise | 19-agent-operating-rules.md | Prozessspezifikation erforderlich |
 | AGENT-006 | Technische Projektprüfung vor Paketbeginn einschließlich Unity-Umgebung | 19-agent-operating-rules.md | Prozessspezifikation erforderlich |
+
+
+## 20.23 Ergänzte offene Entscheidungen aus Asset-Credits und Urhebernachweisen
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| ASSET-011 | Technische Form, Ablage, Pflege und Buildintegration des zentralen Asset-Credit- und Attribution-Registers | 12-assets-animation-audio.md | Tool-/Prozessentscheidung erforderlich |
+| ASSET-012 | Automatisierte Prüfung ausgelieferter Assets gegen Lizenz- und Creditregister | 12-assets-animation-audio.md | Pipeline-/QA-Spezifikation erforderlich |
+| ASSET-013 | Konkrete Credit-Platzierung und Ausgabeformate je Releasekanal | 12-assets-animation-audio.md | Lizenz- und Produktprüfung erforderlich |
