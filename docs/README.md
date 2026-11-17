@@ -30,6 +30,10 @@ Diese Dokumentation beschreibt Zielbild, Leitplanken, Spielsysteme, Weltgenerier
 20. [Entscheidungsregister und offene Punkte](20-decisions-and-open-questions.md)
 21. [Glossar](21-glossary.md)
 22. [Asset-Credit- und Attribution-Register](22-asset-attribution-register.md)
+23. [Originalkonzept- und Quellenregister](23-original-concept-source-register.md)
+24. [Item-, Material- und Produktionsmigration](24-item-material-production-migration.md)
+25. [Quest-System-Spezifikation und Migration](25-quest-system-specification.md)
+
 
 ## Statuskennzeichnung
 
