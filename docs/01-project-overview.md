@@ -499,3 +499,35 @@ Dieses Dokument gibt die übergeordnete Richtung vor. Die Detaildefinitionen geh
 | 0.1 | 2026-11-17 | Bestehenden Projektüberblick zu einem übergeordneten Gesamtkonzept erweitert; Spielerfantasie, Designpfeiler, Systemverbund, Progressionsphasen, Qualitätsanspruch und offene Entscheidungen ergänzt. |
 
 **Nächster Schritt:** Gemeinsame inhaltliche Prüfung dieser Spielvision. Anschließend werden die bestätigten Aussagen in das Entscheidungsregister übernommen und die nachfolgenden Fachkonzepte darauf abgestimmt.
+
+## 1.0 Verbindliche Einordnung: Was wird entwickelt – und wofür dient diese Dokumentation?
+
+**Vaelith ist eine eigenständige Neuentwicklung als vollständiges 3D-Spiel in Unity.** Das Ergebnis ist ein neues Spiel unter dem Namen **Vaelith**. Es wird nicht lediglich ein vorhandenes Emberwild-Projekt umbenannt, portiert oder technisch fortgesetzt. Die technische Umsetzung, Runtime, Welt, Werkzeuge und Projektstruktur werden für Vaelith in Unity neu aufgebaut.
+
+Vorhandene Emberwild-/Vaelith-Konzepte, Regeln, Ideen, Datenbestände, JSON-Strukturen, Kataloge und Funktionen dienen als fachliche Ausgangsquellen. Sie werden geprüft, eingeordnet und – sofern geeignet und freigegeben – in das neue Vaelith-Design und die neue Unity-Architektur übernommen, angepasst oder als Erweiterung weiterentwickelt. Sie schreiben keine alte technische Architektur oder Projektstruktur fest.
+
+### Verbindliche Unterscheidung der Quellen- und Konzeptarten
+
+Nicht jeder beschriebene Inhalt dieser Dokumentation ist ein verbindlicher Implementierungsauftrag. Jeder Inhalt ist sinngemäß einer der folgenden Klassen zuzuordnen:
+
+1. **Projektleitplanke:** Verbindliche Vorgabe für die Neuentwicklung, beispielsweise Spielname Vaelith, Unity als Engine, vollständige 3D-Ausrichtung, Unabhängigkeit von ASHFALL und die festgelegten Entwicklungs-/Qualitätsregeln.
+2. **Bestehendes Konzept / fachliche Grundlage:** Ein bereits vorhandenes Emberwild-/Vaelith-Konzept, eine Regel, ein Datenbestand oder eine Funktion. Es ist vor Umsetzung anhand der Originalquelle zu prüfen. Danach wird entschieden, ob es unverändert übernommen, angepasst, erweitert, ersetzt oder bewusst nicht übernommen wird.
+3. **Arbeitskonzept:** Eine ausgearbeitete Zielrichtung oder Systemidee, die als Grundlage für weitere Planung dient, aber noch keine vollständige oder endgültig freigegebene Spezifikation darstellt.
+4. **Funktionserweiterung:** Eine zusätzliche oder erweiterte Funktion, die das bestehende fachliche Konzept sinnvoll ergänzt. Sie wird erst dann verbindlicher Implementierungsumfang, wenn sie spezifiziert, priorisiert und für ein Arbeitspaket freigegeben wurde.
+5. **Vorschlag / Beispiel / Inspiration:** Eine mögliche Lösung, ein Muster, eine beispielhafte Aufzählung oder eine Idee zur Diskussion. Sie ist ausdrücklich keine Baupflicht und darf nicht allein aufgrund ihrer Erwähnung implementiert werden.
+6. **Offene Entscheidung / Quellenlücke:** Ein Punkt, für den eine Entscheidung, technische Prüfung oder Originalquelle fehlt. Der Agent muss ihn offen halten, statt ihn selbst als beschlossen festzuschreiben.
+
+### Verbindliche Regel für Entwicklungsagenten
+
+Der Agent muss vor jeder Implementierung erkennen und dokumentieren, welcher dieser Klassen ein betroffener Inhalt angehört. Bei Unsicherheit darf er einen Vorschlag nicht zur verbindlichen Anforderung hochstufen. Er soll die fachlich sinnvollste Empfehlung ausarbeiten und den Punkt zur Entscheidung vorlegen, sofern er den freigegebenen Umfang oder eine Leitplanke berührt.
+
+Eine fachliche Idee kann als Ziel erhalten bleiben, obwohl ihre konkrete technische oder spielmechanische Umsetzung in Unity anders gestaltet wird. Maßgeblich ist das freigegebene Vaelith-Ziel und nicht die unveränderte Nachbildung eines früheren technischen Lösungswegs.
+
+### Ergebnis der Neuentwicklung
+
+- Produkt- und Spielname: **Vaelith**.
+- Engine und technische Zielumgebung: **Unity**.
+- Spielwelt und Spielerlebnis: **vollständig 3D** mit realer räumlicher Bewegung, Geometrie, Navigation und Interaktion.
+- Technische Umsetzung: eigenständige Unity-Projektstruktur und neu entwickelte Runtime/Systemarchitektur.
+- Fachliche Grundlage: geprüfte und freigegebene Konzepte, Daten, Funktionen und Inhalte aus den bisherigen Emberwild-/Vaelith-Arbeiten sowie ausdrücklich bestätigte Erweiterungen.
+- Nicht-Ziel: die alte technische Implementierung unverändert fortzuführen oder sämtliche erwähnten Ideen ungeprüft zu implementieren.
