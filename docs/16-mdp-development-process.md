@@ -211,3 +211,12 @@ Für jeden umzusetzenden Umfang sind anschließend festzuhalten:
 - Unity-/3D-spezifische Umsetzung und Integrationspunkte.
 
 Erst ein ausreichend spezifizierter und freigegebener Umfang wird zum Implementierungsauftrag. Nicht freigegebene Erweiterungen können als Empfehlung oder separater Vorschlag dokumentiert werden, dürfen aber nicht unbemerkt in das Arbeitspaket einfließen.
+
+
+## 16.22 Quellenbasierte Konzeptkonsolidierung
+
+Der Agent muss vor Implementierung die Quellenregister 23–25 und die dort referenzierten Originaldateien berücksichtigen. Die Quellenarbeit erfolgt systemweise: Originalanforderung erfassen, Status bestimmen, Zielsystem zuordnen, Abhängigkeiten ermitteln, Widersprüche markieren und erst danach das Vaelith-Arbeitskonzept konsolidieren.
+
+Aus dem Quellenimport entstandene Arbeitspakete umfassen mindestens Quest Runtime und Quest Editor, Item-/Materialmigration, Produktions-/Facility-Daten, 3D-Steuerung und Vertikalität, Bausystem, Ökologie/Genetik, NPC-Meister/Karrieren, regionale Warenlogistik und gemeinsame Dev-Tools. Diese Themen sind in fachlich prüfbare Pakete mit Akzeptanzkriterien aufzuteilen.
+
+Der Agent darf fehlende Details nicht eigenmächtig als historische Emberwild-Fakten ausgeben. Wo der Projektleiter die Designausarbeitung delegiert hat, darf der Agent einen passenden Vaelith-Vorschlag erarbeiten, muss ihn aber als neue Vaelith-Entscheidung bzw. Arbeitskonzept kennzeichnen und seine Begründung dokumentieren.
