@@ -123,3 +123,21 @@ Die Migration erhält IDs, Bedeutungen, Übersetzungen, Materialgrenzen und Refe
 Die vorhandenen Produktionsarchitekturen für Lebensmittel, Metallurgie und Holzverarbeitung sowie Recipe-/Facility-Schemas sind konkrete fachliche Ausgangsquellen. Sie werden in ein gemeinsames Produktionsvertragsmodell überführt, ohne fachspezifische Eigenschaften zu verlieren. Inputs werden bei Auftragsstart kontrolliert reserviert; Outputs und Nebenprodukte werden bei erfolgreichem Abschluss genau einmal verbucht. Fehler, Abbruch und Wiederaufnahme besitzen definierte Regeln.
 
 Transport, Lager, Händler, Produktionsstätten und Siedlungen verwenden dieselben kanonischen Itemdefinitionen und Warenmengen. Fernsimulation darf Ergebnisse aggregieren, aber keine abweichenden Produktions- oder Verbrauchsregeln erfinden.
+
+## 13.22 Regionale Warenströme und Transportmittel
+
+Die Emberwild-Quellen beschreiben regionale Spezialisierung, Außenposten, lokale Lager, Packtiere, Karren und Karawanen. Für Vaelith wird physische Warenlogistik als zusammenhängender Wirtschaftsvorgang behandelt: Waren existieren an konkreten Orten, müssen gelagert, transportiert und am Ziel verbucht werden. Ein Markt darf keine Waren erzeugen, nur weil ein Händlerbestand angezeigt wird.
+
+Transportmittel können nach Kapazität, Geschwindigkeit, Gelände, Personalbedarf, Schutz und Verwundbarkeit unterschieden werden. Beispiele der Quelle sind Handkarren, Packtiere und größere Wagenzüge. Die konkreten Kapazitäten und Geschwindigkeitsmodifikatoren sind nicht übernommen und müssen im Vaelith-Balancing ermittelt werden.
+
+## 13.23 Karawanen, Routenrisiken und Versorgung
+
+Eine Karawane ist ein persistenter Transportauftrag mit Fracht, Quelle, Ziel, Route, Trägern/Fahrzeugen, Begleitschutz, Abfahrts-/Ankunftszeit und Status. Routenrisiken ergeben sich aus Gelände, Wetter, politischer Lage, Gefahrenorten, Infrastruktur und Schutzmaßnahmen.
+
+Überfälle oder Unterbrechungen dürfen nicht ausschließlich als zufälliger Verlustwert auftreten. Sie müssen als Welt-/Gameplayereignis mit Ursache, Ort, Reaktionsmöglichkeit und nachvollziehbarem Ergebnis modelliert werden. Der Spieler kann je nach Situation eskortieren, sichern, Umwege wählen, Infrastruktur verbessern oder Verluste akzeptieren.
+
+## 13.24 Außenposten und regionale Produktion
+
+Minen, Steinbrüche, Mühlen, Forstposten und andere Produktionsorte benötigen reale Infrastruktur, Arbeitskräfte, Betriebsmittel, Lager und Transport. Ihre Erträge hängen von Vorkommen, Zustand, Personal, Fähigkeiten, Sicherheit und Versorgung ab. Regionale Spezialisierung erzeugt Handelsbedarf, darf aber keine künstlichen Monopole ohne alternative Beschaffungs- oder Substitutionsmöglichkeiten erzwingen.
+
+Die in Emberwild-Beispielen genannten Rohstoffnamen, Provinzwerte, Prozentboni und Überfallwahrscheinlichkeiten sind keine freigegebenen Vaelith-Balancingwerte.
