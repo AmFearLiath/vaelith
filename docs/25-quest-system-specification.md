@@ -242,3 +242,21 @@ Die Quelle questsystem/expansion_questsystem.md fordert Questline-ID, verschacht
 Dieses Dokument konkretisiert die Zielarchitektur für Vaelith. Es behauptet ausdrücklich nicht, dass das ursprüngliche Quest-System bereits fertig entwickelt war. Bestehende Quest-IDs, Objective-IDs, Übersetzungen, Belohnungsdaten und World-Change-Referenzen sind bei der Migration soweit möglich zu erhalten.
 
 Noch zu erstellen sind konkrete Datenverträge, vollständige Beispielquests, Migrationsadapter und Editor-Workflows. Diese Aufgaben werden in der MDP geplant.
+
+
+## 25.20 Abgleich mit dem vorhandenen Quest-Beispiel
+
+Die Datei questsystem/questbeispiele/ew_act1_silent_bell.json ist ein konkretes Beispiel für den Entwicklungsstand des Quest Schema v2.2.0. Sie enthält bereits Questline, Lifecycle-Metadaten, verschachtelte Freischaltbedingungen, Objective-Gruppen mit ALL/ANY, Objective-Abhängigkeiten, Knowledge-Bedingungen, Entscheidungen, bedingte Belohnungen, World-Change-Referenzen, Failure Conditions, Visibility und Editor-Metadaten.
+
+Das Beispiel bestätigt, dass diese Bereiche nicht nur abstrakte Ideen waren, sondern bereits in einem konkreten Datenentwurf zusammengeführt wurden. Es ist dennoch kein Beleg für ein vollständiges, validiertes oder implementiertes Quest-System. Die Beispielquest enthält Referenzen und Begriffe, deren Zielsysteme und Schemas separat zu prüfen sind.
+
+Bei der Migration sind insbesondere folgende Beobachtungen zu berücksichtigen:
+- Die Beispielquest verwendet Conditions als all-Listen. Vaelith soll diese Struktur in einen einheitlichen typisierten Ausdrucksbaum überführen, der ALL/ANY/NOT eindeutig ausdrücken kann.
+- Objective-Gruppen und einzelne Objective-Abhängigkeiten existieren parallel. Der Validator muss sicherstellen, dass daraus keine widersprüchlichen oder zyklischen Abhängigkeiten entstehen.
+- Entscheidungen schreiben World State, NPC-Beziehungen, Reputation, Knowledge und Questfreischaltungen. Diese Effekte müssen als zentrale, idempotente World Actions ausgeführt werden.
+- Rewards enthalten Grundbelohnungen, bedingte Belohnungen und Objective-nahe Belohnungen. Vaelith muss genau definieren, wann diese vergeben werden und wie Mehrfachvergabe verhindert wird.
+- Die Beispielquest führt eine Failure Condition über den Zustand eines Ortes. Die Vaelith-Designregel bleibt: Scheitern ist nur zulässig, wenn es ausdrücklich und für den Spieler nachvollziehbar vorgesehen ist.
+- Das Feld abandonable ist in der Beispielquest true. Für Vaelith wird die Aufgebbarkeit nicht ungeprüft übernommen; Hauptstory-Quests sind standardmäßig nicht aufgebbar.
+- Die Beispielquest nutzt mehrsprachige Felder direkt in der Definition. Vaelith darf diese Inhalte übernehmen, soll aber langfristig ein einheitliches Lokalisierungsmodell verwenden, statt pro Textfeld uneinheitliche Sprachvarianten zu pflegen.
+
+Die Beispielquest dient als Migrations- und Testfall, nicht als endgültige Referenz für alle Vaelith-Regeln.
