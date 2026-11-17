@@ -79,3 +79,82 @@ Audio soll Welt, Kreaturen, Interaktion, Umgebung, Kampf und Atmosphäre unterst
 ## 12.9 Asset-Änderungen und Nachvollziehbarkeit
 
 Originaldateien, Lizenznachweise und Bearbeitungsstände sind nachvollziehbar aufzubewahren. Assetupdates dürfen Referenzen oder Materialzuordnungen nicht stillschweigend brechen.
+
+## 12.10 Assetpipeline und Importprofile
+
+Für jede relevante Assetkategorie sind nachvollziehbare Importprofile zu definieren. Einheitliche Grundregeln sollen Maßstab, Achsen, Einheiten, Texturkompression, Materialkonventionen, Namensgebung und Metadaten festlegen. Kategorieabhängige Abweichungen bleiben möglich und müssen dokumentiert sein.
+
+Die Pipeline soll Originaldatei, importierte Fassung und optimierte Laufzeitvariante unterscheidbar halten. Reimport darf manuelle Anpassungen oder Referenzen nicht unbeabsichtigt überschreiben.
+
+## 12.11 Assetkatalog und Zuordnung zu Spielinhalten
+
+Ein zentraler Assetkatalog verknüpft Assets mit fachlichen Datensätzen und Einsatzorten. Ein Item kann beispielsweise Inventaricon, Weltmodell, Ausrüstungsvariante, Materialvariante und Animation-/Effektreferenzen besitzen.
+
+Zu verwalten sind:
+- stabile Asset-ID und Dateireferenz;
+- Assettyp und Kategorien/Tags;
+- Quelle, Lizenz und Änderungsverlauf;
+- technische Import-/Qualitätsdaten;
+- zugeordnete Items, Kreaturen, Gebäude oder UI-Inhalte;
+- Varianten, Abhängigkeiten und LODs;
+- Integrations-, Validierungs- und Teststatus.
+
+Fachliche Gameplaydaten bleiben von der visuellen Assetzuordnung getrennt. Fehlende Assets müssen auffindbar sein und dürfen nicht zum Verlust des zugrunde liegenden Items oder Inhalts führen.
+
+## 12.12 Modularität und Variantenverwaltung
+
+Modulare Modelle und Varianten benötigen klare Kompatibilitätsregeln. Komponenten dürfen nur kombiniert werden, wenn Maßstab, Anschlüsse, Rig, Materialslots und fachliche Zuordnung passen.
+
+Varianten können Geometrie, Material, Textur, Farbe, Seltenheitsdarstellung oder funktionale Komponenten betreffen. Visuelle Varianten dürfen keine Gameplaywerte verändern, sofern eine explizite fachliche Datenreferenz dies nicht vorsieht.
+
+## 12.13 LOD, Streaming und Speicherbudgets
+
+Assets benötigen je nach Größe, Sichtweite und Nutzung geeignete Detailstufen und Streamingregeln. Zu prüfen sind Mesh-LOD, Texturauflösung, Mipmaps, Instancing, Occlusion und asynchrones Laden. Die Auswahl erfolgt anhand repräsentativer Szenen und Profiling.
+
+Speicherbudgets müssen pro Assetgruppe und Szene/Region messbar sein. Übermäßige Materialvarianten, unnötige Duplikate und dauerhaft geladene nicht benötigte Assets sind zu vermeiden.
+
+## 12.14 Animation-Runtime und Zustandsverträge
+
+Animationen müssen mit Bewegungs-, Kampf-, Interaktions- und Kreaturenzuständen abgestimmt sein. Animation ist Darstellung und darf nicht alleinige Wahrheitsquelle für Gameplayzustände werden.
+
+Zu definieren sind:
+- Zustands- und Übergangsverträge;
+- Synchronisierung von Treffer-, Interaktions- und Audioereignissen;
+- Abbruch und Unterbrechung;
+- Root-Motion-/In-Place-Verantwortung;
+- Retargeting-Grenzen und Rig-Kompatibilität;
+- Netzwerk-/Replay-Anforderungen nur, falls später beschlossen;
+- Fallbacks bei fehlender oder fehlerhafter Animation.
+
+## 12.15 Animation-QA und visuelle Abnahme
+
+Jeder relevante Charakter- und Kreaturentyp benötigt repräsentative Prüfszenen. Zu prüfen sind Übergänge, Richtungswechsel, Geländeanpassung, Fußkontakt, Interaktionspunkte, Ausrüstung, Trefferzonen und Clipping.
+
+Die Abnahme erfolgt in Bewegung und im tatsächlichen Gameplaykontext, nicht nur durch isolierte Vorschau einzelner Clips. Platzhalteranimationen sind sichtbar zu kennzeichnen.
+
+## 12.16 Audioverwaltung und Laufzeitregeln
+
+Audioinhalte benötigen Metadaten zu Typ, Quelle, Lizenz, Lautheits-/Formatvorgaben, räumlichem Verhalten und Einsatzkontext. Laufzeitregeln müssen Priorisierung, gleichzeitige Stimmen, Distanz, Innen-/Außenräume, Umgebungszonen und Übergänge berücksichtigen.
+
+Audio darf bei häufigen Ereignissen nicht unkontrolliert vervielfacht werden. Kritische Gameplayhinweise benötigen klare Priorität und dürfen nicht ausschließlich akustisch vermittelt werden.
+
+## 12.17 Asset- und Audio-Rechteprüfung
+
+Lizenzinformationen müssen bis zur ausgelieferten Nutzung nachvollziehbar bleiben. Bei abgeleiteten oder bearbeiteten Assets sind die ursprünglichen Bedingungen weiter zu berücksichtigen. Nicht eindeutig geklärte Nutzungsrechte blockieren die Integration in Releasebuilds.
+
+Für Musik, Sprachaufnahmen, Soundeffekte, Fonts und sonstige Drittinhalte gelten dieselben Nachweis- und Freigabeanforderungen wie für 3D-Assets.
+
+## 12.18 Offene Asset-/Animations-/Audioentscheidungen
+
+| ID | Thema | Status |
+|---|---|---|
+| ASSET-001 | Finale visuelle Stilrichtlinien und technische Qualitätsprofile | Art Direction erforderlich |
+| ASSET-002 | Assetkatalog und stabile Asset-ID-Konvention | Daten-/Toolentscheidung erforderlich |
+| ASSET-003 | Importprofile und unterstützte Austauschformate | Pipeline-Prototyp erforderlich |
+| ASSET-004 | LOD- und Speicherbudgets je Assetkategorie | Profiling erforderlich |
+| ASSET-005 | Modulare Charakter-/Ausrüstungs- und Kreaturenpipeline | Prototyp erforderlich |
+| ASSET-006 | Rig-/Retargeting-Standards und Ausnahmen je Artengruppe | Animationstest erforderlich |
+| ASSET-007 | Umfang und Lizenzierung von Musik, Sprache und Soundeffekten | Content-/Lizenzplanung erforderlich |
+| ASSET-008 | Audio-Middleware oder Unity-Bordmittel | Prototyp/Anforderungsprüfung erforderlich |
+| ASSET-009 | Asset-Streaming- und Addressables-Strategie | Technische Evaluierung erforderlich |
+| ASSET-010 | Assetfreigabe und visuelle Qualitätsabnahme | Prozessentscheidung erforderlich |
