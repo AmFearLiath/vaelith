@@ -118,3 +118,24 @@ Die folgende Orientierung beschreibt die logische Reifeentwicklung und ersetzt k
 8. **Härtung und Veröffentlichung:** Optimierung, Kompatibilität, Lizenz-/Creditprüfung, QA und Release.
 
 Diese Phasen können sich teilweise überlappen, sofern Abhängigkeiten und Datenverträge gesichert sind. Die konkrete Reihenfolge der MDP-Pakete wird nach der Bestands- und Umgebungsprüfung bestätigt.
+
+
+## 17.12 Quellenbasierte Ergänzung der MDP-Arbeitspakete
+
+Der Quellenimport macht zusätzliche Arbeitspakete bzw. Teilpakete sichtbar. Sie werden nicht als starre neue Reihenfolge verstanden; Abhängigkeiten und frühe vertikale Tests bestimmen die tatsächliche Reihenfolge.
+
+- Quest-System: Quest Runtime, World State, Decision Ledger, Knowledge, Dialog Runtime, Editor und Migration.
+- Datenmigration: Item-/Materialkataloge, Rezept-/Facility-Daten, IDs, Referenzen und Versionsfamilien.
+- 3D-Spielsteuerung: Third-Person-Rig, Hybrid-Zoom, Navigation, Vertikalität, Treppen, Kamera-Kollision und Mehrstöckigkeit.
+- Bausystem: Gebäudekataloge, Baupläne, Platzierung, Baufortschritt, lokale Materialversorgung und Gebäudevalidierung.
+- Living World: Ökologie, Population, Genetik, Meister-/Vorarbeitersystem, Karrieren und Krisenereignisse.
+- Welt-/Wirtschaftsverknüpfung: regionale Spezialisierung, Außenposten, Warenlager, Transportaufträge, Karawanen und Routenrisiken.
+- Dev-Editor: gemeinsame 3D-Kamera, Asset-Browser, Transformationswerkzeuge, Nav-/Kollisionsvisualisierung, Pinsel und versionierter Export.
+
+Diese Pakete benötigen vor Implementierung eine genaue Abgrenzung, Akzeptanzkriterien, Datenverträge, Testfälle und Abhängigkeiten. Die Originalquellen liefern Fachideen und Beispiele; alte Engine- und Implementierungsanweisungen werden nicht fortgeschrieben.
+
+## 17.13 Multiplayer als separate Scope-Entscheidung
+
+Die ZIP enthält umfangreiche Multiplayer-Konzepte zu Gilden, Territorien, Diplomatie, kooperativem Bauen, Belagerungen, Serverereignissen und Netzwerkarchitektur. Diese Themen werden als optionale Erweiterungsrichtung dokumentiert. Sie dürfen nicht unbemerkt in die Singleplayer-first-Entwicklung einfließen oder die Kernarchitektur mit ungeprüften Serveranforderungen überfrachten.
+
+Architekturentscheidungen sollen sinnvolle Erweiterbarkeit nicht unnötig verhindern, aber keine Multiplayer-Funktion gilt als beschlossen, bevor Produktumfang, Betrieb, Kosten, Sicherheit und Spielstandmodell ausdrücklich festgelegt sind.
