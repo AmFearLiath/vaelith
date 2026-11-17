@@ -289,3 +289,28 @@ Wo bestehende Quellen noch nicht erneut eingelesen wurden, sind Anforderungen al
 | GAME-013 | Gameplay-UI, Eingabebelegung und Accessibility-Anforderungen | Offen |
 | GAME-014 | Speichern/Wiederherstellen mehrstufiger Gameplay-Aktionen | Technische Spezifikation erforderlich |
 | GAME-015 | Vollständiger Abgleich des vorhandenen Quest-JSON und Quest-Editors | Quellenabgleich erforderlich |
+
+
+## 5.21 Gameplay-übergreifende Zustands- und Ereignisverträge
+
+Gameplayaktionen müssen auf klaren Zustandsübergängen beruhen. Eine Aktion prüft ihre Voraussetzungen, reserviert bzw. verarbeitet benötigte Ressourcen, führt die Änderung aus und meldet ein eindeutiges Ergebnis. Bei mehrteiligen Aktionen müssen Fehler, Abbruch und Wiederaufnahme definiert sein.
+
+Systeme kommunizieren über dokumentierte Ereignisse oder Schnittstellen. Quest-, Kampf-, Bau-, Dungeon-, Kreaturen- und Wirtschaftssysteme dürfen nicht gegenseitig interne Daten direkt verändern, ohne die Zuständigkeit des jeweiligen Systems zu beachten. Ereignisse benötigen stabile IDs bzw. Referenzen, definierte Nutzdaten und Regeln gegen doppelte Verarbeitung.
+
+## 5.22 Zeitabhängige und unterbrochene Aktionen
+
+Herstellung, Bau, Zucht, Pflege, Reisen und andere zeitabhängige Vorgänge benötigen einen einheitlich interpretierbaren Fortschrittszustand. Zu unterscheiden sind mindestens bereit, laufend, pausiert, blockiert, abgebrochen und abgeschlossen. Welche Vorgänge während Kampf, Regionwechsel, Spielende oder Offlinezeit weiterlaufen, wird pro System festgelegt und mit Dokument 06 abgestimmt.
+
+Ein System darf Zeit nicht eigenständig anders skalieren als Weltzeit und Simulation. Zeitfortschritt muss speicherbar und nach dem Laden konsistent rekonstruierbar sein.
+
+## 5.23 Spielerentscheidungen und Konsequenzdarstellung
+
+Wenn eine Aktion oder Questentscheidung dauerhafte Folgen besitzt, müssen diese Folgen fachlich definiert und im Weltzustand abgebildet werden. Das betrifft insbesondere Beziehungen, Fraktionen, Besitz, Siedlungsentwicklung, Kreaturen, Ressourcen, Zugänge und Verfügbarkeit von Inhalten.
+
+Konsequenzen sollen weder willkürlich noch unsichtbar sein. Der Spieler benötigt angemessene Hinweise auf erkennbare Risiken und nachträgliche Rückmeldungen zu eingetretenen Veränderungen. Nicht jede Konsequenz muss vorab vollständig offengelegt werden; Überraschungen dürfen aber nicht aus inkonsistenten oder fehlerhaften Zustandsänderungen entstehen.
+
+## 5.24 Systemübergreifende Gameplay-Abnahme
+
+Ein System wird nicht ausschließlich isoliert getestet. Repräsentative End-to-End-Szenarien müssen zeigen, dass Daten und Zustände durch die beteiligten Systeme korrekt fließen. Beispiele sind Questbelohnung ins Inventar, Rohstofftransport zur Baustelle, Kreaturenzuweisung zum Dungeon, Produktionsausfall durch fehlende Versorgung und Wiederherstellung nach einem unterbrochenen Vorgang.
+
+Die Tests müssen reproduzierbar sein und Startzustand, Aktionen, erwartete Ergebnisse und tatsächliche Ergebnisse dokumentieren. Kritische Daten- und Spielstandpfade benötigen zusätzlich Regressionstests.
