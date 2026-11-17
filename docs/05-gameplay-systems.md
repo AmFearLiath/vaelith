@@ -314,3 +314,20 @@ Konsequenzen sollen weder willkürlich noch unsichtbar sein. Der Spieler benöti
 Ein System wird nicht ausschließlich isoliert getestet. Repräsentative End-to-End-Szenarien müssen zeigen, dass Daten und Zustände durch die beteiligten Systeme korrekt fließen. Beispiele sind Questbelohnung ins Inventar, Rohstofftransport zur Baustelle, Kreaturenzuweisung zum Dungeon, Produktionsausfall durch fehlende Versorgung und Wiederherstellung nach einem unterbrochenen Vorgang.
 
 Die Tests müssen reproduzierbar sein und Startzustand, Aktionen, erwartete Ergebnisse und tatsächliche Ergebnisse dokumentieren. Kritische Daten- und Spielstandpfade benötigen zusätzlich Regressionstests.
+
+
+## 5.25 Quest-System — verbindliche fachliche Zielarchitektur
+
+Die konkrete Quest-System-Spezifikation und Migrationsregeln stehen in Dokument 25. Für Gameplay gelten: datengetriebene Questdefinitionen, zentrale Quest Runtime, typisierte Events, verschachtelte Conditions, Objective-Graphen, echte alternative Lösungen, persistente Entscheidungen, World State, Knowledge, eigenständige Dialogdefinitionen und idempotente World Actions.
+
+Quests greifen über definierte Services auf Kampf, Inventar, NPCs, Fraktionen, Regionen, Gebäude, Wirtschaft, Kreaturen und Simulation zu. Sie duplizieren deren Zuständigkeiten nicht. Hauptstory-Quests sind standardmäßig nicht aufgebbar; verdeckte, unfair verpasste Zeitlimits und Scheinentscheidungen sind ausgeschlossen.
+
+## 5.26 3D-Bewegung, Kamera und Vertikalität
+
+Vaelith verwendet eine vollständig dreidimensionale Spielfigursteuerung. Das Emberwild-Dokument 3D_PERSPEKTIVE_UND_VERTIKALITAET_KONZEPT.md ist fachliche Quelle für Third-Person-Kamera, Hybrid-Zoom, freie Umschau, Kamera-Kollisionsschutz, WASD und Point-to-Go als auswählbare Steuerungsarten, Treppen-/Stufenüberwindung, Ground-Snapping und begehbare mehrstöckige Gebäude.
+
+Für Vaelith ist 3D-Bewegung das Primärmodell. Eine isometrische/strategische Übersicht ist eine optionale Kameraperspektive bzw. Bedienansicht, nicht eine flache 2D-Bewegungswelt. Kameraabstände, Winkel, FOV-, Step-Height- und Physikwerte aus dem alten Konzept sind Prototypwerte, keine ungeprüften Produktionswerte.
+
+## 5.27 Quest-System-Abnahmeszenarien
+
+Die Quest Runtime muss Fortschritt aus realen Gameplayereignissen verarbeiten: Kampf, Interaktion, Erkundung, Dialog, Wissen, Handel, Crafting, Bau, Zucht, Verteidigung und Welt-/Simulationsereignisse. Speichern/Laden, doppelte Events, fehlende Referenzen, alternative Pfade, verzögerte Konsequenzen und Fehler bei mehrteiligen Weltaktionen sind Ende-zu-Ende-Testfälle. Die vollständige Testliste steht in Dokument 25.
