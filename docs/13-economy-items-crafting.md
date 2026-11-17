@@ -110,3 +110,16 @@ Ein Teilbereich ist erst abnahmebereit, wenn Definitionen und Instanzen konsiste
 ## 13.19 Offene Entscheidungen
 
 Die zugehörigen offenen Punkte ECON, ITEM und CRAFT sind im Entscheidungsregister unter Dokument 20 geführt. Die endgültigen Schemas, Zahlen und Formeln bleiben bis zur Prüfung der historischen Quelldaten ausdrücklich offen.
+
+
+## 13.20 Originalkataloge und Migrationsgrundlage
+
+Das bereitgestellte Emberwild-Archiv enthält umfangreiche Item-, Material-, Werkzeug-, Lebensmittel-, Verbrauchsgüter-, Ausrüstungs-, Rezept- und Produktionsdaten sowie Planungs- und Migration Notes. Die JSON-Dateien sind syntaktisch parsebar; daraus folgt keine automatische Freigabe ihrer Inhalte oder Werte. Mehrere Katalogversionen und Migrationsstände müssen familienweise verglichen werden.
+
+Die Migration erhält IDs, Bedeutungen, Übersetzungen, Materialgrenzen und Referenzen soweit möglich. Itemdefinition, Iteminstanz, Stack, Rezept, Produktionsauftrag und Facility werden getrennt modelliert. Originaldateien bleiben unverändert. Die vollständigen Regeln und Abnahmekriterien stehen in Dokument 24.
+
+## 13.21 Produktionsarchitektur und physische Warenflüsse
+
+Die vorhandenen Produktionsarchitekturen für Lebensmittel, Metallurgie und Holzverarbeitung sowie Recipe-/Facility-Schemas sind konkrete fachliche Ausgangsquellen. Sie werden in ein gemeinsames Produktionsvertragsmodell überführt, ohne fachspezifische Eigenschaften zu verlieren. Inputs werden bei Auftragsstart kontrolliert reserviert; Outputs und Nebenprodukte werden bei erfolgreichem Abschluss genau einmal verbucht. Fehler, Abbruch und Wiederaufnahme besitzen definierte Regeln.
+
+Transport, Lager, Händler, Produktionsstätten und Siedlungen verwenden dieselben kanonischen Itemdefinitionen und Warenmengen. Fernsimulation darf Ergebnisse aggregieren, aber keine abweichenden Produktions- oder Verbrauchsregeln erfinden.
