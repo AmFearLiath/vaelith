@@ -253,3 +253,87 @@ Die folgenden Punkte wurden bei der Erweiterung von 07-world-generation.md ident
 | QA-008 | Plattformübergreifende Modding- und Backend-Testmatrix | 18-qa-security-performance.md | Kompatibilitätstests erforderlich |
 | QA-009 | Visuelle Qualitätsmetriken und Abnahmeverfahren | 18-qa-security-performance.md | Art-/QA-Abstimmung erforderlich |
 | QA-010 | Langzeittests für Simulation und Weltzeit | 18-qa-security-performance.md | Testkonzept erforderlich |
+
+
+## 20.18 Ergänzte offene Entscheidungen aus Wirtschaft, Items und Crafting
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| ECON-001 | Wirtschaftsakteure, Geld-/Tauschmodell und regionale Marktgrenzen | 13-economy-items-crafting.md | Quellenabgleich/Design erforderlich |
+| ECON-002 | Preisbildung und Gewichtung von Angebot, Nachfrage, Qualität und Entfernung | 13-economy-items-crafting.md | Balancingentscheidung erforderlich |
+| ECON-003 | Händlerbestände, Geldquellen und Bestandsregeneration | 13-economy-items-crafting.md | Offen |
+| ECON-004 | Transportkosten, Transportzeiten, Träger und Verlustrisiken | 13-economy-items-crafting.md | Offen |
+| ECON-005 | Wirtschaftsereignisse, Engpässe und regionale Abhängigkeiten | 13-economy-items-crafting.md | Offen |
+| ECON-006 | Aggregation von Wirtschaftsflüssen in der Fernsimulation | 13-economy-items-crafting.md | Prototyp/Profiling erforderlich |
+| ECON-007 | Wirtschaftsdiagnose, Kennzahlen und Referenzszenarien | 13-economy-items-crafting.md | Tool-/QA-Spezifikation erforderlich |
+| ECON-008 | Steuern, Abgaben, Löhne und weitere Geldsenken/-quellen | 13-economy-items-crafting.md | Quellenabgleich/Design erforderlich |
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| ITEM-001 | Vollständiger Import der historischen Itemarchive und Verzeichnisstruktur | 13-economy-items-crafting.md | Quellenzugriff erforderlich |
+| ITEM-002 | Kanonisches Schema für Itemdefinitionen und Iteminstanzen | 13-economy-items-crafting.md | Quellenabgleich erforderlich |
+| ITEM-003 | Erhalt und Migration bestehender Item-IDs und Referenzen | 13-economy-items-crafting.md | Migrationsplanung erforderlich |
+| ITEM-004 | Kategorien, Unterkategorien und Ausrüstungsslots | 13-economy-items-crafting.md | Quellenabgleich erforderlich |
+| ITEM-005 | Trennung von Qualität, Seltenheit, Zustand und visueller Variante | 13-economy-items-crafting.md | Designentscheidung erforderlich |
+| ITEM-006 | Gewicht, Volumen, Stackregeln und Lagerkapazitäten | 13-economy-items-crafting.md | Quellenabgleich/Design erforderlich |
+| ITEM-007 | Iteminstanz-Persistenz, Haltbarkeit und Zustandsänderungen | 13-economy-items-crafting.md | Technische Spezifikation erforderlich |
+| ITEM-008 | Modding-Namensräume und Konfliktregeln für Itemdefinitionen | 13-economy-items-crafting.md | Abgleich mit MOD-004/005 erforderlich |
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| CRAFT-001 | Vollständiger Bestand bestehender Rezepte und Herstellungsdaten | 13-economy-items-crafting.md | Quellenzugriff erforderlich |
+| CRAFT-002 | Rezeptmodell, Inputs, Outputs und Nebenprodukte | 13-economy-items-crafting.md | Quellenabgleich erforderlich |
+| CRAFT-003 | Werkstatt-/Stationsanforderungen und Stationszustände | 13-economy-items-crafting.md | Offen |
+| CRAFT-004 | Herstellungszeit, Abbruch und Transaktionsverhalten | 13-economy-items-crafting.md | Technische Spezifikation erforderlich |
+| CRAFT-005 | Einfluss von Fähigkeiten, Berufen und Rohstoffqualität | 13-economy-items-crafting.md | Balancingentscheidung erforderlich |
+| CRAFT-006 | Editorworkflow für Rezepte, Validierung und Simulation | 13-economy-items-crafting.md | Editor-Spezifikation erforderlich |
+
+## 20.19 Ergänzte offene Entscheidungen aus Webplattform und Administration
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| WEB-001 | Finale Website-Seitenstruktur und Informationsarchitektur | 14-web-platform.md | Abgleich mit Original-Webdesign erforderlich |
+| WEB-002 | Launcher-Architektur und expliziter Startablauf | 14-web-platform.md | Technische Entscheidung erforderlich |
+| WEB-003 | Kontenmodell und Identitätsanbieter, falls benötigt | 14-web-platform.md | Produkt-/Architekturentscheidung erforderlich |
+| WEB-004 | Onlinepflicht, Offlinebetrieb und Backendabhängigkeiten | 14-web-platform.md | Abgleich mit ARCH-010 erforderlich |
+| WEB-005 | Finale Adminmodule und Rollen-/Rechtematrix | 14-web-platform.md | Scopeentscheidung erforderlich |
+| WEB-006 | Hosting, Umgebungen, Betrieb und Wiederherstellung | 14-web-platform.md | Betriebs-/Architekturentscheidung erforderlich |
+| WEB-007 | Content-Publishing, Versionierung und Rollback | 14-web-platform.md | Prozess-/Technikspezifikation erforderlich |
+| WEB-008 | Gemeinsames Designsystem und Komponentenverantwortung | 14-web-platform.md | UI-Prototyp/Abstimmung erforderlich |
+| WEB-009 | Datenschutz, Aufbewahrung und Auditumfang | 14-web-platform.md | Rechts-/Produktprüfung erforderlich |
+| WEB-010 | Barrierefreiheit und unterstützte Browser-/Geräteklassen | 14-web-platform.md | Qualitäts-/Produktentscheidung erforderlich |
+
+## 20.20 Ergänzte offene Entscheidungen aus Monetarisierung
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| MON-001 | Vollständige Sichtung der historischen Monetarisierungsvorgaben | 15-monetization.md | Originalquellen erforderlich |
+| MON-002 | Bestätigte Monetarisierungsarten und Angebotsformen | 15-monetization.md | Quellenabgleich erforderlich |
+| MON-003 | Historisch festgelegte Preise, Währungen und regionale Regeln | 15-monetization.md | Quellenabgleich erforderlich |
+| MON-004 | Umfang und Rechte von Updates, Erweiterungen und Zusatzinhalten | 15-monetization.md | Quellenabgleich erforderlich |
+| MON-005 | Auswirkungen auf Gameplay, Progression, Modding und Spielstände | 15-monetization.md | Analyse nach Quellenimport erforderlich |
+| MON-006 | Store-, Plattform-, Backend- und Zahlungsanforderungen | 15-monetization.md | Abhängig vom bestätigten Modell |
+| MON-007 | Umgang mit widersprüchlichen oder überholten historischen Aussagen | 15-monetization.md | Projektleitungsentscheidung erforderlich |
+
+## 20.21 Ergänzte offene Entscheidungen aus der MDP
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| MDP-001 | Granularität und Kennzeichnung von Monolithen, Paketen, Aufgaben und Unteraufgaben | 16-mdp-development-process.md | Prozessentscheidung erforderlich |
+| MDP-002 | Zentrales Format und Ablage der Arbeitspaketdefinitionen | 16-mdp-development-process.md | Tool-/Prozessentscheidung erforderlich |
+| MDP-003 | Verbindliche Abhängigkeitsdarstellung und Paketplanung | 16-mdp-development-process.md | Prozessspezifikation erforderlich |
+| MDP-004 | Review- und Freigabepunkte je Paketgröße und Risikoklasse | 16-mdp-development-process.md | Prozessentscheidung erforderlich |
+| MDP-005 | CI-/Build-/Testintegration in den Paketlebenszyklus | 16-mdp-development-process.md | Tool-/Prozessentscheidung erforderlich |
+| MDP-006 | Rückfall- und Migrationsverfahren für gemeinsam genutzte Datenverträge | 16-mdp-development-process.md | Technische Spezifikation erforderlich |
+| MDP-007 | Messbare Priorisierungskriterien und Roadmappflege | 16-mdp-development-process.md | Prozessentscheidung erforderlich |
+
+## 20.22 Ergänzte offene Entscheidungen aus den Agentenregeln
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| AGENT-001 | Verbindliches Format für Agentenstart- und Bestandsberichte | 19-agent-operating-rules.md | Prozessentscheidung erforderlich |
+| AGENT-002 | Ablage und Nachweisformat für Tests, Screenshots und Builds | 19-agent-operating-rules.md | Tool-/Prozessentscheidung erforderlich |
+| AGENT-003 | Genehmigungsworkflow für zusätzliche Agenten und externe Mitwirkende | 19-agent-operating-rules.md | Projektleitungsentscheidung erforderlich |
+| AGENT-004 | Asset-/Bibliothekslizenzinventar und regelmäßige Prüfung | 19-agent-operating-rules.md | Prozessspezifikation erforderlich |
+| AGENT-005 | Einheitliches Übergabeformat und Statusnachweise | 19-agent-operating-rules.md | Prozessspezifikation erforderlich |
+| AGENT-006 | Technische Projektprüfung vor Paketbeginn einschließlich Unity-Umgebung | 19-agent-operating-rules.md | Prozessspezifikation erforderlich |
