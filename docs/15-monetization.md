@@ -25,3 +25,30 @@ Bei einer späteren Bewertung sind mindestens Fairness, Transparenz, Spielerauto
 ## 15.4 Dokumentationsanforderung
 
 Jedes Modell erhält einen Status: bestätigt, vorgeschlagen, verworfen oder offen. Änderungen müssen mit ursprünglicher Quelle, Änderungstyp, Begründung und Auswirkungen im Entscheidungsregister vermerkt werden. Bis die Originalquellen ausgewertet sind, bleibt die Monetarisierung ein offener Spezifikationsbereich.
+
+
+## 15.5 Trennung von Quellenbestand und neuen Bewertungen
+
+Bei der Übernahme historischer Monetarisierungsvorgaben sind drei Ebenen getrennt zu führen:
+
+1. **Historischer Bestand:** Aussagen und Regeln, die in den Originalquellen tatsächlich enthalten sind.
+2. **Aktuelle Bewertung:** mögliche Auswirkungen auf Spielbalance, Betrieb, Plattformen, Modding, Updates und Spielerlebnis.
+3. **Neue Vorschläge:** Änderungen oder zusätzliche Modelle, die ausdrücklich als Vorschlag gekennzeichnet und von der Projektleitung entschieden werden müssen.
+
+Eine Bewertung darf den historischen Bestand nicht stillschweigend umschreiben. Widersprüche zwischen Quellen werden mit Fundstelle dokumentiert und zur Entscheidung vorgelegt.
+
+## 15.6 Auswirkungen auf Spiel und Technik
+
+Sobald die historischen Modelle eingelesen sind, müssen ihre Auswirkungen auf Gameplay, Progression, Items, Erweiterungen, Modding, Spielstände, Backend, Store-Integration und langfristige Pflege untersucht werden. Die Untersuchung darf keine nicht dokumentierten Geschäftsmodellannahmen als Voraussetzung verwenden.
+
+Technische Systeme für Käufe, Berechtigungen oder Inhaltsfreischaltung werden erst spezifiziert, wenn das zugehörige Modell bestätigt wurde. Bis dahin sind keine Shop-, Zahlungs-, Premiumwährungs- oder vergleichbaren Systeme als beschlossen zu behandeln.
+
+## 15.7 Transparenz und Änderungsfreigabe
+
+Spieler müssen später klar erkennen können, was ein Angebot enthält, welche dauerhaften oder temporären Nutzungsrechte damit verbunden sind und welche Auswirkungen es auf vorhandene Inhalte hat. Konkrete rechtliche, steuerliche und plattformbezogene Anforderungen werden vor Veröffentlichung fachkundig geprüft.
+
+Jede Änderung eines bestätigten Monetarisierungsmodells benötigt eine explizite Freigabe, eine Auswirkungsanalyse und eine Aktualisierung des Entscheidungsregisters. Der Agent darf weder Preise noch Geschäftsmodell oder spielrelevante Vorteile eigenmächtig festlegen.
+
+## 15.8 Abnahmestatus
+
+Dieses Dokument bleibt hinsichtlich des konkreten Geschäftsmodells unvollständig, bis die historischen Monetarisierungsquellen erneut eingelesen und vollständig übertragen wurden. Die hier ergänzten Abschnitte definieren ausschließlich den Umgang mit Quellen, Bewertungen und Freigaben; sie stellen kein Monetarisierungsmodell dar.
