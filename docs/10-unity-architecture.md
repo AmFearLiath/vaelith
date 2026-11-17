@@ -59,3 +59,99 @@ Entwicklungs-, Test- und Releasebuilds müssen unterscheidbare Einstellungen bes
 ## 10.10 Architekturentscheidungen
 
 Keine konkrete Unity-Paketversion, ECS-/DOTS-Pflicht, Netzwerkarchitektur, Renderpipeline oder Persistenzbibliothek ist an dieser Stelle endgültig beschlossen. Claude erstellt einen begründeten Architekturentscheid anhand eines realistischen Prototyps und überprüft die Kompatibilität vor dem Ausbau.
+
+## 10.11 Assembly-, Modul- und Abhängigkeitsregeln
+
+Die logischen Layer aus Abschnitt 10.3 müssen in überprüfbare technische Abhängigkeitsregeln überführt werden. Höhere Präsentations- und Toolschichten dürfen Domainregeln nicht zur Laufzeit als alleinige Wahrheitsquelle definieren.
+
+Zu dokumentieren sind:
+- Modulverantwortung und öffentliche Schnittstellen;
+- erlaubte und verbotene Abhängigkeiten;
+- Regeln für gemeinsame Verträge und Datentypen;
+- Umgang mit optionalen Modulen und plattformspezifischen Implementierungen;
+- Testbarkeit ohne vollständige Unity-Szene;
+- Versionierung und Migrationsregeln für Modulverträge.
+
+Zyklische Abhängigkeiten und unkontrollierte Singleton-Verflechtungen sind zu vermeiden. Die konkrete Assembly-Aufteilung ist erst nach einem vertikalen Prototyp verbindlich festzulegen.
+
+## 10.12 Lebenszyklus und Initialisierungsreihenfolge
+
+Kernsysteme benötigen einen definierten Start-, Aktivierungs-, Deaktivierungs- und Shutdown-Lebenszyklus. Reihenfolge und Abhängigkeiten dürfen nicht zufällig von Szenenladefolge oder Script-Ausführungsreihenfolge abhängen.
+
+Zu spezifizieren sind:
+- Bootstrap und Prüfung der Laufzeitumgebung;
+- Laden von Konfigurationen und Contentdefinitionen;
+- Initialisierung von Savegame und Weltzustand;
+- Aktivierung von Streaming, Simulation und Gameplay;
+- Szenen-/Regionswechsel;
+- geordnetes Speichern und Herunterfahren;
+- Verhalten bei fehlgeschlagener Initialisierung.
+
+Systeme müssen Abhängigkeiten deklarieren und bei fehlenden Voraussetzungen verständliche Fehler liefern. Teilweise initialisierte Spielzustände dürfen nicht als vollständig spielbereit gelten.
+
+## 10.13 Asynchrone Verarbeitung und Threading
+
+CPU-intensive oder I/O-lastige Aufgaben sind auf geeignete asynchrone bzw. nebenläufige Ausführung zu prüfen. Unity-Objekte und APIs mit Main-Thread-Anforderungen dürfen nicht unkontrolliert aus Hintergrundthreads verwendet werden.
+
+Für jeden nebenläufigen Prozess sind Eingabedaten, Eigentümerschaft, Abbruchverhalten, Ergebnisübergabe und Fehlerbehandlung zu definieren. Dazu zählen insbesondere Weltgenerierung, Asset-/Contentladen, Streaming, Datenvalidierung und Simulationsberechnungen.
+
+Datenrennen, doppelte Verarbeitung und veraltete Ergebnisse nach Szenen-/Regionswechseln müssen durch klare Lebenszyklen und Tests verhindert werden.
+
+## 10.14 Szenen, Weltzustand und Präsentation
+
+Szenen sind primär Präsentations- und Ladecontainer, nicht die alleinige Speicherung fachlicher Weltwahrheit. Dauerhafte Weltzustände müssen unabhängig von der aktuell geladenen Szene referenzierbar und speicherbar bleiben.
+
+Zu prüfen sind:
+- Szenenübergänge ohne Verlust persistenter Zustände;
+- additive Szenen und Region-/Chunkstreaming;
+- Wiederverwendung gemeinsamer Präsentationsobjekte;
+- Trennung von statischen und dynamischen Weltinhalten;
+- Referenzauflösung bei verzögert geladenen Objekten;
+- Verhalten bei fehlenden oder beschädigten Szeneninhalten.
+
+## 10.15 Navigation, Physik und Interaktionsräume
+
+Die räumlichen Systeme müssen einen konsistenten Vertrag für Kollisionsgeometrie, Navigationsflächen, Bewegungsräume und Interaktionsreichweiten besitzen. Vertikale Verbindungen und mehrgeschossige Strukturen sind explizit zu testen.
+
+Ein Objekt kann visuell vorhanden sein, ohne für Navigation oder Interaktion verfügbar zu sein. Solche Abweichungen müssen in Editor und Runtime diagnostizierbar sein. Änderungen an Terrain oder Gebäuden müssen abhängige Kollisions- und Navigationsdaten aktualisieren oder als ungültig markieren.
+
+## 10.16 Logging, Diagnose und Telemetrie
+
+Logs sollen fachliche Ereignisse, technische Fehler und Performanceinformationen unterscheidbar erfassen. Jede Meldung muss genügend Kontext enthalten, um betroffene IDs, Region, Modul, Version und Auslöser einzugrenzen, soweit verfügbar.
+
+Telemetrie ist zweckgebunden, datensparsam und transparent zu gestalten. Externe Übertragung oder personenbezogene Erfassung wird nicht vorausgesetzt und benötigt eine gesonderte Produkt-/Datenschutzentscheidung. Entwicklungsdiagnostik muss auch ohne externe Dienste funktionieren.
+
+## 10.17 Plattform- und Buildvarianten
+
+Plattformabhängige Funktionen müssen über definierte Schnittstellen und geprüfte Implementierungen laufen. Buildprofile legen fest, welche Features, Moddingmöglichkeiten, Debugfunktionen und Contentformate verfügbar sind.
+
+Jede unterstützte Zielplattform benötigt einen dokumentierten Kompatibilitätsstatus für:
+- Renderpipeline und Grafikfeatures;
+- Speicher- und Streamingverhalten;
+- Eingabe und UI;
+- Savegamepfade und Dateizugriffe;
+- Scripting Backend und Modding;
+- Audio, Controller und sonstige Geräteintegration.
+
+Nicht unterstützte Kombinationen müssen früh erkannt und verständlich gemeldet werden.
+
+## 10.18 Technische Prototypen und Architekturfreigabe
+
+Architekturentscheidungen werden anhand kleiner, lauffähiger vertikaler Prototypen getroffen. Mindestens zu prüfen sind ein 3D-Regionsabschnitt mit Streaming, ein persistentes dynamisches Objekt, ein NPC-/Simulationsablauf, ein Content-/Editorworkflow und – soweit technisch möglich – ein Mod-API-Prototyp.
+
+Für jeden Architekturentscheid werden Alternativen, Messwerte, Zielumgebung, Einschränkungen, Migrationskosten und Entscheidung dokumentiert. Ein theoretisch elegantes System gilt nicht als validiert, bevor es im repräsentativen Projektkontext getestet wurde.
+
+## 10.19 Offene Architekturentscheidungen
+
+| ID | Thema | Status |
+|---|---|---|
+| ARCH-001 | Finale Unity-Version und Upgrade-Politik | Projektstartprüfung erforderlich |
+| ARCH-002 | Renderpipeline und Renderfeature-Set | Prototyp/Benchmark erforderlich |
+| ARCH-003 | Assembly-/Modulzuschnitt und Abhängigkeitsregeln | Vertikaler Prototyp erforderlich |
+| ARCH-004 | Einsatz von ECS/DOTS gegenüber klassischer Unity-Architektur | Profiling und Anwendungsfallprüfung erforderlich |
+| ARCH-005 | Threading-/Job-System für Generator und Simulation | Prototyp/Profiling erforderlich |
+| ARCH-006 | Szenen-, Streaming- und Weltzustandslebenszyklus | Technische Spezifikation erforderlich |
+| ARCH-007 | Physik-, Kollisions- und Navigationslösungen | Prototyp erforderlich |
+| ARCH-008 | Zielplattformen, Backends und Buildprofile | Produktentscheidung erforderlich |
+| ARCH-009 | Logging-/Telemetrieumfang und Datenschutzgrenzen | Produkt-/Technikentscheidung erforderlich |
+| ARCH-010 | Netzwerk-/Onlinefunktionen und Backend-Abhängigkeiten | Produktentscheidung erforderlich |
