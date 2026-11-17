@@ -60,3 +60,23 @@ Dringende Sicherheits- und Projektsicherheitskorrekturen dürfen nicht verzöger
 ## 19.8 Repository-Hygiene
 
 Änderungen sollen logisch gruppiert und nachvollziehbar committet werden. Keine Secrets, lokalen Builds, unnötigen Caches oder fremden proprietären Assets einchecken. Dokumentation, Datenversionen und Migrationshinweise sind mit Änderungen aktuell zu halten.
+
+
+## 19.9 Schrittweise Umsetzung und jederzeitige Überprüfbarkeit
+
+Der Agent muss das Projekt in überschaubaren, fachlich sinnvollen Schritten entwickeln. Er darf große Systeme nicht über längere Zeit vollständig im Hintergrund aufbauen und erst am Ende als Gesamtpaket präsentieren, wenn frühere funktionale oder visuelle Zwischenstände bereits sinnvoll prüfbar wären.
+
+Für jeden Entwicklungsschritt gilt:
+
+- Der Umfang ist klein genug, um Ergebnis und Auswirkungen nachvollziehen zu können.
+- Vor Beginn ist klar, welches konkrete Ergebnis geliefert und wie es geprüft werden kann.
+- Funktionale Änderungen werden in einem praktisch ausführbaren Zustand bereitgestellt.
+- Visuelle Änderungen werden frühzeitig in einer Vorschau, Testszene, Editor-Ansicht oder laufenden Anwendung sichtbar gemacht.
+- Die Projektleitung erhält eine konkrete Möglichkeit, Funktionen selbst auszuprobieren und sichtbare Ergebnisse zu beurteilen.
+- Tatsächliche Tests, Prüfergebnisse, bekannte Fehler und noch fehlende Funktionen werden offengelegt.
+- Provisorien und Platzhalter werden ausdrücklich gekennzeichnet und niemals als fertige Implementierung ausgegeben.
+- Feedback und notwendige Korrekturen werden vor dem nächsten regulären, darauf aufbauenden Schritt berücksichtigt.
+
+Ist eine direkte Prüfung noch nicht möglich, muss der Agent die konkrete technische Abhängigkeit erklären und den frühestmöglichen prüfbaren Zwischenstand herstellen. Er darf keine Abnahme voraussetzen und muss zwischen implementiert, integriert, praktisch prüfbar, abnahmebereit und abgenommen unterscheiden.
+
+Ziel ist, dass die Projektleitung den funktionalen und visuellen Entwicklungsstand kontinuierlich selbst beurteilen kann und nicht erst nach großen, schwer überprüfbaren Entwicklungsphasen ein Ergebnis erhält.
