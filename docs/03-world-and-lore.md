@@ -302,3 +302,12 @@ Konkrete Art-Direction-Referenzen, Farbpaletten, Architekturregeln und Assetvorg
 |---|---|---|
 | 0.1 | 2026-11-17 | Vorhandene Welt- und Lore-Grundlagen strukturiert; Setting, Oberwelt/Unterwelt, Vaelith, Spielerherkunft, Dramaturgie und offene Fragen festgehalten. |
 | 0.2 | 2026-11-17 | Kosmologie, Kulturen, historische Entwicklung, Magie, Erzählweise, Vaelith als Begleiter, visuelle Identität und Quellenstatus präzisiert, ohne offene Lore-Fragen eigenmächtig zu entscheiden. |
+
+
+## 3.21 Abgleich mit den ursprünglichen Emberwild-Storygrundlagen
+
+Die bereitgestellte Quelle story/emberwild-grundlagen.md ist als eigenständige Originalfassung zu behandeln. Sie enthält zusätzliche konkrete Zusammenhänge zwischen Oberwelt, Unterwelt, dem Vater des Spielers und dem magischen Netzwerk Vaelith. Diese Informationen sind nicht vollständig deckungsgleich mit der aktuellen Vaelith-Dramaturgie.
+
+Die aktuelle Vaelith-Fassung mit Vaeliths früheren Eingriffen, seinem Eid, seiner Beobachtung des Spielers und seiner späteren Befreiung bleibt die aktuelle Arbeitsrichtung. Die ältere Emberwild-Fassung wird nicht überschrieben. Ihre zusätzlichen Aussagen werden als Quellenmaterial für einen späteren Story-Abgleich erhalten. Insbesondere dürfen Motivation und Absichten des Vaters, die Funktion des magischen Netzwerks und die genaue Beziehung der Existenzbereiche nicht ohne bewusste dramaturgische Entscheidung vermischt werden.
+
+Die endgültige Lore muss eine konsistente Ursache-Wirkungs-Kette zwischen Herkunft des Spielers, Vaeliths Gefangenschaft, Oberwelt/Unterwelt, magischem Netzwerk und den historischen Eingriffen herstellen. Bis dahin bleiben widersprüchliche oder nur in einer Quelle vorkommende Aussagen als offene Lore-Fragen markiert.
