@@ -359,3 +359,16 @@ Die folgenden Punkte wurden bei der Erweiterung von 07-world-generation.md ident
 | QA-011 | Verbindliche Ende-zu-Ende-Integrationsszenarien und Testdatenbasis je Kernspielablauf | 05, 08, 09, 18 | Testkatalog vor Implementierungsbeginn festzulegen |
 
 Diese Punkte wurden als Klärungsbedarf ergänzt. Die zugehörigen Abschnitte beschreiben notwendige Anforderungen, legen aber weder ein konkretes ID-Format noch eine bestimmte Datenbank, Backendarchitektur oder technische Transaktionsimplementierung fest.
+
+## 20.25 Übergeordnete Projekt- und Konzeptklassifizierung
+
+| Aussage | Einordnung | Konsequenz |
+|---|---|---|
+| Das neue Spiel heißt Vaelith | Verbindliche Projektleitplanke | Produktname in Projekt, Dokumentation und Builds |
+| Entwicklung als vollständiges 3D-Spiel in Unity | Verbindliche Projektleitplanke | Eigenständige Unity-Neuentwicklung |
+| Bestehende Emberwild-/Vaelith-Konzepte und Daten | Fachliche Ausgangsquellen | Vor Übernahme prüfen, danach migrieren/anpassen/erweitern oder begründet ausnehmen |
+| In den Konzeptdokumenten beschriebene Systemrichtungen | Jeweils Leitplanke, Arbeitskonzept oder Vorschlag gemäß Kennzeichnung | Keine pauschale Implementierung aller genannten Features |
+| Zusätzliche Ideen und Funktionsvorschläge | Vorschlag/Funktionserweiterung | Erst nach Spezifikation, Priorisierung und Freigabe umsetzen |
+| Nicht entschiedene Fragen und Quellenlücken | Offen | Nicht als beschlossene Architektur oder Spielfunktion behandeln |
+
+Diese Einordnung ist übergeordnet und gilt für sämtliche Fachkonzepte. Sie ersetzt nicht die jeweils konkrete Statuskennzeichnung in den einzelnen Dokumenten.
