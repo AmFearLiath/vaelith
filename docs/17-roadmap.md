@@ -139,3 +139,9 @@ Diese Pakete benötigen vor Implementierung eine genaue Abgrenzung, Akzeptanzkri
 Die ZIP enthält umfangreiche Multiplayer-Konzepte zu Gilden, Territorien, Diplomatie, kooperativem Bauen, Belagerungen, Serverereignissen und Netzwerkarchitektur. Diese Themen werden als optionale Erweiterungsrichtung dokumentiert. Sie dürfen nicht unbemerkt in die Singleplayer-first-Entwicklung einfließen oder die Kernarchitektur mit ungeprüften Serveranforderungen überfrachten.
 
 Architekturentscheidungen sollen sinnvolle Erweiterbarkeit nicht unnötig verhindern, aber keine Multiplayer-Funktion gilt als beschlossen, bevor Produktumfang, Betrieb, Kosten, Sicherheit und Spielstandmodell ausdrücklich festgelegt sind.
+
+## Player Experience und Wiederentdeckbarkeit als Konzeptbereich
+
+Das neue PECS-Arbeitskonzept aus Dokument 26 ist als systemübergreifender Konzeptbereich zu berücksichtigen. Es wird nicht als sofortiges zusätzliches Vollsystem parallel zu den bestehenden M00–M12-Paketen umgesetzt. Zunächst sind Begriffe, Systemverantwortung, Abhängigkeiten und Auswirkungen auf Gameplay, Simulation, Quests, Daten und Modding zu präzisieren.
+
+Frühe Architekturentscheidungen müssen die Trennung zwischen Spielausrichtung, Spieler-Simulationstiefe und technischer Simulationsauflösung berücksichtigen. Ein späteres eigenständiges Arbeitspaket für PECS ist nach Definition der Fachverträge und eines repräsentativen Vertical-Slice-Szenarios zu planen. Die tatsächliche Priorisierung und Paketnummerierung bleibt offen.
