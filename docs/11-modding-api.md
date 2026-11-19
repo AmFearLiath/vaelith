@@ -177,3 +177,12 @@ Wenn eine Plattform keine verlässliche Code-Mod-Unterstützung ermöglicht, mü
 | MOD-008 | Vertrauenshinweise, Signaturen und Herkunftsprüfung | Sicherheitsprüfung erforderlich |
 | MOD-009 | Mod-Manager-Umfang und Diagnoseexport | Produkt-/UX-Entscheidung erforderlich |
 | MOD-010 | API-Versionierung, Supportfenster und Deprecation | Governance-Entscheidung erforderlich |
+
+
+## Native Spieler-Konfiguration, Gameplay-Profile und Mods
+
+Nicht jede Anpassung der Spielerfahrung ist eine Mod. Das PECS-Arbeitskonzept trennt native Spieleinstellungen, speicherbare Gameplay-Profile, validierte Regel-/Daten-Erweiterungen und ausführbare Code-Mods.
+
+Native Spielausrichtungen und Simulationspräferenzen müssen ohne externe Werkzeuge im Spiel zugänglich sein. Gameplay-Profile speichern gültige Kombinationen solcher Einstellungen. Daten-/Regel-Erweiterungen und Code-Mods verwenden weiterhin die hier definierten Paket-, API-, Vertrauens-, Abhängigkeits-, Konflikt- und Savegame-Regeln.
+
+Die PECS-Schicht darf keine eigene Mod-Laufzeit oder zweite Datenwahrheit erzeugen. Sie koordiniert Präferenzen und Darstellung; die Mod API bleibt Eigentümerin des Erweiterungslebenszyklus. Siehe `26-player-experience-and-replayability.md`.

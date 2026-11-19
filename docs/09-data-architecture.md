@@ -204,3 +204,11 @@ Emberwild-Itemdaten werden als versionierte Stammdatenfamilien migriert. Definit
 ## 9.22 Eventherkunft und Auditierbarkeit
 
 Systemübergreifende Ereignisse tragen Quelle, Event-ID, Welt-/Spielzeit, Schema-Version und fachlichen Kontext. Relevante Änderungen an Quest-, Inventar-, Wirtschafts-, NPC-, Regions- und Produktionszuständen müssen bis zum auslösenden Vorgang nachvollziehbar sein. Dies dient Debugging, Save-Recovery, Reproduzierbarkeit und Schutz vor doppelten Belohnungen oder Ressourcenbuchungen.
+
+## Spielerprofile und Gameplay-Konfigurationen
+
+Das Arbeitskonzept PECS sieht vor, Spielausrichtungen, Simulationstiefen pro Funktionsbereich, Automatisierungspräferenzen und aktivierte Regel-/Mod-Pakete nachvollziehbar zu speichern. Diese Konfiguration ist von der persistenten Weltwahrheit zu trennen.
+
+Profile dürfen keine zweite Quelle für Quest-, NPC-, Wirtschafts-, Inventar- oder Freischaltzustände bilden. Sie beschreiben Präferenzen und gültige Konfigurationen. Fachzustände bleiben in ihren zuständigen Systemen.
+
+Änderungen an Profilen müssen versioniert und validiert werden. Laufende Aktionen und mehrteilige Transaktionen dürfen durch einen Wechsel nicht dupliziert, gelöscht oder rückwirkend verfälscht werden. Bei ungültigen oder inkompatiblen Konfigurationen muss ein sicherer Rückfall auf die letzte gültige Fassung möglich sein. Details stehen in `26-player-experience-and-replayability.md`.

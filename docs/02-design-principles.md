@@ -536,3 +536,17 @@ Wenn eine Passage mehrere Kategorien vermischt, gilt nur der ausdrücklich als L
 Die Unity-Neuentwicklung soll bewährte fachliche Regeln und gewünschte Spielerfunktionen erhalten, aber keine alte technische Implementierung blind nachbauen. Ein fachliches Konzept kann in der neuen 3D-Architektur anders strukturiert oder technisch vollständig neu umgesetzt werden, sofern sein bestätigter Zweck und seine Regeln erhalten bleiben.
 
 Vorhandene Daten, JSON-Strukturen, Kataloge und Funktionen werden erst nach Bestandsprüfung migriert. Die Prüfung muss zwischen fachlicher Semantik, technischer Altlast, nicht mehr benötigtem Inhalt und gewünschter Erweiterung unterscheiden. Änderungen und Verluste benötigen nachvollziehbare Begründung und Freigabe gemäß Agentenregeln.
+
+
+## Freiheit der Spielerfahrung ohne Verlust der Weltkonsistenz
+
+Spieler sollen unterschiedliche Tätigkeiten und Spielweisen kombinieren und die gewünschte Detailtiefe geeigneter Systeme individuell einstellen können. Diese Freiheit darf weder die gemeinsame Weltlogik noch die fachliche Zuständigkeit der Systeme auflösen.
+
+- Spielausrichtungen sind Schwerpunkte und Empfehlungen, keine exklusiven Klassen oder Zugangssperren.
+- Spieler-Simulationstiefe ist von der technischen Simulationsauflösung der Welt zu trennen.
+- Vereinfachung und Automatisierung verwenden dieselben fachlichen Regeln, Ressourcen, Zeitbedingungen und Weltzustände wie manuelle Abläufe.
+- Quest-, Story- und Freischaltzustände bleiben Eigentum der zuständigen Systeme und werden nicht durch Profile übersprungen.
+- Konfigurationswechsel müssen persistent, nachvollziehbar, validiert und ohne Duplikate oder rückwirkende Verfälschung von Weltaktionen funktionieren.
+- Wiederholbarkeit soll durch neue Schwerpunkte, Profile, Entscheidungen und Weltverläufe entstehen, nicht durch künstliches Grinden oder bloße Zahleneskalation.
+
+Die konkrete Ausarbeitung erfolgt als Arbeitskonzept in `26-player-experience-and-replayability.md`.

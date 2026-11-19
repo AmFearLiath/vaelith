@@ -531,3 +531,14 @@ Eine fachliche Idee kann als Ziel erhalten bleiben, obwohl ihre konkrete technis
 - Technische Umsetzung: eigenständige Unity-Projektstruktur und neu entwickelte Runtime/Systemarchitektur.
 - Fachliche Grundlage: geprüfte und freigegebene Konzepte, Daten, Funktionen und Inhalte aus den bisherigen Emberwild-/Vaelith-Arbeiten sowie ausdrücklich bestätigte Erweiterungen.
 - Nicht-Ziel: die alte technische Implementierung unverändert fortzuführen oder sämtliche erwähnten Ideen ungeprüft zu implementieren.
+
+
+## Individuelle Spielerfahrung und Wiederentdeckbarkeit — Konzept-Erweiterung
+
+Vaelith soll nicht nur eine große Zahl miteinander verbundener Systeme anbieten. Der Spieler soll selbst bestimmen können, welche Tätigkeiten und Spielweisen er priorisiert und wie intensiv er einzelne Bereiche erlebt. Spielausrichtungen wie Abenteuer, Landwirtschaft, Handel, Transport, Handwerk, Beziehungen oder Verwaltung sind kombinierbare Schwerpunkte, keine exklusiven Klassen oder getrennten Spielmodi.
+
+Für geeignete Funktionsbereiche soll der Spieler eine eigene Simulationstiefe wählen können: vereinfacht, normal, detailliert oder als Tiefensimulation. Diese Stufen beschreiben die gewünschte Detailtiefe, Kontrolle und Automatisierung aus Spielersicht. Sie sind ausdrücklich von der technischen Simulationsauflösung der lebendigen Welt zu unterscheiden, die weiterhin nach Entfernung, Relevanz und Simulationsbudget abgestuft werden kann.
+
+Quest-, Story- und Freischaltfortschritt bleiben unabhängig von der gewählten Spielausrichtung. Quests prüfen reale Welt- und Spielerzustände und sollen – sofern im Questdesign vorgesehen – unterschiedliche Lösungswege unterstützen. Eine Rolle oder ein Profil darf keine Questfortschritte künstlich voraussetzen oder umgehen.
+
+Wiederentdeckbarkeit ist ein eigenständiges Ziel: andere Spielausrichtungen, Detailstufen, Welt- und Ereignisausgänge, Entscheidungen und Erweiterungen sollen neue vollständige Spielerfahrungen ermöglichen. Das dafür vorgeschlagene Player Experience Configuration System (PECS) wird in `26-player-experience-and-replayability.md` als Arbeitskonzept beschrieben. Diese Ergänzung verändert nicht die bestehende Grundidentität des 3D-Abenteuer-RPGs mit lebendiger Welt, sondern erweitert die Freiheit, diese Welt zu erleben.

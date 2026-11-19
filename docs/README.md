@@ -33,6 +33,7 @@ Diese Dokumentation beschreibt Zielbild, Leitplanken, Spielsysteme, Weltgenerier
 23. [Originalkonzept- und Quellenregister](23-original-concept-source-register.md)
 24. [Item-, Material- und Produktionsmigration](24-item-material-production-migration.md)
 25. [Quest-System-Spezifikation und Migration](25-quest-system-specification.md)
+26. [Player Experience, Simulation Profiles und Wiederentdeckbarkeit](26-player-experience-and-replayability.md)
 
 
 ## Statuskennzeichnung
@@ -45,7 +46,11 @@ Diese Dokumentation beschreibt Zielbild, Leitplanken, Spielsysteme, Weltgenerier
 
 ## Zentrale Projektthese
 
-Der Spieler beginnt damit, die Welt zu entdecken. Danach lernt er, in ihr zu leben. Später beginnt er, sie zu verändern. Schließlich muss er entscheiden, welche Verantwortung er für sie übernehmen möchte.
+Der Spieler entdeckt eine lebendige Welt, entwickelt darin seine eigene Rolle, erlebt und gestaltet sie auf seine bevorzugte Weise und kann sie immer wieder neu entdecken. Die Welt und ihre Systeme bleiben zusammenhängend; die individuelle Spielerfahrung ist anpassbar.
+
+## Konzept-Erweiterung
+
+Dokument 26 beschreibt das neue Arbeitskonzept für individuelle Spielausrichtungen, spielersteuerbare Simulationstiefe, adaptive Funktionsdarstellung, Automatisierung, unabhängigen Questfortschritt und langfristige Wiederentdeckbarkeit. Es erweitert die bestehende Vision; es ersetzt sie nicht und ist noch keine pauschale Implementierungsfreigabe.
 
 ## Wichtige Quellenbegrenzung
 
