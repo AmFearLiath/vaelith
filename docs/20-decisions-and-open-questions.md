@@ -413,3 +413,26 @@ Die detaillierten Anforderungen und Quellen stehen in Dokument 23 (Quellenregist
 | SRC-007 | Das eingebettete Items.zip überschneidet sich mit dem äußeren Items-Bestand | Migrationsleitplanke | Vor Katalogzählung und Migration deduplizieren |
 
 Die Quellenregister 23–25 sind Teil der maßgeblichen Projektdokumentation. Ein als Arbeitskonzept gekennzeichneter Vorschlag wird erst nach Projektfreigabe zur verbindlichen Produktentscheidung, sofern die Projektleitung nicht ausdrücklich eine konkrete Designentscheidung delegiert hat.
+
+## Ergänzte offene Entscheidungen aus Player Experience und Wiederentdeckbarkeit
+
+Die neue Konzept-Erweiterung in Dokument 26 beschreibt ein übergreifendes Arbeitskonzept. Die folgenden Punkte sind vor Implementierung zu spezifizieren und keine bereits beschlossenen technischen Detailentscheidungen.
+
+| ID | Thema | Quelle | Status |
+|---|---|---|---|
+| PECS-001 | Umfang, Name und Systemgrenzen des Player Experience Configuration System | 26 | Architektur-/Produktentscheidung erforderlich |
+| PECS-002 | Katalog, Kombination und UI-Wirkung der Spielausrichtungen | 26 | Game-Design-Spezifikation erforderlich |
+| PECS-003 | Anzahl, Semantik und Grenzwerte der Spieler-Simulationstiefen | 26 | Systemübergreifende Spezifikation erforderlich |
+| PECS-004 | Abgrenzung Spieler-Simulationstiefe vs. technische Simulationsauflösung | 06, 26 | Architekturvertrag erforderlich |
+| PECS-005 | Funktionsgruppen, progressive Offenlegung und Sichtbarkeitsregeln | 26 | UX-/Accessibility-Konzept erforderlich |
+| PECS-006 | Automatisierungs- und Delegationsregeln je Fachsystem | 05, 06, 13, 26 | Fachliche Spezifikation erforderlich |
+| PECS-007 | Profilumfang, Speicherort, Versionierung sowie Import/Export | 09, 26 | Datenvertrag erforderlich |
+| PECS-008 | Laufzeitwechsel, sichere Übergangspunkte und Transaktionsschutz | 05, 09, 26 | Technische Spezifikation erforderlich |
+| PECS-009 | Quest-Lösungswege und automatisierte Gameplayereignisse unter Profilen | 25, 26 | Quest-/Gameplay-Testkatalog erforderlich |
+| PECS-010 | Wiederentdeckbarkeit, New-Run-Varianten und Weltstartprofile | 01, 07, 17, 26 | Game-Design-/Roadmapentscheidung erforderlich |
+| PECS-011 | Abgrenzung nativer Einstellungen, Gameplay-Profile, Regelmods und Code-Mods | 11, 26 | Modding-/UX-Vertrag erforderlich |
+| PECS-012 | Konflikt-, Abhängigkeits- und Rückfallverhalten von Profilen und Erweiterungen | 09, 11, 26 | Technische Spezifikation erforderlich |
+| PECS-013 | Auswirkungen auf spätere Multiplayer-Synchronisation | 17, 26 | Erst bei Scope-Entscheidung erforderlich |
+| PECS-014 | Community-Verteilung, Hosting und Moderation von Gameplay-Profilen/Mods | 11, 26 | Produkt-/Betriebsentscheidung erforderlich |
+
+Die vier vorgeschlagenen Spieler-Simulationstiefen (Vereinfacht, Normal, Detailliert, Tiefensimulation) und der Name PECS sind Arbeitsvorschläge. Sie gelten nicht als endgültig festgelegt, bis sie ausdrücklich bestätigt werden.
