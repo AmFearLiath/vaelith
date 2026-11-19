@@ -331,3 +331,11 @@ Für Vaelith ist 3D-Bewegung das Primärmodell. Eine isometrische/strategische �
 ## 5.27 Quest-System-Abnahmeszenarien
 
 Die Quest Runtime muss Fortschritt aus realen Gameplayereignissen verarbeiten: Kampf, Interaktion, Erkundung, Dialog, Wissen, Handel, Crafting, Bau, Zucht, Verteidigung und Welt-/Simulationsereignisse. Speichern/Laden, doppelte Events, fehlende Referenzen, alternative Pfade, verzögerte Konsequenzen und Fehler bei mehrteiligen Weltaktionen sind Ende-zu-Ende-Testfälle. Die vollständige Testliste steht in Dokument 25.
+
+## Individuelle Spielausrichtung und Simulationstiefe
+
+Vaelith soll unterschiedliche Tätigkeiten und Spielerfantasien innerhalb derselben Welt unterstützen. Spielausrichtungen wie Abenteuer, Kampf, Magie, Landwirtschaft, Handel, Transport, Handwerk, Beziehungen und Verwaltung sind kombinierbare Schwerpunkte, keine exklusiven Klassen oder getrennten Spielmodi.
+
+Für geeignete Funktionsbereiche soll der Spieler die gewünschte Detailtiefe und Kontrolle festlegen können. Vereinfachte Abläufe dürfen Routinehandlungen automatisieren oder delegieren, müssen aber dieselben fachlichen Regeln, Ressourcen, Zeitbedingungen und Weltzustände verwenden wie manuelle Abläufe. Die Einstellung soll während einer laufenden Welt wechselbar sein, sofern der jeweilige Systemzustand einen sicheren Übergang erlaubt.
+
+Die zentrale Koordination dieser Präferenzen ist als Player Experience Configuration System (PECS) vorgeschlagen. PECS steuert Profile, Darstellung und Spielerpräferenzen; die jeweiligen Gameplay-Systeme behalten die Verantwortung für Aktionen, Regeln und Zustände. Questfortschritt und tatsächliche Freischaltungen bleiben unabhängig von einer Spielausrichtung. Details und offene Fragen stehen in `26-player-experience-and-replayability.md`.
