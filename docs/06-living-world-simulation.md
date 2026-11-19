@@ -301,3 +301,11 @@ Ein übergeordnetes Ereignissystem kann ökologische, wirtschaftliche, soziale u
 Jedes Ereignis benötigt Auslöser, betroffene Region/Akteure, Eskalationsstufen, Reaktionsfenster, Folgen, Auflösungsbedingungen und Schutz vor Wiederholungsschleifen. Ökologische Bedrohungen, organisierte Angriffe, Versorgungskrisen und politische Konflikte bleiben unterscheidbare Ereignisklassen.
 
 Die in älteren Konzepten verwendete Asche-/Korruptionsmechanik wird nicht pauschal übernommen. Übertragbar ist das Prinzip eines transparenten, systemübergreifenden Krisen-Direktors; die konkrete Vaelith-Weltgefahr muss aus dem freigegebenen Setting entstehen.
+
+## Abgrenzung: technische Simulationsauflösung und Spieler-Simulationstiefe
+
+Die in diesem Dokument beschriebenen Simulationsstufen nach Relevanz, Entfernung, Aktivität und Simulationsbudget sind technische Laufzeitmechanismen. Sie bestimmen, mit welcher Auflösung Weltzustände effizient fortgeführt werden.
+
+Davon getrennt ist die gewünschte Detailtiefe aus Spielersicht. Ein Spieler kann beispielsweise detaillierte Wirtschaftsentscheidungen wünschen, obwohl entfernte Regionen technisch aggregiert simuliert werden. Ebenso kann ein naher NPC technisch hochauflösend simuliert werden, obwohl dessen Verwaltung für den Spieler vereinfacht dargestellt wird.
+
+Die Spielerpräferenz darf die fachliche Weltwahrheit nicht verfälschen. Automatisierung und Delegation müssen dieselben Regeln, Ressourcen, Zeitbedingungen und Ereignisse verwenden wie manuelle Abläufe. Die übergreifende Koordination ist im Arbeitskonzept `26-player-experience-and-replayability.md` beschrieben.
